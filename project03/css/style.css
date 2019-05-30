@@ -1,0 +1,144 @@
+html{overflow-y:scroll;}
+*{margin:0; padding:0;}
+body{font-family:'YouandiModernTR', 'YouandiModernTB', 'YouandiModernHEB', dotum, '돋움', gulim, '굴림', Arial, AppleGothic, verdana, sans-serif, helvetica; font-size:15px; color:#000000;}
+button,img{border:none; vertical-align:middle;}
+ol,ul,li{list-style:none; margin:0; padding:0;}
+label,button{cursor:pointer;}
+button{background:none; font-family:'YouandiModernTR', 'YouandiModernTB', 'YouandiModernHEB', dotum, '돋움', gulim, '굴림', Arial, AppleGothic, verdana, sans-serif, helvetica; font-size:0;}
+a{color:#000000; text-decoration:none;}
+h1,h2,h2,h4,h5,h6{font-weight:normal;}
+input,select{font-family:'YouandiModernTR', 'YouandiModernHEB', dotum,'돋움',gulim,'굴림',Arial, AppleGothic, verdana, sans-serif, helvetica; font-size:10.5pt; color:#555; vertical-align:middle}
+.cf:after{content:""; display:block; clear:both;}
+@font-face{
+	font-family:'YouandiModernTR';
+	font-style:normal;
+	font-weight:normal;
+	src:url(../font/Youandi_Modern_TextRegular.eot); 
+    src:url(../font/Youandi_Modern_TextRegular.eot?#iefix) format('embedded-opentype'), url(../font/Youandi_Modern_TextRegular.woff) format('woff');
+}
+@font-face{
+	font-family:'YouandiModernTB';
+	font-style:normal;
+	font-weight:normal;
+	src:url(../font/Youandi_Modern_TextBold.eot); 
+    src:url(../font/Youandi_Modern_TextBold.eot?#iefix) format('embedded-opentype'), url(../font/Youandi_Modern_TextBold.woff) format('woff');
+}
+@font-face{
+	font-family:'YouandiModernHEB';
+	font-style:normal;
+	font-weight:normal;
+	src:url(../font/Youandi_Modern_HeadExtraBold.eot); 
+    src:url(../font/Youandi_Modern_HeadExtraBold.eot?#iefix) format('embedded-opentype'), url(../font/Youandi_Modern_HeadExtraBold.woff) format('woff');
+}
+.header{z-index:30; background:url(../images/bg_transparent_black_90p.png); width:100%; position:fixed; left:0; top:0;}
+.gnb{height:32px;}
+.gnb_inner{width:1180px; margin:0 auto; padding:12px 0 3px; text-align:right;}
+.gnb_inner ul{display:inline-block;}
+.gnb_inner li{float:left; font-size:11px; padding-left:7px;}
+.gnb_inner .split{padding:0 13px;}
+.gnb_inner .indi{padding-left:12px;}
+.gnb_inner .indi a{color:#ffffff;}
+.gnb_inner .alliance a{padding:0 0 0 4px;}
+.gnb_inner .btn_login{color:#999999; margin-top:-4px; padding:3px 7px 4px; border:1px solid #373737; font-size:11px;}
+.gnb_inner .btn_login:hover{color:#333333; background:#ffffff; border:1px solid #ffffff;}
+.gnb_inner ul li a{color:#999999; padding:0 4px;}
+.gnb_inner ul li a:hover{color:#ffffff;}
+
+.lnb{padding-top:4px; height:68px; position:relative;}
+.lnb_inner{width:1180px; margin:0 auto; height:68px; line-height:68px;}
+.lnb_inner .logo{position:absolute; top:-5px;}
+.local_menu{margin-left:217px;}
+.local_menu>ul{float:left;}
+.local_menu>ul>li{float:left;}
+.local_menu>ul>li>a{color:#ffffff; display:block; margin-top:-4px; padding:0 13px 4px; font-size:14px;}
+.local_menu>ul>li:hover>a{background:#ffffff; color:#1e75d6; font-weight:500;}
+.lnb_inner .dep2{position:absolute; top:72px; left:0; width:100%; overflow:hidden; z-index:99999; margin:0; padding:0; background:#ffffff; height:0; transition:height 0.3s linear;}
+.local_menu>ul>.myaccount:hover .dep2{height:471px;}
+.local_menu>ul>.cards:hover .dep2{height:306px;}
+.local_menu>ul>.benefits:hover .dep2{height:272px;}
+.local_menu>ul>.point_info:hover .dep2{height:277px;}
+.local_menu>ul>.cashback_info:hover .dep2{height:271px;}
+.local_menu>ul>.car_benefits:hover .dep2{height:271px;}
+.local_menu>ul>.finance_info:hover .dep2{height:272px;}
+.local_menu>ul>.culture:hover .dep2{height:274px;}
+.local_menu>ul>.customer:hover .dep2{height:370px;}
+
+.lnb_inner .dep2_inner{width:1180px; margin:0 auto; position:relative;}
+.lnb_inner .dep2_padding{padding-left:241px; margin-right:-50px;}
+
+.benefits .dep2_padding{padding-left:458px;}
+.point_info .dep2_padding{padding-left:440px;}
+.cashback_info .dep2_padding{padding-left:644px;}
+.car_benefits .dep2_padding{padding-left:715px;}
+.finance_info .dep2_padding{padding-left:832px;}
+
+.dep2_inner .dep2_menu{float:left; width:179px; margin:30px 0 28px; padding-left:20px; border-left:1px solid #e1e1e1; line-height:100%;}
+.dep2_inner .dep2_menu.fir{border:0 none; padding:0;}
+.myaccount .dep2_menu{height:359px;}
+.myaccount .dep2_menu.fir{width:193px;}
+.myaccount .dep2_menu.la{width:175px;}
+.cards .dep2_menu{height:248px;}
+.cards .dep2_menu.fir{width:auto;}
+.cards .dep2_menu.la{width:126px;}
+.benefits .dep2_menu{height:213px;}
+.culture .dep2_menu{height:216px;}
+.customer .dep2_menu{height:312px;}
+
+.dep2_inner .dep2_menu h2{display:block; margin:23px 0 9px 0; font-family: 'YouandiModernHEB'; font-size:12px;}
+.dep2_inner .dep2_menu h2.fir{margin:0 0 9px 0;}
+
+.dep2_inner .dep2_menu a{font-size:13px; line-height:24px; color:#666666; font-weight:400; display:block;}
+
+.dep2_inner .dep3{float:left; padding-right:30px;}
+
+.dep2_inner .dep3 h3{margin:11px 0 5px 0; font-size:13px; font-weight:300;}
+.dep2_inner .dep3 h3.fir{margin:0 0 5px 0;}
+
+.dep2_inner .lnb_banner{position:absolute; top:36px; left:0; width:200px; height:auto; margin-right:29px; padding-top:143px; line-height:20px; font-size:13px; cursor:pointer; vertical-align:top; background:url(../images/img_myaccount_banner_01.png) no-repeat 0 0;}
+.cards .lnb_banner{background-image:url(../images/img_card_banner_03.png);}
+.finance_info .lnb_banner{width:170px; padding-top:76px;  background-image:url(../images/img_finance_banner_181120.png); background-position:20px 0;}
+
+.dep2_inner .lnb_banner p{line-height:19px; margin-bottom:12px;}
+.dep2_inner .lnb_banner a{line-height:19px; color:#1e75d6;}
+.finance_info .lnb_banner a{color:#000000;}
+
+.search_open{float:right; margin-top:-4px;}
+.search_open .btn_search_open{width:24px; height:24px; background:url(../images/sp_btn_icon.png) no-repeat 0 0; background-position:-180px -25px;}
+.header_search{position:absolute; top:72px; left:0; width:100%; background:#ffffff; display:none;}
+.input_wrap{height:51px; background:#1f75d6;}
+.input_inner{position:relative; width:1180px; margin:0 auto; line-height:51px;}
+.input_inner input{width:94%; height:32px; background-color:#1f75d6; padding:10px 0 8px; border:none; color:#ffffff; font-size:21px; line-height:32px;}
+input::-webkit-input-placeholder{color:#fff; opacity:0.5;}
+input::-moz-input-placeholder{color:#fff; opacity:0.5;}
+input::-ms-input-placeholder{color:#fff; opacity:0.5;}
+input::-o-input-placeholder{color:#fff; opacity:0.5;}
+input::input-placeholder{color:#fff; opacity:0.5;}
+.btn_search{position:absolute; top:14px; right:0; width:24px; height:24px; background:url(../images/sp_btn_icon.png) no-repeat 0 0; background-position:-180px -25px;}
+
+.search_word{line-height:100%; background-color:#1e75d6; border-top:1px solid #3583da;}
+.search_word dl{line-height:100%; overflow:hidden; padding:4px 0; width:1180px; margin:0 auto;}
+.search_word dt{float:left; margin-right:8px; padding:3px 8px 4px; width:50px; color:#ffffff; font-size:11px; font-family:'YouandiModernHEB'; line-height:100%; vertical-align:middle; border:1px solid #4b91de; display:inline-block;}
+.search_word dd{float:left; margin:1px 12px 0 0; line-height:19px; vertical-align:middle; font-size:13px; color:#666666;}
+.search_word a{color:#ffffff;}
+
+#container{padding-top:144px;}
+.contents{position:relative; width:1180px; margin:0 auto; margin-bottom:120px;}
+.contents .section{border:1px solid #d6d6d6;}
+.contents .sec1{height:692px;}
+.sec1 .sec1_menu{width:100%; height:100%;}
+.sec1 .sec1_menu li{position:relative; float:left; width:240px; height:100%; border-left:1px solid #d6d6d6; padding:0 27px; transition:all 0.3s ease;}
+.sec1_menu li.logo_area_bg{width:292px; border:0 none; padding:0;}
+.sec1_menu .login_area{width:100%; height:100%; background:url(../images/bg_login_32.jpg) no-repeat center 0;}
+.sec1_menu .login_area_inner{position:relative; width:240px; height:100%; margin:0 auto;}
+
+
+
+
+
+
+
+
+
+
+
+
