@@ -1,0 +1,71 @@
+.section1{margin-bottom:8px; height:0; padding-bottom:calc(39% + 64px);}
+.nav_top{width:100%; height:64px; float:none;}
+.navT_big{display:none;}
+.navT_min{display:block;}
+.nav_top>ul>li{border:none; float:left;width:20%;}
+.nav_top>ul>li>a{width:100%; height:64px; line-height:64px; padding-left:0; text-align:center;}
+.dep2{left:0; top:64px; width:20%; height:auto; display:none;}
+.dep2 .dep2_inner{width:100%; padding:10px 20px; border-color:#ffaa46;}
+.nav_top>ul>li:nth-child(1) .dep2 .dep2_inner{padding:10px 4px;}
+.nav_top>ul>li:nth-child(2) .dep2{left:20%;}
+.nav_top>ul>li:nth-child(3) .dep2{left:40%;}
+.nav_top>ul>li:nth-child(4) .dep2{left:60%;}
+.nav_top>ul>li:nth-child(5) .dep2{left:80%;}
+
+.dep2 ul{padding-top:0;}
+.dep2 li{margin:8px 0;}
+.dep2 li a{height:auto; line-height:22px; padding-left:0; display:block; text-align:center; word-break:keep-all; font-size:15px;}
+
+.main_slider{width:100%; height:0; padding-bottom:39%;}
+.slider_text strong{font-size:18px;}
+.slider_text span{font-size:14px; margin-top:8px; padding:0 100px;}
+
+.control{position:absolute; right:32px; width:66px;}
+.stop_btn{right:4px;}
+
+.section2{height:526px;}
+
+.nav_bot{width:100%; border:1px solid #d7d7d7; box-sizing:border-box;}
+.nav_bot ul li{padding:0; float:left; width:14.28%; word-break:keep-all;}
+.nav_bot ul li a{height:84px; box-sizing:border-box; line-height:1.2; border-bottom:none; padding:48px 0 8px; font-size:14px; background:no-repeat center 8px; text-align:center;}
+
+.article1{width:100%; border-top:none; box-sizing:border-box;}
+
+.article2{width:100%; box-sizing:border-box;}
+.dictionary{width:34%;  padding:15px 0 0; word-break:keep-all;}
+.dictionary div{max-width:300px;}
+.dictionary div a{margin:12px 0 0 2px;}
+
+.calendar{padding:15px 2% 0;}
+
+.calendar_event{width:36%; padding:15px 16px 0;}
+.event_info{margin-top:12px; padding:0}
+
+.footerTop_inner{height:56px;}
+.page_info li{padding:0 10px;}
+.page_info li:last-child{padding-right:0;}
+.sitelink {width:50%;}
+.sitelink select{width:calc(50% - 40px); margin-right:0;}
+.sitelink input:last-child{margin-right:0}
+
+
+.footerBot_inner{height:auto; padding:8px;}
+.foot_bt_l{float:right;}
+.foot_bt_l .sns{padding-top:16px;}
+.foot_bt_l .sns li.fir{display:none;}
+.foot_bt_l>a>img{height:40px;}
+
+.addres {width:calc(100% - 250px); margin:20px 0 0 0;}
+.addres p{text-align:left; letter-spacing:-.5px;}
+
+.foot_bt_r{clear:both}
+.foot_bt_r ul li{float:left;}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>한국문학번역원</title>
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/calender.css" />
+	<link rel="stylesheet" href="css/style2.css" media="only screen and (min-width:768px) and (max-width:1279px)"/>
+	<link rel="stylesheet" href="css/style3.css" media="only screen and (max-width:767px)"/>
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/underscore-min.js"></script> <!-- 갤린더 -->
+	<script src="js/moment-2.2.1.js"></script> <!-- 갤린더 -->
+	<script src="js/jhclndr.js"></script><!-- 갤린더 -->
+	<script src="js/site.js"></script><!-- 갤린더 -->	
+	<script type="text/javascript" src="js/script1.js"></script>
+</head>
+<body>
+	<div id="header">
+		<div class="header_top">
+			<div class="header_top_inner">
+				<ul class="topmenu">
+					<li><a href="#" class="intro">홍보영상</a></li>
+					<li><span>메인</span></li>
+					<li><a href="#" class="timeline">행사정보</a></li>
+				</ul>
+				<div class="lang">
+					<a href="#">ENG</a>
+				</div>
+			</div>
+		</div>
+		<div class="header_bot">
+			<div class="header_mobile">
+				<div id="nav_btn">
+					<a href="#">모바일 메뉴
+						<div class="line1"></div>
+						<div class="line2"></div>
+						<div class="line3"></div>
+					</a>
+				</div>
+				<div id="search_btn">
+					<a href="#">검색</a>
+				</div>
+			</div>
+			<h1><a href="index.html"><img src="img/logo.gif" alt="한국문학번역원 로고"/>한국문학번역원</a></h1>
+			<div class="search">
+				<form action="#">
+					<select name="languege" id="">
+						<option selected="selected">Select Language</option>
+						<option value="ALBANIAN">Albanian</option>
+						<option value="ARABIC">Arabic</option>
+						<option value="ARMENIAN_EASTERN">Armenian - Eastern</option>
+						<option value="ARMENIAN_WESTERN">Armenian - Western</option>
+						<option value="BASQUE\">Basque</option>
+						<option value="BELARUSIAN\">Belarusian</option>
+						<option value="BENGALI_PHONETIC\">Bengali - Phonetic</option>
+						<option value="BOSNIAN\">Bosnian</option>
+						<option value="BRAZILIAN_PORTUGUESE\">Brazilian - Portuguese</option>
+						<option value="BULGARIAN\">Bulgarian</option>
+						<option value="CATALAN\">Catalan</option>
+						<option value="CROATIAN\">Croatian</option>
+						<option value="CZECH\">Czech</option>
+						<option value="CZECH_QWERTZ\">Czech - Qwertz</option>
+						<option value="DANISH\">Danish</option>
+						<option value="DARI\">Dari</option>
+						<option value="DUTCH\">Dutch</option>
+						<option value="DEVANAGARI_PHONETIC\">Devanagari - Phonetic</option>
+						<option value="ENGLISH\">English</option>
+						<option value="ESTONIAN\">Estonian</option>
+						<option value="ETHIOPIC\">Ethiopic</option>
+						<option value="FINNISH\">Finnish</option>
+						<option value="FRENCH\">French</option>
+						<option value="GALICIAN\">Galician</option>
+						<option value="GEORGIAN_QWERTY\">Georgian - Qwerty</option>
+						<option value="GEORGIAN_TYPEWRITER\">Georgian - Typewriter</option>
+						<option value="GERMAN\">German</option>
+						<option value="GREEK\">Greek</option>
+						<option value="GUJARATI_PHONETIC\">Gujarati - Phonetic</option>
+						<option value="GURMUKHI_PHONETIC\">Gurmukhi - Phonetic</option>
+						<option value="HEBREW\">Hebrew</option>
+						<option value="HINDI\">Hindi</option>
+						<option value="HUNGARIAN_101\">Hungarian - 101</option>
+						<option value="ICELANDIC\">Icelandic</option>
+						<option value="ITALIAN\">Italian</option>
+						<option value="KANNADA_PHONETIC\">Kannada - Phonetic</option>
+						<option value="KAZAKH\">Kazakh</option>
+						<option value="KHMER\">Khmer</option>
+						<option value="KOREAN\">Korean</option>
+						<option value="KYRGYZ\">Kyrgyz</option>
+						<option value="LAO\">Lao</option>
+						<option value="LATVIAN\">Latvian</option>
+						<option value="LITHUANIAN\">Lithuanian</option>
+						<option value="MACEDONIAN\">Macedonian</option>
+						<option value="MALAYALAM_PHONETIC\">Malayalam - Phonetic</option>
+						<option value="MALTESE\">Maltese</option>
+						<option value="MONGOLIAN_CYRILLIC\">Mongolian - Cyrillic</option>
+						<option value="MONTENEGRIN\">Montenegrin</option>
+						<option value="NORWEGIAN\">Norwegian</option>
+						<option value="ORIYA_PHONETIC\">Oriya - Phonetic</option>
+						<option value="PAN_AFRICA_LATIN\">Pan African Latin</option>
+						<option value="PASHTO\">Pashto</option>
+						<option value="PERSIAN\">Persian</option>
+						<option value="POLISH\">Polish</option>
+						<option value="PORTUGUESE\">Portuguese</option>
+						<option value="ROMANI\">Romani</option>
+						<option value="ROMANIAN\">Romanian</option>
+						<option value="RUSSIAN\">Russian</option>
+						<option value="SANSKRIT_PHONETIC\">Sanskrit - Phonetic</option>
+						<option value="SERBIAN_CYRILLIC\">Serbian - Cyrillic</option>
+						<option value="SERBIAN_LATIN\">Serbian - Latin</option>
+						<option value="SINHALA\">Sinhala</option>
+						<option value="SLOVAK\">Slovak</option>
+						<option value="SLOVAK_QWERTY\">Slovak - Qwerty</option>
+						<option value="SLOVENIAN\">Slovenian</option>
+						<option value="SOUTHERN_UZBEK\">Southern Uzbek</option>
+						<option value="SPANISH\">Spanish</option>
+						<option value="SWEDISH\">Swedish</option>
+						<option value="TAMIL_PHONETIC\">Tamil - Phonetic</option>
+						<option value="TATAR\">Tatar</option>
+						<option value="TELUGU_PHONETIC\">Telugu - Phonetic</option>
+						<option value="THAI\">Thai</option>
+						<option value="TURKISH_F\">Turkish - F</option>
+						<option value="TURKISH_Q\">Turkish - Q<</option>
+						<option value="UIGHUR\">Uighur</option>
+						<option value="UKRAINIAN_101\">Ukrainian - 101</option>
+						<option value="URDU\">Urdu</option>
+						<option value="UZBEK_LATIN\">Uzbek - Latin</option>
+						<option value="UZBEK_CYRILLIC_PHONETIC\">Uzbek - Cyrillic - Phonetic</option>
+						<option value="UZBEK_CYRILLIC_TYPEWRITTER\">Uzbek - Cyrillic - Typewritter</option>
+						<option value="VIETNAMESE_TCVN\">Vietnamese - TCVN</option>
+						<option value="VIETNAMESE_TELEX\">Vietnamese - Telex</option>
+						<option value="VIETNAMESE_VIQR\">Vietnamese - VIQR</option>
+					</select>
+					<input type="text"/>
+					<a href="#" class="close"><img src="img/close_mobile2.png" alt=""/>닫기</a>
+					<a href="#" onclick="return false;"><img src="img/tp_search.gif" alt="검색"/></a>
+				</form>
+			</div>
+		</div>
+		<div class="nav_overlay"></div>
+	</div><!-- id="header" -->
+	<div id="container">
+		<div class="section1 cf">
+			<div class="nav_top">
+				<ul class="navT_big">
+					<li>
+						<a href="#">사업안내</a>
+						<div class="dep2">
+							<div class="dep2_inner">
+								<ul>
+									<li><a href="#">번역지원 사업</a></li>
+									<li><a href="#">출판지원 사업</a></li>
+									<li><a href="#">해외교류 사업</a></li>
+									<li><a href="#">국내교류 사업</a></li>
+									<li><a href="#">교육사업</a></li>
+									<li><a href="#">해외소개정기간행물사업</a></li>
+									<li><a href="#">한국문학해외소개자료사업</a></li>
+									<li><a href="#">번역전문도서관</a></li>
+									<li><a href="#">정보화 사업</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">아카이브</a>
+						<div class="dep2">
+							<div class="dep2_inner">
+								<ul>
+									<li><a href="#">간행물열람</a></li>
+									<li><a href="#">미디어 자료실</a></li>
+									<li><a href="#">영어로 읽는 한국문학</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">알림광장</a>
+						<div class="dep2">
+							<div class="dep2_inner">
+								<ul>
+									<li><a href="#">공지사항</a></li>
+									<li><a href="#">보도자료</a></li>
+									<li><a href="#">외신에서 본 한국문학</a></li>
+									<li><a href="#">번역원 주요행사</a></li>
+									<li><a href="#">채용정보</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">기관소개</a>
+						<div class="dep2">
+							<div class="dep2_inner">
+								<ul>
+									<li><a href="#">원장실</a></li>
+									<li><a href="#">기관안내</a></li>
+									<li><a href="#">윤리경영</a></li>
+									<li><a href="#">사이버 홍보관</a></li>
+									<li><a href="#">고객센터</a></li>
+									<li><a href="#">홈페이지 이용안내</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">정보공개</a>
+						<div class="dep2">
+							<div class="dep2_inner">
+								<ul>
+									<li><a href="#">공공데이터</a></li>
+									<li><a href="#">정보공개</a></li>
+									<li><a href="#">사전정보공표</a></li>
+									<li><a href="#">사업실명제</a></li>
+									<li><a href="#">경영공시</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<ul class="navT_min">
+					<li>
+						<a href="#">사업안내</a>
+						<div class="dep2">
+							<div class="dep2_inner">
+								<ul>
+									<li><a href="#">번역지원 사업</a></li>
+									<li><a href="#">출판지원 사업</a></li>
+									<li><a href="#">해외교류 사업</a></li>
+									<li><a href="#">국내교류 사업</a></li>
+									<li><a href="#">교육사업</a></li>
+									<li><a href="#">해외소개정기간행물사업</a></li>
+									<li><a href="#">한국문학해외소개자료사업</a></li>
+									<li><a href="#">번역전문도서관</a></li>
+									<li><a href="#">정보화 사업</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">아카이브</a>
+						<div class="dep2">
+							<div class="dep2_inner">
+								<ul>
+									<li><a href="#">간행물열람</a></li>
+									<li><a href="#">미디어 자료실</a></li>
+									<li><a href="#">영어로 읽는 한국문학</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">알림광장</a>
+						<div class="dep2">
+							<div class="dep2_inner">
+								<ul>
+									<li><a href="#">공지사항</a></li>
+									<li><a href="#">보도자료</a></li>
+									<li><a href="#">외신에서 본 한국문학</a></li>
+									<li><a href="#">번역원 주요행사</a></li>
+									<li><a href="#">채용정보</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">기관소개</a>
+						<div class="dep2">
+							<div class="dep2_inner">
+								<ul>
+									<li><a href="#">원장실</a></li>
+									<li><a href="#">기관안내</a></li>
+									<li><a href="#">윤리경영</a></li>
+									<li><a href="#">사이버 홍보관</a></li>
+									<li><a href="#">고객센터</a></li>
+									<li><a href="#">홈페이지 이용안내</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">정보공개</a>
+						<div class="dep2">
+							<div class="dep2_inner">
+								<ul>
+									<li><a href="#">공공데이터</a></li>
+									<li><a href="#">정보공개</a></li>
+									<li><a href="#">사전정보공표</a></li>
+									<li><a href="#">사업실명제</a></li>
+									<li><a href="#">경영공시</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<ul class="navT_mobile">
+					<li>
+						<a href="#">사업안내</a>
+						<div class="dep2">
+							<div class="dep2_inner">
+								<ul>
+									<li><a href="#">번역지원 사업</a></li>
+									<li><a href="#">출판지원 사업</a></li>
+									<li><a href="#">해외교류 사업</a></li>
+									<li><a href="#">국내교류 사업</a></li>
+									<li><a href="#">교육사업</a></li>
+									<li><a href="#">해외소개정기간행물사업</a></li>
+									<li><a href="#">한국문학해외소개자료사업</a></li>
+									<li><a href="#">번역전문도서관</a></li>
+									<li><a href="#">정보화 사업</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">아카이브</a>
+						<div class="dep2">
+							<div class="dep2_inner">
+								<ul>
+									<li><a href="#">간행물열람</a></li>
+									<li><a href="#">미디어 자료실</a></li>
+									<li><a href="#">영어로 읽는 한국문학</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">알림광장</a>
+						<div class="dep2">
+							<div class="dep2_inner">
+								<ul>
+									<li><a href="#">공지사항</a></li>
+									<li><a href="#">보도자료</a></li>
+									<li><a href="#">외신에서 본 한국문학</a></li>
+									<li><a href="#">번역원 주요행사</a></li>
+									<li><a href="#">채용정보</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">기관소개</a>
+						<div class="dep2">
+							<div class="dep2_inner">
+								<ul>
+									<li><a href="#">원장실</a></li>
+									<li><a href="#">기관안내</a></li>
+									<li><a href="#">윤리경영</a></li>
+									<li><a href="#">사이버 홍보관</a></li>
+									<li><a href="#">고객센터</a></li>
+									<li><a href="#">홈페이지 이용안내</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">정보공개</a>
+						<div class="dep2">
+							<div class="dep2_inner">
+								<ul>
+									<li><a href="#">공공데이터</a></li>
+									<li><a href="#">정보공개</a></li>
+									<li><a href="#">사전정보공표</a></li>
+									<li><a href="#">사업실명제</a></li>
+									<li><a href="#">경영공시</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="nav_top navT_mobile">
+				<div class="lang"><a href="#">ENG</a></div>
+				<ul>
+					<li>
+						<a href="#">사업안내</a>
+						<div class="dep2">
+							<div class="dep2_inner">
+								<ul>
+									<li><a href="#">번역지원 사업</a></li>
+									<li><a href="#">출판지원 사업</a></li>
+									<li><a href="#">해외교류 사업</a></li>
+									<li><a href="#">국내교류 사업</a></li>
+									<li><a href="#">교육사업</a></li>
+									<li><a href="#">해외소개정기간행물사업</a></li>
+									<li><a href="#">한국문학해외소개자료사업</a></li>
+									<li><a href="#">번역전문도서관</a></li>
+									<li><a href="#">정보화 사업</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">아카이브</a>
+						<div class="dep2">
+							<div class="dep2_inner">
+								<ul>
+									<li><a href="#">간행물열람</a></li>
+									<li><a href="#">미디어 자료실</a></li>
+									<li><a href="#">영어로 읽는 한국문학</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">알림광장</a>
+						<div class="dep2">
+							<div class="dep2_inner">
+								<ul>
+									<li><a href="#">공지사항</a></li>
+									<li><a href="#">보도자료</a></li>
+									<li><a href="#">외신에서 본 한국문학</a></li>
+									<li><a href="#">번역원 주요행사</a></li>
+									<li><a href="#">채용정보</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">기관소개</a>
+						<div class="dep2">
+							<div class="dep2_inner">
+								<ul>
+									<li><a href="#">원장실</a></li>
+									<li><a href="#">기관안내</a></li>
+									<li><a href="#">윤리경영</a></li>
+									<li><a href="#">사이버 홍보관</a></li>
+									<li><a href="#">고객센터</a></li>
+									<li><a href="#">홈페이지 이용안내</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">정보공개</a>
+						<div class="dep2">
+							<div class="dep2_inner">
+								<ul>
+									<li><a href="#">공공데이터</a></li>
+									<li><a href="#">정보공개</a></li>
+									<li><a href="#">사전정보공표</a></li>
+									<li><a href="#">사업실명제</a></li>
+									<li><a href="#">경영공시</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="main_slider">
+				<div class="slidebox cf">
+					<img src="img/201905071743343181.jpg" alt="29회 유럽한국학회" class="slide_image"/>
+					<img src="img/201905070916565751.jpg" alt="2019 재일한인문학연구" class="slide_image"/>
+					<img src="img/201905070912415301.jpg" alt="2019 번역아카데미" class="slide_image"/>
+					<img src="img/201905021750448571.jpg" alt="48회 서울문학회" class="slide_image"/>
+					<img src="img/201903081052392711.jpg" alt="일본 조남주 작가 문학행사" class="slide_image"/>
+					<img src="img/201903081056095251.jpg" alt="2019 이집트 카이로문학축제" class="slide_image"/>
+				</div>
+				<div class="textbox">
+					<div class="slider_text">
+						<strong>2019년 이탈리아 로마 사피엔자 대학 제29회 유럽한국학회(AKSE) 참석</strong>
+						<span>한국문학번역원은 2019년 4월 11일(목)부터 14(일)까지 이탈리아 로마에서 개최된 유럽한국학회(AKSE, The Association for Korean Studies in Europe)에 참석했다.</span>
+					</div>
+					<div class="slider_text">
+						<strong>2019 재일한인문학연구 심포지엄 및 재일한인작가 문학좌담회 개최</strong>
+						<span>한국문학번역원은 2019년 4월 13일(토) 일본 도쿄에서 ‘재일한인문학연구 심포지엄’과 ‘재일한인작가 문학좌담회’를 개최하였다</span>
+					</div>
+					<div class="slider_text">
+						<strong>2019년도 번역아카데미 특별과정/번역아틀리에 개강식</strong>
+						<span>한국문학번역원은 2019년 4월 1일(월), 2019년도 번역아카데미 특별과정(제11기, 12기) 및 번역아틀리에(제10기) 개강식을 개최하였다.</span>
+					</div>
+					<div class="slider_text">
+						<strong>한국문학번역원 제48회 서울문학회 개최</strong>
+						<span></span>
+					</div>
+					<div class="slider_text">
+						<strong>2019 일본 조남주 작가 문학행사 개최</strong>
+						<span>한국문학번역원은 2019년 2월 19일(월) 일본 지쿠마쇼보(筑摩書房), 하쿠스이샤(白水社), 기노쿠니야서점(紀伊國屋書店)과 함께 일본 도쿄에서 『82년생 김지영』의 조남주 작가 문학행사를 공동 주최하였다.</span>
+					</div>
+					<div class="slider_text">
+						<strong>2019 이집트 카이로문학축제 김승희 시인 참가</strong>
+						<span>한국문학번역원은 2019년 2월 16일(토)부터 2월 21일(목)까지 이집트 카이로에서 열린 2019 카이로문학축제(Cairo Literature Festival 2019)에 김승희 시인과 함께 참가하였다.</span>
+					</div>
+				</div>
+				<div class="control">
+					<div class="control_btn">1</div>
+					<div class="control_btn">2</div>
+					<div class="control_btn">3</div>
+					<div class="control_btn">4</div>
+					<div class="control_btn">5</div>
+					<div class="control_btn">6</div>
+				</div>
+				<div class="stop_btn stop">멈춤/재생</div>
+			</div>
+		</div>
+		<div class="section2 cf">
+			<div class="nav_bot">
+				<ul>
+					<li><a href="#" class="a1">온라인 사업지원</a></li>
+					<li><a href="#" class="a2">한국문학 디지털도서관</a></li>
+					<li><a href="#" class="a3">계간지 KLN</a></li>
+					<li><a href="#" class="a4">학사관리 시스템</a></li>
+					<li><a href="#" class="a5">서울작가축제</a></li>
+					<li><a href="#" class="a6">고객센터</a></li>
+					<li><a href="#" class="a7">채용정보</a></li>
+				</ul>
+			</div>
+			<div class="article1">
+				<div class="notice">
+					<h2>공지사항</h2>
+					<div class="more"><a href="#"><img src="img/more_icon.gif" alt="공지사항 더보기"/></a>공지사항 더보기</div>
+					<dl>
+						<dt><a href="#">번역아카데미 정규과정 제12기 일반지원자 서류합격자 발표</a></dt>
+						<dd>2019.05.09</dd>
+						<dt><a href="#">2019 제2회 한민족 이산문학 독후감 대회 수상작 발표</a></dt>
+						<dd>2019.04.29</dd>
+						<dt><a href="#">2019년도 2분기 해외교류 공모사업 지원대상자 선정 및 심사</a></dt>
+						<dd>2019.04.26</dd>
+					</dl>
+				</div>
+				<div class="presskit">
+					<h2>외신에서 본 한국문학</h2>
+					<div class="more"><a href="#"><img src="img/more_icon.gif" alt="외신에서 본 한국문학 더보기"/></a>외신에서 본 한국문학 더보기</div>
+					<dl>
+						<dt><a href="#">[독일어] 안수길, 독역 <북간도> 작품소개</a></dt>
+						<dd>2019.05.08</dd>
+						<dt><a href="#">[이탈리아어] 신경숙, 이태리어역 <리진> 관련 인터뷰</a></dt>
+						<dd>2019.05.08</dd>
+						<dt><a href="#">[영어] 황석영, 영역 <바리데기> 북리뷰</a></dt>
+						<dd>2019.05.08</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="article2">
+				<div class="dictionary">
+					<h3>국립국어원 한국어-외국어 학습사전</h3>
+					<div>
+						<a href="#"><img src="img/lang_img1.gif" alt=""/></a>
+						<a href="#"><img src="img/lang_img2.gif" alt=""/></a>
+						<a href="#"><img src="img/lang_img3.gif" alt=""/></a>
+						<a href="#"><img src="img/lang_img4.gif" alt=""/></a>
+						<a href="#"><img src="img/lang_img5.gif" alt=""/></a>
+						<a href="#"><img src="img/lang_img6.gif" alt=""/></a>
+						<a href="#"><img src="img/lang_img7.gif" alt=""/></a>
+						<a href="#"><img src="img/lang_img8.gif" alt=""/></a>
+						<a href="#"><img src="img/lang_img9.gif" alt=""/></a>
+						<a href="#"><img src="img/lang_img10.gif" alt=""/></a>
+						<a href="#"><img src="img/lang_img11.gif" alt=""/></a>
+						<a href="#"><img src="img/lang_img12.gif" alt=""/></a>
+					</div>
+				</div>
+				<div class="calendar">
+					<div class="calendar_title cf">
+						<h3>05월 행사안내</h3>
+					</div>
+					<div class="calender-pause">
+						<div class="calender-left">
+							<div class="column_right_grid calender">
+								  <div class="cal1"><div class="clndr"><div class="clndr-controls"><div class="clndr-control-button"><p class="clndr-previous-button">previous</p></div><div class="month">July 2015</div><div class="clndr-control-button rightalign"><p class="clndr-next-button">next</p></div></div><table class="clndr-table" border="0" cellspacing="0" cellpadding="0"><thead><tr class="header-days"><td class="header-day">SUN</td><td class="header-day">MON</td><td class="header-day">TUE</td><td class="header-day">WED</td><td class="header-day">THU</td><td class="header-day">FRI</td><td class="header-day">SAT</td></tr></thead><tbody><tr><td class="day past adjacent-month last-month calendar-day-2015-04-26"><div class="day-contents">26</div></td><td class="day past adjacent-month last-month calendar-day-2015-04-27"><div class="day-contents">27</div></td><td class="day past adjacent-month last-month calendar-day-2015-04-28"><div class="day-contents">28</div></td><td class="day past adjacent-month last-month calendar-day-2015-04-29"><div class="day-contents">29</div></td><td class="day past adjacent-month last-month calendar-day-2015-04-30"><div class="day-contents">30</div></td><td class="day past calendar-day-2015-05-01"><div class="day-contents">1</div></td><td class="day past calendar-day-2015-05-02"><div class="day-contents">2</div></td></tr><tr><td class="day past calendar-day-2015-05-03"><div class="day-contents">3</div></td><td class="day past calendar-day-2015-05-04"><div class="day-contents">4</div></td><td class="day past calendar-day-2015-05-05"><div class="day-contents">5</div></td><td class="day past calendar-day-2015-05-06"><div class="day-contents">6</div></td><td class="day past calendar-day-2015-05-07"><div class="day-contents">7</div></td><td class="day past calendar-day-2015-05-08"><div class="day-contents">8</div></td><td class="day past calendar-day-2015-05-09"><div class="day-contents">9</div></td></tr><tr><td class="day past event calendar-day-2015-05-10"><div class="day-contents">10</div></td><td class="day past event calendar-day-2015-05-11"><div class="day-contents">11</div></td><td class="day past event calendar-day-2015-05-12"><div class="day-contents">12</div></td><td class="day past event calendar-day-2015-05-13"><div class="day-contents">13</div></td><td class="day today event calendar-day-2015-05-14"><div class="day-contents">14</div></td><td class="day calendar-day-2015-05-15"><div class="day-contents">15</div></td><td class="day calendar-day-2015-05-16"><div class="day-contents">16</div></td></tr><tr><td class="day calendar-day-2015-05-17"><div class="day-contents">17</div></td><td class="day calendar-day-2015-05-18"><div class="day-contents">18</div></td><td class="day calendar-day-2015-05-19"><div class="day-contents">19</div></td><td class="day calendar-day-2015-05-20"><div class="day-contents">20</div></td><td class="day event calendar-day-2015-05-21"><div class="day-contents">21</div></td><td class="day event calendar-day-2015-05-22"><div class="day-contents">22</div></td><td class="day event calendar-day-2015-05-23"><div class="day-contents">23</div></td></tr><tr><td class="day calendar-day-2015-05-24"><div class="day-contents">24</div></td><td class="day calendar-day-2015-05-25"><div class="day-contents">25</div></td><td class="day calendar-day-2015-05-26"><div class="day-contents">26</div></td><td class="day calendar-day-2015-05-27"><div class="day-contents">27</div></td><td class="day calendar-day-2015-05-28"><div class="day-contents">28</div></td><td class="day calendar-day-2015-05-29"><div class="day-contents">29</div></td><td class="day calendar-day-2015-05-30"><div class="day-contents">30</div></td></tr><tr><td class="day calendar-day-2015-05-31"><div class="day-contents">31</div></td><td class="day adjacent-month next-month calendar-day-2015-06-01"><div class="day-contents">1</div></td><td class="day adjacent-month next-month calendar-day-2015-06-02"><div class="day-contents">2</div></td><td class="day adjacent-month next-month calendar-day-2015-06-03"><div class="day-contents">3</div></td><td class="day adjacent-month next-month calendar-day-2015-06-04"><div class="day-contents">4</div></td><td class="day adjacent-month next-month calendar-day-2015-06-05"><div class="day-contents">5</div></td><td class="day adjacent-month next-month calendar-day-2015-06-06"><div class="day-contents">6</div></td></tr></tbody></table></div></div>
+							 </div>
+						</div>
+					</div><!-- class="calender-pause" -->
+				</div>
+				<div class="calendar_event">
+					<h3>행사안내</h3>
+					<ul class="event_info">
+						<li><a href="#">&nbsp; <br/>&nbsp;</a></li>
+						<li><a href="#">&nbsp; <br/>&nbsp;</a></li>
+						<li><a href="#">&nbsp; <br/>&nbsp;</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer_top">
+			<div class="footerTop_inner">
+				<ul class="page_info">
+					<li class="fir"><a href="#">홈페이지 이용안내</a></li>
+					<li class="bold"><a href="#">개인정보처리방침</a></li>
+					<li><a href="#">오시는 길</a></li>
+					<li><a href="#">사이트맵</a></li>
+				</ul>
+				<div class="sitelink">
+					<form action="#">
+						<fieldset>
+							<select name="relation" class="relation">
+								<option value="#">유관기관 안내</option>
+								<option value="#">국립국악원</option>
+								<option value="#">국립국어원</option>
+								<option value="#">국립극장</option>
+								<option value="#">국립민속박물관</option>
+								<option value="#">국립중앙도서관</option>
+								<option value="#">국립중앙박물관</option>
+								<option value="#">국립현대미술관</option>
+								<option value="#">대한민국예술원</option>
+								<option value="#">한국예술종합학교</option>
+								<option value="#">한국정책방송원</option>
+								<option value="#">해외문화홍보원</option>
+							</select>
+							<input type="image" src="img/go_btn.gif" class="relation_btn">
+							<select name="institute" class="institute">
+								<option value="#">문화원안내</option>
+								<option value="#">주한독일문화원</option>
+								<option value="#">주한영국문화원</option>
+								<option value="#">주한체코문화원</option>
+								<option value="#">주한프랑스문화원</option>
+								<option value="#">주한중국문화원</option>
+								<option value="#">주한일본대사관 공보문화원</option>
+								<option value="#">스토리 오브 코리아</option>
+								<option value="#">Seoul Selection</option>
+								<option value="#">KTLIT.com</option>
+							</select>
+							<input type="image" src="img/go_btn.gif" class="institute_btn">
+						</fieldset>
+					</form>
+				</div>
+
+			</div>
+		</div>
+		<div class="footer_bot">
+			<div class="footerBot_inner cf">
+				<div class="foot_bt_l">
+					<ul class="sns cf">
+						<li class="fir"><a href="#"><img src="img/foot_img_justice_s.gif" alt="정의로운 대한민국"/></a></li>
+						<li><a href="#"><img src="img/foot_img1.gif" alt="페이스북"/></a></li>
+						<li><a href="#"><img src="img/foot_img2.gif" alt="트위터"/></a></li>
+						<li><a href="#"><img src="img/foot_img8.gif" alt="인스타그램"/></a></li>
+						<li><a href="#"><img src="img/foot_img4.gif" alt="유튜브"/></a></li>
+					</ul>
+					<a href="#"><img src="img/foot_img5.jpg" alt="공공누리"/></a>
+				</div>
+				<div class="addres">
+					<p>06083 서울특별시 강남구 영동대로 112길 32(삼성동)</p>
+					<p><strong>Tel</strong>: 02-6919-7714 <strong>Fax</strong>: 02-3448-4247 <strong>Email</strong>: info@klti.or.kr</p>
+					<p>Copyright(c) 2016 Literature Translation Institute of Korea. All Rights Reserved.</p>
+				</div>
+				<div class="foot_bt_r">
+					<ul>
+						<li><a href="#"><img src="img/goodcontentsicon.jpg" alt="굿콘텐츠서비스"/></a></li>
+						<li><a href="#"><img src="img/mark_e.jpg" alt="굿콘텐츠서비스"/></a></li>
+						<li><a href="#"><img src="img/Family friendly.png" alt="굿콘텐츠서비스"/></a></li>
+						<li><a href="#"><img src="img/foot_img7.gif" alt="굿콘텐츠서비스"/></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
