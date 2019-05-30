@@ -1,0 +1,61 @@
+*{margin:0;padding:0;}
+ul{list-style:none;}
+a{text-decoration:none; color:#555555;}
+img{border:0;}
+.productBox .container{
+	width:1150px;
+	margin:100px auto;
+	height:250px;
+	position:relative;
+	display:block;
+}
+.productBox .container span.left{
+	position:absolute;
+	top:75px;
+	left:0;
+}
+.productBox .container span.right{
+	position:absolute;
+	top:75px;
+	right:0;
+}
+
+.productBox .container .area{
+	position:relative;
+	width:1050px;
+	height:250px;
+	margin-left:50px;
+	overflow:hidden;
+}
+.productBox .container .area ul{
+	position:relative;
+	width:1500px;
+	height:250px;
+	background:#ffffff;
+}
+.productBox .container .area ul li{
+	float:left;
+	margin:0 5px;
+	height:250px;
+}
+.productBox .container .area ul li img{
+	width:200px;
+	height:200px;
+}
+.productBox .container .area ul li span.pname{
+	font-size:11px;
+	display:block;
+	text-align:center;
+	width:200px;
+	padding:5px;
+	white-space:nowrap;
+}
+
+
+
+
+
+
+
+
+

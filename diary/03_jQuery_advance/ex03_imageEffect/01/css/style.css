@@ -1,0 +1,17 @@
+body{
+	width:620px;
+	margin:20px auto;
+	padding:0;
+	background:#192839;
+}
+#navigation{list-style:none;}
+#navigation li a{
+	display:block;
+	width:150px;
+	height:30px;
+	margin-bottom:5px;
+	color:#000000;
+	border:1ps solid #ffcc00;
+	text-decoration:none;
+}
+

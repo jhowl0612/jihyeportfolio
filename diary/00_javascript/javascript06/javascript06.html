@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript 객체 사용하기</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div id="wrap">
+    <div class="article">
+        <h2>JavaScript 객체 사용하기</h2>
+    </div>
+    <p>&nbsp;</p>
+  <h3>내장 객체 사용하기 </h3>
+    <p>사용예) Date객체 사용하기</p>
+    
+<pre>
+&lt;script language=&quot;JavaScript&quot;&gt;
+<span class="green">&lt;!-- </span>
+    a=new Date()
+    document.write(a)
+<span class="green">//--&gt;</span>
+&lt;/script&gt;
+</pre>
+
+
+  <p>&nbsp;</p>
+    <h3>메소드로 날짜와 시간 표시하기</h3>
+      getYear() 년도 (1970년 이후의 년도)<br>
+      getFullYear() 년도를 구합니다<br>
+      getMonth() 월을 구합니다<br>
+      getDate() 일을 구합니다<br>
+      getDay() 요일을 구합니다<br>
+      getHours() 시간을 구합니다<br>
+      getMinutes() 분을 구합니다<br>
+      getSeconds() 초를 구합니다<br>
+      getTime() 1970년 1월 1일 이후 시간을 1000분의 1초로 표시<br>
+      getMilliseconds() 100분의 1초로 표시<br/>
+      
+  <p>사용예) 오늘 날짜 표시하기</p>
+    
+<pre>
+&lt;script language=&quot;JavaScript&quot;&gt;
+<span class="green">&lt;!-- </span>
+    a=new Date()
+    document.write(&quot;오늘은&quot;,a.getYear(),&quot;년&quot;,a.getMonth()+1,&quot;월&quot;,a.getDate(),&quot;일&quot;,&quot;입니다.&quot;)
+<span class="green">//--&gt;</span>
+&lt;/script&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+  <p>사용예) 요일 표시하기</p>
+    
+<pre>
+&lt;script language=&quot;JavaScript&quot;&gt;
+<span class="green">&lt;!--</span> 
+    a=new Date()
+    b=a.getDay()
+
+    switch(b)
+    {
+        case 0 : c=&quot;일&quot;
+        break
+
+        case 1 : c=&quot;월&quot;
+        break
+
+        case 2 : c=&quot;화&quot;
+        break
+
+        case 3 : c=&quot;수&quot;
+        break
+
+        case 4 : c=&quot;목&quot;
+        break
+        
+        case 5 : c=&quot;금&quot; 
+        break
+        
+        case 6 : c=&quot;토&quot; 
+        break
+      }
+
+    document.write(&quot;오늘은 &quot;,c,&quot;요일 입니다.&quot;)
+<span class="green">//--&gt;</span>
+&lt;/script&gt;
+</pre>
+
+
+
+
+  <p>&nbsp;</p>
+    <p>사용예) 특정 날짜 표시하기</p>
+    <p>a = new Date(년도,월,일,시간,분,초,1/100초)</p>
+    
+<pre>
+&lt;script language=&quot;JavaScript&quot;&gt;
+<span class="green">&lt;!--</span>
+    a=new Date(1991,11,18,11,32,11,11)
+    document.write(&quot;내가 태어난 날짜는&quot;,a.getMonth(),&quot;월&quot;,a.getDate(),&quot;일&quot;,
+        a.getHours(),&quot;시&quot;,a.getMinutes(),&quot;분 입니다.&quot;)
+<span class="green">//--&gt;</span>
+&lt;/script&gt;
+</pre>
+
+
+
+  <p>&nbsp;</p>
+    <p>사용예) 날짜 시간 변경하기</p>
+    
+<pre>
+&lt;script language=&quot;JavaScript&quot;&gt;
+<span class="green">&lt;!--</span> 
+    a=new Date(1991,11,18,11,32,11,11)
+    a.setDate(20)
+    
+    document.write(&quot;내가 태어난 날짜는&quot;,a.getMonth(),&quot;월&quot;,a.getDate(),
+        &quot;일&quot;,a.getHours(),&quot;시&quot;,a.getMinutes(),&quot;분 입니다.&quot;)
+<span class="green">//--&gt;</span>
+&lt;/script&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+  <p>사용예) D-Day 표시하기</p>
+    
+<pre>
+&lt;head&gt;
+    &lt;title&gt;MY Birthday&lt;/title&gt;
+    &lt;script language=&quot;JavaScript&quot;&gt;
+        var today = new Date();
+        var birth = new Date(&quot;June 1, 2002&quot;);
+        <span class="green">// Janu Febr Marc Apri May June July Augu Sept Octo Nove Dece</span>
+        var aa = birth.getTime();
+        var bb = today.getTime();
+        var day = Math.ceil((bb-aa)/24/60/60/1000);
+    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;img src=&quot;cup.gif&quot; width=&quot;377&quot; height=&quot;286&quot; style=&quot;display: block; margin: 0 auto; border:0;&quot;&gt;
+
+    &lt;script language=&quot;JavaScript&quot;&gt;
+        document.write(&quot;&lt;p style='text-align: center;'&gt;&quot;)
+        document.write(&quot;내가 지구상에 태어난지 &quot; + day + &quot;일 지났어요.&quot;)
+        document.write(&quot;&lt;/p&gt;&quot;)
+    &lt;/script&gt;
+&lt;/body&gt;
+</pre>
+  
+  
+</div>
+</body>
+</html>

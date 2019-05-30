@@ -1,0 +1,11 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Kreon);
+
+/* body 공통속성 */
+body,div,ul,li,dl,dt,dd,ol,p,h1,h2,h3,h4,h5,h6,form{margin: 0; padding: 0;}
+body{font:normal dotum,'돋움';}
+ul,ol,dl{list-style: none;}
+img{border:0; vertical-align:top;}
+ul{list-style:none; padding:0; margin:0;}
+li {list-style: none;}
+a{text-decoration: none;}
+.cf:after {content:''; clear: both; display:block;}

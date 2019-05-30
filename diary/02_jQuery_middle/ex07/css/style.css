@@ -1,0 +1,22 @@
+*{margin:0; padding:0;}
+li{list-style:none;}
+body{margin:50px;}
+a{text-decoration:none;}
+
+#wrap{margin:100px;}
+#nav li{width:113px; cursor:pointer;}
+#nav .menu_image{overflow:hidden; height:0;}
+#nav .menu_image a img{height:97px; padding-top:10px;}
+#nav .text_image{padding-left:20px; padding-top:10px;}
+#nav .text_image .off img{padding-left:8px;}
+#nav .text_image .on{display:none;}
+
+
+
+
+
+
+
+
+
+

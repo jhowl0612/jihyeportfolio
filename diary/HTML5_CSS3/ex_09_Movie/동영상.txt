@@ -1,0 +1,20 @@
+css에 추가 해서 넣을것
+#cfvideo {
+	position: absolute;
+	float:left;
+	left: 872px;
+	top: 356px;
+	width: 240px;
+	height: 135px;
+}
+
+
+
+
+html에 넣을 것
+<div id="cfvideo">
+    <video width="240" height="135" poster="movie/images/video-poster.jpg">
+    <source src="movie/media/coffee_cf.mp4" type="video/mp4">
+    <source src="movie/media/coffee_cf.webm" type="video/webm">
+    Your browser does not support the video tag.
+</div>

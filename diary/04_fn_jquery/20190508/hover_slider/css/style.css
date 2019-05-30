@@ -1,0 +1,9 @@
+#wrap{width:1000px; height:500px; margin:100px auto; overflow:hidden; border:1px solid #dddddd;}
+.sc{width:200px; margin-left:40px; border:1px solid #dddddd; height:400px; margin-top:50px; box-sizing:border-box; float:left;}
+.cf:after{content:""; display:block; clear:both;}
+.visual{position:relative; width:2000px;}
+.section01{background:#bfefff;}
+.section02{background:#cfffbf;}
+.section03{background:#ffffbf;}
+.section04{background:#ffbfbf;}
+

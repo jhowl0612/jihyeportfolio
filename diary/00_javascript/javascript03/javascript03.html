@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript 반복문 사용하기</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<DIV id="wrap">
+	<div class="article">
+	  <H2>JavaScript 반복문 사용하기</H2>
+	</div>
+    <p>
+	 --제어문에는 반복문, 조건문, 선택문이 있다.  <br />
+	반목문이란 주어진 조건에 따라서 문장을 반복 실행하게 해준다.<br>
+    자바 스크립트에서 반복문은 for문, while문, do while문이 있다
+	</p>
+    <p>&nbsp;</p>
+    <h3>FOR문</h3>
+    <p>for (초기값; 최종값; 증감식)</p>
+    <p>사용예) 특정 문자열을 400번 반복해서 화면에 출력</p>
+
+<pre>
+    &lt;script language=&quot;javascript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        for(i=1;i&lt;=400;i++)
+        document.write(&quot;사랑해&quot;)
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt;
+</pre>
+
+	 <p>&nbsp;</p>
+	 
+    <h3>FOR문(중첩for문) </h3>
+      for (초기값; 최종값; 증가식)</p>
+  <p>사용예) 구구단 출력<br>
+  <pre>    &lt;script language=&quot;javascript&quot;&gt;
+    &lt;!--
+        for(var i=2; i<=9;i++){
+        document.write(&quot;&lt;h1&gt;&quot;+i+&quot;단 &lt;/h1&gt; &quot;);
+		
+		for(var k=1;k<=9;k++){
+			document.write(i+"x"+k+"="+i*k,&quot;&lt;br/&gt&quot;);
+		}
+	}
+    //--&gt;
+    &lt;/script&gt; </p></pre>
+
+    <p>&nbsp;</p>
+    <h3>WHILE문</h3>
+    <p>while(조건문)<br>
+      {<br>
+     &nbsp;&nbsp;&nbsp;&nbsp; A<br>
+      }<br>
+     &nbsp;&nbsp;&nbsp;&nbsp; B            ; 조건문이 참이면 A를 실행하고 조건문이 거짓이면 B를 실행</p>
+     <p>사용예) 1부터 10까지의 합 계산</p>
+     
+<pre>
+    &lt;script language=&quot;javascript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        x=0
+        total=0<br>
+    while(x&lt;10)
+    {
+        x++
+        total=total+x<br>
+        document.write(x)<br>
+        if(x!=10)
+        document.write(&quot;+&quot;)
+    }<br>
+        document.write(&quot;=&quot;+ total)
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt;
+</pre>
+	 <p>&nbsp;</p>
+	<h3>Mission03</h3>
+	<p>while문을 이용하여 구구단 중 5단을 출력해보세요</p>
+
+
+    <p>&nbsp;</p>
+    <h3>DO WHILE문</h3>
+    <p>WHILE문은 조건을 확인한 후에 문장을 실행하지만, DO WHILE문은 실행한 다음 조건을 확인하도록 해주는 반복문이다.      그러므로 DO WHILE문은 조건에 상관없이 반복 문장을 최소 한번은 실행하게 된다.<br>
+      <br>
+      do <br>
+      { A }<br>
+      while (조건)<br>
+      B</p>
+    <p>사용예) 1부터 10까지의 합 계산</p>
+    
+<pre>
+    &lt;script language=&quot;javascript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        x=0
+        total=0<br>
+        do
+        {
+            x++
+            total=total+x<br>
+            document.write(x)
+            if(x!=10)document.write(&quot;+&quot;)
+        }<br>
+        while(x&lt;10)
+        document.write(&quot;=&quot;+ total)
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <h3>CONTINUE문</h3>
+    <p>반복문 문장 안에 사용하여 반복 실행 중에 조건문으로 되돌아 가게 해주는 역활을 한다. <br>
+      즉, 반목문에서 특정 부분을 실행하지 않게 하고 싶을 때 간단하게 사용할 수 있다.</p>
+    <p>사용예) 1부터 10까지의 수중에서 3을 제외한 수의 합을 계산</p>
+    
+<pre>
+    &lt;script language=&quot;javascript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        x=0
+        total=0<br>
+        while(x&lt;10)
+        {
+            x++<br>
+            if(x==3) continue
+            total=total+x
+            document.write(x)<br>
+            if(x!=10)
+            document.write(&quot;+&quot;)
+        }
+        
+        document.write(&quot;=&quot;+ total)
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <h3>자바 스크립트 소스를 감추게 만드는 방법</h3>
+    <p>&lt;script src=&quot;js라는 확장자를 가진 외부파일&quot;&gt;&lt;/script&gt;<br>
+    주의) 외부 파일을 작성할 경우 외부 파일에 &lt;script&gt;태그를 입력하지 않는다.</p>
+    <p>&nbsp;</p>
+    
+    <p><span class="blue">문제) 1부터 10까지의 합을 계산 결과와 함께 for문으로 나타내 보세요.</span></p>
+    <p>예) 1+2+3+4+5+6+7+8+9+10=55</p>
+    
+</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+.draggable{
+	width: 160px;
+	height: 160px;
+	float: left;
+	padding: 10px 0px 0px 20px;
+	background:url(../post.png) no-repeat;
+}
+div.invert{background: url(../post2.png) no-repeat;}

@@ -1,0 +1,10 @@
+#wrap{width:939px; margin-left:400px;}
+#wrap ul{margin-top:140px;}
+#wrap ul:after{content:""; display:block; clear:both;}
+#wrap ul li{float:left; height:25px; overflow:hidden; margin-right:6px;}
+#wrap ul li:last-child{margin-right:0px;}
+#wrap ul li img{margin-top:0;}
+#wrap ul li .on img{margin-top:-25px;}
+
+#content{position:relative; width:487px; height:323px;}
+#content div{display:none; position:absolute; top:0; left:0; width:455px; height:291px; margin-top:10px; background:#55aaea; padding:16px;}

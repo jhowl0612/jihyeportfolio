@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var color=["url(../images/bg1.jpg) no-repeat","url(../images/bg2.jpg) no-repeat","url(../images/bg3.jpg) no-repeat"];
+		var i=0;
+		
+		function colorBg(){
+			if(i>=color.length){i=0}
+			var bodyTag=document.getElementsByTagName("body")[0];
+			bodyTag.style.background=color[i];
+			i++;
+		}
+	</script>
+</head>
+<body>
+	<button onclick="colorBg()">배경색</button>
+</body>
+</html>

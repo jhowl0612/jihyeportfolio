@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.rotate{width:100px; height:80px; background:skyblue; transition:all 0.5s; margin:200px auto; line-height:80px; text-align:center;}
+	</style>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+    jQuery(document).ready(function(){
+       $('.rotate').hover(function(){
+			$('.rotate').css('transform','rotateY('+360+'deg)')
+	   },function(){
+			$('.rotate').css('transform','rotateY('+0+'deg)')
+	   });
+    });
+    </script>
+</head>
+<body>
+	<div class="rotate">
+		플립
+	</div>
+</body>
+</html>

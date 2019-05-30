@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> 가로, 세로로 애니메이션되어 커지는 롤오버 이미지 만들기 </title>
+		<meta charset="UTF-8" />
+		<style type="text/css">
+			body {
+				font:0.95em Arial,sans-serif;
+				margin:50px 0px;
+				}
+			nav {
+				width:500px;
+				margin:0px auto;
+				}
+			h1 {
+				text-shadow:0px 0px 5px #666;
+				text-align:center;
+				font-size:3em;
+				letter-spacing:5px;
+				color:#d81b21;
+				text-transform:uppercase;
+				}
+			a {
+				text-decoration:none;
+				}
+			img {
+				border:none;
+				}
+			ul, li {
+				margin:0px;
+				padding:0px;
+				}
+			/* Rollover Design */
+			
+			#gallery{
+				list-style:none;
+			}
+			
+			#gallery li{
+				float:left;
+				margin-left:15px;
+				width:100px;
+				background:#ffffff;
+			}
+			/*부모 float:left를 잘 하면 한 요소가 커질 때 옆 요소가 안 밀려난다!*/
+			
+			#gallery li img{
+				display:block;
+				float:left;
+				width:100px;
+				height:100px;
+				border:2px solid #000000;
+				-webkit-transition-property:width,height;
+				-webkit-transition-duration:1s;
+				-moz-transition-property:width,height;
+				-moz-ttransition-duration:1s;
+				-ms-transition-property:width,height;
+				-ms-transition-duration:1s;
+				transition-property:width,height;
+				transition-duration:1s;
+				position:relative;
+				z-index:2;
+			}
+			/*기본상태와 hover의 duration을 따로 만들면 기본에서는 돌아가는 속도, hover는 변하는 속도를 따로 설정 가능 */
+			#gallery li:hover img{
+				width:300px;
+				height:300px;
+				position:relative;
+				z-index:3;
+				box-shadow:0 0 15px 2px #000000;
+				-webkit-transition-property:width,height;
+				-webkit-transition-duration:3s;
+				-moz-transition-property:width,height;
+				-moz-ttransition-duration:3s;
+				-ms-transition-property:width,height;
+				-ms-transition-duration:3s;
+				transition-property:width,height;
+				transition-duration:3s;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<h1>C/S/S/   s/h/o/e/s -  s/h/o/p</h1>
+		</header>
+		<nav>
+				<ul id="gallery">
+					<li><a href=""><img src="images/bag_hotpink.png" alt="hotPink" /></a></li> 
+					<li><a href=""><img src="images/bag_navy.png" alt="Navy" /></a></li>  
+					<li><a href=""><img src="images/bag_white.png" alt="white" /></a></li> 
+				</ul>
+		</nav>
+	</body>
+</html>

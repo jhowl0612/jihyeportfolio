@@ -1,0 +1,15 @@
+html{overflow-y:scroll;}
+#table{width:400px; height:700px; background:#304000; margin:30px auto; position:relative;}
+#box{width:20px; height:180px; background:#664d00;  position:absolute; bottom:-160px; left:190px;}
+.ball{width:20px; height:20px; border-radius:50%; position:absolute;}
+#ball0{background:#ffffff; bottom:20px; left:190px;}
+#ball1{background:#bfffbf; top:300px; Left:190px;}
+#ball2{background:#ff0000; top:283px; Left:180px;}
+#ball3{background:#ff8000; top:283px; Left:200px;}
+#ball4{background:#ffff00; top:266px; Left:170px;}
+#ball5{background:#80ff00; top:266px; Left:190px;}
+#ball6{background:#00ffbf; top:266px; Left:210px;}
+#ball7{background:#0000ff; top:249px; Left:160px;}
+#ball8{background:#8000ff; top:249px; Left:180px;}
+#ball9{background:#ff73b9; top:249px; Left:200px;}
+#ball10{background:#000000; top:249px; Left:220px;}

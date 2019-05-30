@@ -1,0 +1,5 @@
+body{font-size:5em;}
+.container{height:200px;}
+#div1{background:#efbfff; display:none; padding:20px;}
+#div2{background:#ffff99; display:block;padding:20px;}
+#div3{background:#bfffff; display:block;padding:20px;}

@@ -1,0 +1,42 @@
+html,body,.scene{height:100%;}
+.mask{
+	overflow:hidden;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+.mask img{position:absolute; width:100%;}
+
+.mask .bar{
+	position:absolute;
+	width:100%;
+	height:60px;
+	bottom:0;
+	opacity:0.7;
+}
+.mask#apple-1 .bar{background:#a64cff;}
+.mask#apple-2 .bar{background:#ff2626;}
+.mask#apple-1 .bar{background:#4c79ff;}
+.mask#apple-1 .bar{background:#40ff00;}
+.mask .line{
+	position:absolute;
+	width:1px;
+	height:100%;
+	background-color:#ffffff;
+	opacity:0.8;
+	top:0;
+}
+.mask:first-child .line{display:none;}
+#skill{width:100%; height:500px;}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+body{
+	width:600px;
+	margin:20px auto;
+	padding:0;
+	background:#757584;
+}
+div{
+	background-image:url(../img/pic_bg.jpg);
+	width:600px;
+	height:379px;
+	border:6px solid #ef4018;
+	overflow:hiedden;
+}
+div img{
+	display:none;
+	position:relative;
+}

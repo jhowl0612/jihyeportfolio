@@ -1,0 +1,4 @@
+body{font-size:7em;}
+.container{height:150px;}
+#div1{background:pink; display:none;}
+#div2{background:yellow; display:block;}

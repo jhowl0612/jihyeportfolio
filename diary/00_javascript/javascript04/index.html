@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		code = prompt("비밀번호를 입력하세요.(1234)","");
+		x=isNaN(code);
+		if(x==true){
+			function password(){
+				
+				document.write("숫자만 입력하세요.");
+			}
+			password()
+		}
+		else if (code=="1234"){location.href="welcome.htm"}
+		else {document.write("비밀번호가 틀렸네요.");}
+	</script>
+</head>
+<body>
+	<div id="wrap"></div>
+</body>
+</html>

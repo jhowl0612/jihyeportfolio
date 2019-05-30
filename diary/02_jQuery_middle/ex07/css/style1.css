@@ -1,0 +1,21 @@
+*{margin:0; padding:0;}
+li{list-style:none;}
+body{margin:50px;}
+a{text-decoration:none;}
+
+#wrap{margin:100px;}
+#nav li{/* width:113px; */ cursor:pointer; float:left;}
+#nav .menu_image{overflow:hidden;  width:0;  float:left;}
+#nav .menu_image a img{height:97px; padding-right:10px;}
+#nav .text_image{padding-left:10px; padding-top:40px; float:left;}
+#nav .text_image .on{display:none;}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+body{
+	margin:20px;
+	padding:20px;
+	line-height:1;
+	font-size:1em;
+	background:#555555;
+}
+.title{margin:0; padding:0; font-size:1.5em;}
+.container{margin-top:35px;}
+#medal{position:relative; width:256px; height:256px; margin-top:160px;}
+.logo1{
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:256px;
+	height:256px;
+	margin:-128px 0 0 -128px;
+	background:url(../images/change_logo1.png) no-repeat center center;
+	z-index:5;
+}
+.logo2{
+	position:absolute;
+	top:0;
+	left:50%;
+	width:256px;
+	height:256px;
+	margin:-128px 0 0 -128px;
+	background:url(../images/change_logo2.png) no-repeat center center;
+	cursor:pointer;
+}
+
+
+

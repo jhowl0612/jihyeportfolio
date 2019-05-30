@@ -1,0 +1,16 @@
+$(function(){
+	$('.dd2').DB_springMove({
+		key:'c65806',
+		dir:'y',
+		mirror:6,
+		radius:6,
+		motionSpeed:0.1
+	});
+	$('.dd3').DB_springMove({
+		key:'c65806',
+		dir:'x',
+		mirror:1,
+		radius:10,
+		motionSpeed:0.1
+	});
+});

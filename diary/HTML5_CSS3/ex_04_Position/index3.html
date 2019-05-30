@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box{
+			width:100px; height:100px;
+		}
+		.box:nth-child(1){
+			background:red;
+			position:absolute;
+			top:10px; left:10px;
+			z-index:3;
+		}
+		.box:nth-child(2){
+			background:green;
+			position:absolute;
+			top:50px; left:50px;
+			z-index:4;
+		}
+		.box:nth-child(3){
+			background:blue;
+			position:absolute;
+			top:90px; left:90px;
+			z-index:5;
+		}
+		body>div{width:400px; height:100px; border:3px solid #000000; position:relative; overflow:hidden;}
+	</style>
+</head>
+<body>
+	<h1>금요일 !</h1>
+	<div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+	<h2>주말은 코딩숙제... O<-<</h2>
+</body>
+</html>

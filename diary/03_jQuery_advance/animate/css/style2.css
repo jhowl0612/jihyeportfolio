@@ -1,0 +1,38 @@
+.banner{
+	width:324px;
+	height:400px;
+	background:url(../image/mv_left.jpg) no-repeat;
+	position:relative;
+}
+.banner .gogo{
+	position:absolute;
+	left:194px;
+	top:73px;
+}
+.banner .gogo .gogo1{
+	width:75px;
+	height:75px;
+	overflow:hidden;
+}
+.banner .gogo .gogo1>a{
+	display:block;
+	position:relative;
+	width:75px;
+	height:75px;
+	background:url(../image/img_off_01.jpg) no-repeat;
+}
+.banner .gogo .gogo1>a>img{position:absolute; left:-75px; top:0;}
+.banner .gogo .gogo2{
+	width:75px;
+	height:75px;
+	overflow:hidden;
+	margin-top:128px;
+}
+.banner .gogo .gogo2>a{
+	display:block;
+	position:relative;
+	width:75px;
+	height:75px;
+	background:url(../image/img_off_02.jpg) no-repeat;
+}
+.banner .gogo .gogo2>a>img{position:absolute; left:-75px; top:0;}

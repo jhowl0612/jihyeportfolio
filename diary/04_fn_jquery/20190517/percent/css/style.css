@@ -1,0 +1,95 @@
+html,body{height:100%;}
+p{margin:0;}
+.scene{position:relative; height:100%; overflow:hidden; width:100%;}
+
+#scene-content{
+	position:absolute;
+	width:100%;
+	min-width:600px;
+	height:100%;
+	top:0;
+	right:0;
+}
+.charts{
+	position:relative;
+	width:600px; /* 2행 2열로 나뉘는 너비 */
+	height:600px;
+	top:50%;
+	margin-top:-300px;
+	overflow:hidden;
+}
+.chart{
+	float:left;
+	position:relative;
+	margin:20px;
+	width:240px;
+	height:240px;
+}
+.circle-mask-outer, .circle-mask-inner{
+	overflow:hidden;
+	position:absolute;
+	width:120px;
+	height:240px;
+}
+.circle-mask-outer.left{left:0;}
+.circle-mask-outer.right{right:0;}
+.circle-mask-outer.left .circle-mask-inner{
+	left:100%;
+	-webkit-transform-origin:0 50%;
+	-ms-transform-origin:0 50%;
+	transform-origin:0 50%;
+}
+.circle-mask-outer.right .circle-mask-inner{
+	right:100%;
+	-webkit-transform-origin:100% 50%;
+	-ms-transform-origin:100% 50%;
+	transform-origin:100% 50%;
+}
+.circle-body{
+	border-radius:50%;
+	width:240px;
+	height:240px;
+	position:absolute;
+}
+.circle-mask-outer.left .circle-body{right:0;}
+.circle-mask-outer.right .circle-body{left:0;}
+#html .circle-body{background-color:#0078ff;}
+#css .circle-body{background-color:#ef6122;}
+#Jquery .circle-body{background-color:#9a22ef;}
+#Javascript .circle-body{background-color:#138600;}
+
+.chart-content{
+	position:absolute;
+	left:20px;
+	top:20px;
+	width:200px;
+	height:160px;
+	background:#ffffff;
+	border-radius:50%;
+	padding-top:40px;
+	text-align:center;
+	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.5);
+	-ms-box-shadow:0 0 20px rgba(0,0,0,0.5);
+	box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+.chart-content .percent-number{
+	font-size:50px;
+	font-weight:bold;
+}
+.chart-content .percent-symbol{
+	font-size:30px;
+}
+.no-borderradius .circle-mask-outer, .no-csstransforms .circle-mask-outer{display:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+

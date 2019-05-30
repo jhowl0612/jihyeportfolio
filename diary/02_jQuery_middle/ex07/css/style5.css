@@ -1,0 +1,9 @@
+*{margin:0; padding:0;}
+#wrapper{width:1300px; margin:100px auto;}
+#wrapper ul{width:280px; height:390px; border:2px solid #000000; position: relative; overflow:hidden; margin:20px; float:left;}
+#wrapper ul li{list-style:none; width:280px; height:390px; position:absolute;}
+
+#wrapper ul.top li{top:100%;}
+#wrapper ul.bottom li{bottom:100%;}
+#wrapper ul.left li{left:100%;}
+#wrapper ul.right li{right:100%;}

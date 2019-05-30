@@ -1,0 +1,69 @@
+#nav{
+	margin-top:50px;
+	height:45px;
+	background:#7d7d7d;
+	border-radius:10px;
+	list-style:none;
+	padding:6px 7px;
+	text-align:center;
+}
+#nav li{
+	margin:5px 10px; padding:0;
+	float:left;
+	width:200px;
+	text-align:center;
+	position:relative;
+}
+#nav li a{
+	display:block;
+	text-decoration:none;
+	color:#ffffff;
+	font-weight:bold;
+	margin:0;
+	padding:15px 20px;
+	text-shadow:0 1px 1px rgba(0,0,0,0.3);
+	border-radius:1.4em;
+}
+#nav li:hover a{
+	background:#dddddd;
+	color:#000000;
+	box-shadow:0 1px 1px rgba(0,0,0,0.2);
+}
+#nav li ul{
+	list-style:none;
+	margin:0; padding:0;
+	border:1px solid #999999;
+	border-radius:8px;
+	position:absolute;
+	top:45px; left:0;
+	background:#dddddd;
+	box-shadow:0 1px 1px rgba(0,0,0,0.2);
+	width:200px;
+	display:none;
+}
+#nav li:hover ul{
+	display:block;
+}
+#nav li ul li{
+	margin:0; padding:0;	
+} 
+#nav li ul li a{
+	font-weight:normal;
+	color:#333333;
+	border-radius:0;
+	text-shadow:0 1px 0 #ffffff;
+}
+#nav li ul li:hover a{
+	background:#0086b3;
+	text-shadow:0 1px 1px rgba(0,0,0,0.1);
+}
+#nav li ul li:first-child a{
+	border-top-left-radius:9px;
+	border-top-right-radius:9px;
+}
+#nav li ul li:last-child a{
+	border-bottom-left-radius:9px;
+	border-bottom-right-radius:9px;
+}
+
+

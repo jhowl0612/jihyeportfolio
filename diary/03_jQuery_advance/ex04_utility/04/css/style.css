@@ -1,0 +1,17 @@
+*{margin:0;padding:0;}
+body{
+	width:400px;
+	margin:20px auto;
+	padding:0;
+	font-size:13px;
+}
+p{line-height:1.5; margin-bottom:5px;}
+#tip{
+	position:absolute;
+	width:300px;
+	color:#ffffff;
+	padding:5px;
+	display:none;
+	background:#051840;
+	border-radius:5px;
+}

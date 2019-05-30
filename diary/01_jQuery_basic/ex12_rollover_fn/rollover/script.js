@@ -1,0 +1,3 @@
+$(function(){
+	$('.rollover').rollover();
+});

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../../01_jQuery_basic/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('.button2').hover(function(){
+			$('.button2').hide(1000);
+		},function(){
+			$('.button2').show(1000);
+		});
+    });
+    </script>
+</head>
+<body>
+	<div id="box">나 없어질거야...</div>
+	<button class="button2">버어튼</button>
+</body>
+</html>

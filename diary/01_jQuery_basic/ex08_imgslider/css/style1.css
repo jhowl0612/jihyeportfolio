@@ -1,0 +1,18 @@
+*{margin:0; padding:0;}
+body{padding:30px;}
+h1{padding:0 0 20px;}
+
+.slideshow{
+	width:300px;
+	height:300px;
+	float:left;
+	margin:0 20px 20px 0;
+	position:relative;
+}
+.slideshow a{
+	position:absolute;
+	top:0;
+	left:0;	
+}
+.slideshow img{border:1px solid #000000;}
+.slideshow a.alt{display:none;}

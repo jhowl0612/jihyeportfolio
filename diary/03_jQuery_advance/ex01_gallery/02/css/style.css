@@ -1,0 +1,17 @@
+body {width:620px; margin:20px auto; padding:0; background:#ffbf00;}
+.thumbs{width:100px; float:left;}
+.thumbs img{
+	border:1px solid #b300b3;
+	padding:5px;
+	margin-bottom:4px;
+}
+.thumbs img:hover{border-color:#ffffff;}
+#largeImg{
+	width:500px;
+	height:280px;
+	padding:5px;
+	border:1px solid #b300b3;
+	margin-left:110px;
+	overflow:hidden;
+}
+#caption{background:url(../images/captionBg.png) repeat-y; border:1px solid #cccccc; padding:10px; position:relative; color:#ffffff;}

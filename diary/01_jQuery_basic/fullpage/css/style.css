@@ -1,0 +1,8 @@
+.section{background-size:cover;}
+.slide{background-size:cover;}
+#section0{background-image:url(../imgs/bg1.jpg);}
+#section2{background-image:url(../imgs/bg3.jpg); padding: 6% 0 0 0;}
+#section3{background-image:url(../imgs/bg4.jpg); padding: 6% 0 0 0;}
+#slide1{background-image:url(../imgs/bg2.jpg); padding: 6% 0 0 0;}
+#slide2{background-image:url(../imgs/bg5.jpg); padding: 6% 0 0 0;}
+

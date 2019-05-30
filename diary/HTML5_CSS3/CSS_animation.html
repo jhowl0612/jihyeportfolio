@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS 애니메이션 목록</title>
+	<style type="text/css">
+		body{background:#999999;}
+		div{
+			background-color:black;
+			color:white;
+			font-size:0.8em;
+			line-height:150%;
+			width:90px;
+			height:22px;
+			margin:5px;
+			padding:5px 5px 0 5px;
+			text-align:center;
+			vertical-align:middle;
+			position:relative;
+			overflow:hidden;
+		}
+		
+		.ani1{
+			-webkit-animation-name:ani1;
+			-webkit-animation-duration:2s;
+			-moz-animation-name:ani1;
+			-moz-animation-duration:2s;
+			animation-name:ani1;
+			animation-duration:2s;
+			animation-iteration-count:infinite;
+			animation-direction:alternate;
+		}
+/*animation: name duration timing-function delay iteration-count direction fill-mode play-state*/
+		@keyframes ani1{
+			from{left:10px;}
+			to{left:300px;}
+		}
+		
+		.ani2{
+			-webkit-animation:ani2 2s infinite alternate;
+			-moz-animation:ani2 2s infinite alternate;
+			animation:ani2 2s infinite alternate;
+		}
+		@keyframes ani2{
+			from{left:300px; top:0px;}
+			to{left:300px; top:80px;}
+		}
+		
+		.ani3{
+			-webkit-animation:ani3 2s infinite alternate;
+			-moz-animation:ani3 2s infinite alternate;
+			animation:ani3 2s infinite alternate;
+			text-align:left;
+		}
+		@keyframes ani3{
+			from{width:100px;}
+			to{width:200px;}
+		}
+		
+		.ani4{
+			-webkit-animation:ani4 2s infinite alternate;
+			-moz-animation:ani4 2s infinite alternate;
+			animation:ani4 2s infinite alternate;
+
+		}
+		@keyframes ani4{
+			from{left:50px;}
+			to{left:0px; width:190px;}
+		}
+		
+		.ani5{
+			-webkit-animation:ani5 2s infinite alternate;
+			-moz-animation:ani5 2s infinite alternate;
+			animation:ani5 2s infinite alternate;
+		}
+		@keyframes ani5{
+			from{opacity:1;}
+			to{opacity:0;}
+		}
+		
+		.ani6{
+			-webkit-animation:ani6 2s infinite alternate;
+			-moz-animation:ani6 2s infinite alternate;
+			animation:ani6 2s infinite alternate;
+		}
+		@keyframes ani6{
+			0%{background-color:black;}
+			50%{background-color:yellow; color:black;}
+			100%{background-color:blue;}
+		}
+		
+		.ani7{
+			-webkit-animation:ani7 2s infinite alternate;
+			-moz-animation:ani7 2s infinite alternate;
+			animation:ani7 2s infinite alternate;
+		}
+		@keyframes ani7{
+			from{background-color:red; opacity:1;}
+			to{background-color:blue; opacity:0;}
+		}
+		
+		.ani8{
+			-webkit-animation-name:ani8Width, ani8Opacity;
+			-webkit-animation-duration:2s;
+			-moz-animation-name:ani8Width, ani8Opacity;
+			-moz-animation-duration:2s;
+			animation-name:ani8Width, ani8Opacity;
+			animation-duration:2s;
+			animation-iteration-count:infinite;
+			animation-direction:alternate;
+			text-align:left;
+		}
+		@keyframes ani8Width{
+			from{width:100px;}
+			to{width:300px;}
+		}
+		@keyframes ani8Opacity{
+			from{opacity:0.2;}
+			to{opacity:1;}
+		}
+		
+		.ani9{
+			-webkit-animation:ani9 4s;
+			-moz-animation:ani9 4s;
+			animation:ani9 4s;
+			animation-timing-function:ease-out;
+			animation-fill-mode:forwards;
+			text-align:left;
+		}
+		@keyframes ani9{
+			from{opacity:0; background-color:black; width:100px;}
+			to{opacity:1; background-color:blue; width:310px;}
+		}
+
+		.ani10{
+			-webkit-animation:ani10 2s infinite alternate;
+			-moz-animation:ani10 2s infinite alternate;
+			animation:ani10 2s infinite alternate;
+		}
+		@keyframes ani10{
+			from{border-radius:0;}
+			to{border-radius:15px;}
+		}	
+
+		.ani11{
+			-webkit-animation:ani11 3s infinite;
+			-moz-animation:ani11 3s infinite;
+			animation:ani11 3s infinite;
+			animation-timing-function:linear;
+		}
+		@keyframes ani11{
+			0%{left:100px;transform:rotate(0deg);}
+			25%{left:100px;transform:rotate(15deg);}
+			50%{left:100px;transform:rotate(0deg);}
+			75%{left:100px;transform:rotate(-15deg);}
+			100%{left:100px;transform:rotate(0deg);}
+		}			
+		
+		.ani12{
+			-webkit-animation:ani12 2s infinite;
+			-moz-animation:ani12 2s infinite;
+			animation:ani12 2s infinite;
+			animation-timing-function:linear;
+		}
+		@keyframes ani12{
+			0%{left:200px; transform:rotate(0deg);}
+			25%{left:200px; transform:rotate(90deg);}
+			50%{left:200px; transform:rotate(180deg);}
+			75%{left:200px; transform:rotate(270deg);}
+			100%{left:200px; transform:rotate(360deg);}
+		}
+		
+		.ani13{
+			-webkit-animation-name:ani13;
+			-webkit-animation-duration:4s;
+			-moz-animation-name:ani13;
+			-moz-animation-duration:4s;
+			animation-name:ani13;
+			animation-duration:4s;
+			animation-iteration-count:infinite;
+			animation-direction:alternate;
+			vertical-align:middle;
+			height:45px;
+			width:40px;
+		}
+		@keyframes ani13{
+			0%{
+				left:300px;
+				border-radius:0;
+				transform:rotate(0deg);
+			}
+			25%{
+				left:300px;
+				border-radius:50% 0 0 0;
+				transform:rotate(-90deg);
+			}
+			50%{
+				left:300px;
+				border-radius:50% 50% 0 0;
+				transform:rotate(-180deg);
+			}
+			75%{
+				left:300px;
+				border-radius:50% 50% 50% 0;
+				transform:rotate(-270deg);
+			}
+			100%{
+				left:300px;
+				border-radius:50%;
+				transform:rotate(-360deg);
+			}
+		}
+		
+		.ani14{
+			-webkit-animation:ani14 0.1s infinite alternate;
+			-moz-animation:ani14 0.1s infinite alternate;
+			animation:ani14 0.1s infinite alternate;
+		}
+		@keyframes ani14{
+			0%{left:0px; top:0px;}
+			25%{left:1px; top:-1px;}
+			50%{left:0px; top:0px;}
+			75%{left:-1px; top:-1px;}
+			100%{left:0px; top:0px;}
+		}	
+
+		.ani15{
+			-webkit-animation:ani15 0.1s infinite alternate;
+			-moz-animation:ani15 0.1s infinite alternate;
+			animation:ani15 0.1s infinite alternate;
+		}
+		@keyframes ani15{
+			0%{top:0px;}
+			25%{top:-1px;}
+			50%{top:0px;}
+			75%{top:1px;}
+			100%{top:0px;}
+		}
+		
+		.ani16{
+			-webkit-animation:ani16 2s infinite alternate;
+			-moz-animation:ani16 2s infinite alternate;
+			animation:ani16 2s infinite alternate;
+			animation-timing-function:ease-in-out;
+		}
+		@keyframes ani16{
+			0%{top:0; left:250px;}
+			25%{top:-20px; }
+			50%{top:0; left:350px;}
+			75%{top:-20px; }
+			100%{top:0; left:450px;}
+		}
+		
+		.ani17{
+			-webkit-animation:ani17 2s infinite;
+			-moz-animation:ani17 2s infinite;
+			animation:ani17 2s infinite;
+			animation-timing-function:linear;
+		}
+		@keyframes ani17{
+			0%{top:0; left:150px;}
+			25%{top:-40px; left:200px;}
+			50%{top:0; left:250px;}
+			75%{top:40px; left:200px;}
+			100%{top:0; left:150px;}
+		}
+		
+		.ani18{
+			-webkit-animation:ani18 2s infinite alternate;
+			-moz-animation:ani18 2s infinite alternate;
+			animation:ani18 2s infinite alternate;
+			animation-timing-function:linear;
+			text-align:left;
+		}
+		@keyframes ani18{
+			0%{width:0;}
+			100%{width:90px;}
+		}
+		
+		.ani19{
+			-webkit-animation:ani19 2s infinite alternate;
+			-moz-animation:ani19 2s infinite alternate;
+			animation:ani19 2s infinite alternate;
+			animation-timing-function:ease-out;
+			text-align:left;
+		}
+		@keyframes ani19{
+			0%{left:0; transform:rotate(0deg);}
+			100%{left:400px; transform:rotate(360deg);}
+		}
+		
+		.ani20{
+			-webkit-animation:ani20 2s infinite alternate;
+			-moz-animation:ani20 2s infinite alternate;
+			animation:ani20 2s infinite alternate;
+			animation-timing-function:ease-in;
+		}
+		@keyframes ani20{
+			0%{left:0; opacity:1;}
+			100%{left:400px; opacity:0;}
+		}
+		
+		.ani30{
+			width:140px;
+			transition-property:border-radius,border,height;
+			transition-duration:0.15s;
+		}
+		.ani30:hover{
+			border-radius:20px;
+			border:3px solid #2626ff;
+			height:16px;
+		}
+		
+		.ani31{
+			width:140px;
+			transition:all 0.4s;
+			text-align:left;
+		}
+		.ani31:hover{
+			width:260px;
+		}
+		
+		.ani32{
+			width:140px;
+			transition:all 0.2s;
+			opacity:0;
+			top:-15px;
+			background:white;
+			color: #555555;
+
+		}
+/*transition: property duration function delay*/
+		.ani32:hover{
+			top:0;
+			opacity:1;
+		}
+		
+		.ani33{
+			width:140px;
+			transition:all 0.2s;
+		}
+		.ani33:hover{
+			border-radius:10px;
+			background-color:#23008c;
+			color:#26ffff;
+		}
+		
+		.ani34{
+			width:140px;
+			transition:all 0.3s;
+			opacity:0.5;
+			background-color:#ffffff;
+		}
+		.ani34:hover{
+			opacity:1;
+			background-color:#000000;
+		}
+		
+		.ani35{
+			width:140px;
+			transition:all 0.3s;
+			color:#000000;
+		}
+		.ani35:hover{
+			background-color:#666666;
+			color:#ffffff;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="ani1">
+		애니메이션1
+	</div>
+	<div class="ani2">
+		애니메이션2
+	</div>
+	<div class="ani3">
+		애니메이션3
+	</div>
+	<div class="ani4">
+		애니메이션4
+	</div>
+	<div class="ani5">
+		애니메이션5
+	</div>
+	<div class="ani6">
+		애니메이션6
+	</div>
+	<div class="ani7">
+		애니메이션7
+	</div>
+	<div class="ani8">
+		애니메이션8 : 네임을 여러 개 줄 수 있따
+	</div>
+	<div class="ani9">
+		애니메이션9 : 애니메이션 종료 상태 유지
+	</div>
+	<div class="ani10">
+		애니메이션10
+	</div>
+	<div class="ani11">
+		애니메이션11
+	</div>
+	<div class="ani12">
+		애니메이션12
+	</div>
+	<div class="ani13">
+		13
+	</div>
+	<div class="ani14">
+		애니메이션14
+	</div>
+	<div class="ani15">
+		애니메이션15
+	</div>
+	<div class="ani16">
+		애니메이션16
+	</div>	
+	<div class="ani17">
+		애니메이션17
+	</div>
+	<div class="ani18">
+		애니메이션18
+	</div>
+	<div class="ani19">
+		애니메이션19
+	</div>
+	<div class="ani20">
+		애니메이션20
+	</div>
+	<div class="ani30">
+		커서올려주세요30
+	</div>
+	<div class="ani31">
+		&nbsp; &nbsp; 커서올려주세요31 &nbsp; &nbsp;좋아요 아주조아요
+	</div>
+	<div class="ani32">
+		커서올려주세요32
+	</div>
+	<div class="ani33">
+		커서올려주세요33
+	</div>
+	<div class="ani34">
+		커서올려주세요34
+	</div>
+	<div class="ani35">
+		커서올려주세요35
+	</div>
+	
+</body>
+</html>

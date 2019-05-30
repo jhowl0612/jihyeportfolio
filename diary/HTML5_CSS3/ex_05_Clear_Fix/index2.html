@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>float에 overflow 속성으로 대응하는 방법 예제</title>
+	<style type="text/css">
+		*{margin:0; padding:0; font-size:1em;}
+		body{background:#ffffff; margin:10px; font-size:0.75em;}
+		h1{font-size:25px; margin:0 0 0.5em 0;}
+		#header{
+			clear:both;
+			padding:10px;
+			margin:0 0 10px 0;
+			border: 10px solid #cccccc;
+		}
+		#container{
+			overflow:hidden;
+			padding:10px;
+			margin:0 0 10px 0;
+			border:10px solid #dddddd;
+			background:#ffffff;
+		}
+		#lnb{
+			float:left;
+			width:25%;
+			margin:0 0 10px 0;
+			padding:10px;
+			border:10px solid #000000;
+			background:#ff0000;
+		}
+		#content{
+			float:right;
+			width:55%;
+			margin:0 0 10px 0;
+			padding:10px;
+			border:10px solid #000000;
+			background:#ff0000;
+		}
+		#footer{
+			clear:both;
+			padding:10px;
+			border:10px solid #dddddd;
+		}
+	</style>
+</head>
+<body>
+	<h1>float에 overflow 속성으로 대응하는 방법 예제</h1>
+	<div id="header">
+		<p>#header{clear:both;}</p>
+	</div>
+	<div id="container">
+		<p>#container{overflow:hidden;}</p>
+		<div id="lnb">
+			<p><strong>#lnb{float:left;}</strong></p>
+		</div>
+		<div id="content">
+			<p><strong>#content{float:right;}</strong></p>
+		</div>
+	</div>
+	<div id="footer">
+		<p>#footer{clear:both;}</p>
+	</div>
+</body>
+</html>

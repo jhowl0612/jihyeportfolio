@@ -1,0 +1,14 @@
+$(function(){
+	$('#nav>ul>#springBtn').bind('click',function(){
+		$('#image').removeClass().addClass('spring');
+	});
+	$('#nav>ul>#summerBtn').on('click',function(){
+		$('#image').removeClass().addClass('summer');
+	});
+	$('#nav>ul>#fallBtn').on('click',function(){
+		$('#image').removeClass().addClass('fall');
+	});
+	$('#nav>ul>#winterBtn').on('click',function(){
+		$('#image').removeClass().addClass('winter');
+	});
+});

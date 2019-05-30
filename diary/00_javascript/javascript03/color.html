@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var color=["yellow","gray","green","red","gold","blue","purple"];
+		var i=0;
+		
+		function colorBg(){
+			if(i>=color.length){i=0}
+			var bodyTag=document.getElementsByTagName("body")[0];
+			bodyTag.style.backgroundColor=color[i];
+			i++;
+		}
+		
+	</script>
+</head>
+<body>
+	<button onclick="colorBg()">배경색 바꾸기</button>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.cf:after{content:""; display:block; clear:both;}
+body{background:#bda66c; margin:0; padding:0; color:#282828;}
+#container{
+	width:750px;
+	margin:0 auto;
+	padding:0;
+}
+#main{
+	width:750px;
+	background:#f8fcff;
+	height:auto;
+}
+#main #content_left{float:left; padding:0 30px 30px 30px; width:425px; height:auto;}

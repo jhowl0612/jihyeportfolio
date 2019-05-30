@@ -1,0 +1,35 @@
+$(function(){
+	$('.section01').hover(function(){
+		$(this).stop().animate({width:920},500);
+	},function(){
+		$(this).stop().animate({width:200},500);
+	});
+	$('.section02').hover(function(){
+		$(this).stop().animate({width:920},500);
+		$('.visual').stop().animate({left:-240},500);
+	},function(){
+		$(this).stop().animate({width:200},500);
+		$('.visual').stop().animate({left:0},500);
+	});
+	$('.section03').hover(function(){
+		$(this).stop().animate({width:920},500);
+		$('.visual').stop().animate({left:-480},500);
+	},function(){
+		$(this).stop().animate({width:200},500);
+		$('.visual').stop().animate({left:0},500);
+	});
+	$('.section03').hover(function(){
+		$(this).stop().animate({width:920},500);
+		$('.visual').stop().animate({left:-480},500);
+	},function(){
+		$(this).stop().animate({width:200},500);
+		$('.visual').stop().animate({left:0},500);
+	});
+	$('.section04').hover(function(){
+		$(this).stop().animate({width:920},500);
+		$('.visual').stop().animate({left:-720},500);
+	},function(){
+		$(this).stop().animate({width:200},500);
+		$('.visual').stop().animate({left:0},500);
+	});
+});

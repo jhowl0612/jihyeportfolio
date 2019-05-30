@@ -1,0 +1,45 @@
+.border_tip{
+	width:400px;
+	padding:8px;
+	text-align:justify;
+	background:darkgreen;
+	font:12px "맑은 고딕";
+	position:relative;
+	left:50%; margin-left:-208px;
+	top:100px;
+	color:#ffffff;
+}
+.border_tip:before{
+	content:"";
+	position:absolute;
+	left:200px;
+	top:-9px;
+	border-bottom:10px solid darkgreen;
+	border-left:10px solid transparent;
+	border-right:10px solid transparent;
+}
+.border_tip:after{
+	content:"";
+	position:absolute;
+	left:200px;
+	bottom:-9px;
+	border-top:10px solid darkgreen;
+	border-left:10px solid transparent;
+	border-right:10px solid transparent;
+}
+.left{
+	position:absolute;
+	left:-9px;
+	top:50%; margin-top:-10px;
+	border-right:10px solid darkgreen;
+	border-top:10px solid transparent;
+	border-bottom:10px solid transparent;
+}
+.right{
+	position:absolute;
+	right:-9px;
+	top:50%; margin-top:-10px;
+	border-left:10px solid darkgreen;
+	border-top:10px solid transparent;
+	border-bottom:10px solid transparent;
+}

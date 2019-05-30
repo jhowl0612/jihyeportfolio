@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript 함수 정의하기</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div id="wrap">
+    <div class="article">
+        <H2>JavaScript 함수 정의하기</H2>
+    </div>
+    <h3>함수 정의하기</h3>
+    <p>-함수를 실행하려면 함수를 정의하고 정의된 함수를 실행해야 한다.<br>
+  -함수는 불러줘야 실행한다.</p>
+    <p>기본형식<br>
+    function 함수이름()<br>
+    {<br>
+   &nbsp;&nbsp;&nbsp;&nbsp; 문장<br>
+    }</p>
+    <p>&nbsp;</p>
+    <p>(사용예) 함수정의하고 사용하기</p>
+    
+<pre>
+&lt;head&gt;
+    &lt;script language=&quot;javascript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        function love()
+        {
+            for(i=1;i&lt;=400;i++)
+            document.write(&quot;사랑해!&quot;)
+        }
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script language=&quot;javascript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        love()
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt; 
+&lt;/body&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <p>(사용예) 함수의 매개변수 정의와 사용</p>
+    
+<pre>
+&lt;head&gt;
+    &lt;script language=&quot;JavaScript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        function add(a,b)
+        {
+            var c  
+            c=a+b
+            document.write(c)
+        }
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script language=&quot;JavaScript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        m=3
+        n=4
+        document.write(m + &quot;+&quot; + n + &quot;=&quot;)
+        add(m,n)
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt;
+&lt;/body&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <h3>함수에서 변수 사용할 때 주의할점</h3>
+    var 변수 : 지역 변수로 정의함<br>
+    변수 : 전역 변수로 정의함</p>
+    <p>(사용예) 지역변수와 전역변수 설정</p>
+    
+<pre>
+&lt;head&gt;
+    &lt;script language=&quot;javascript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        function sdsd(a,b)
+        {
+            var c=a+b         <span class="green">// 지역변수 선언 c=30, var 지우고 다시 실행</span>
+            document.write(c)
+            document.write(&quot;&lt;br /&gt;&quot;)
+        }
+        
+        function sd()
+        {
+            d=c+2
+            document.write(d)
+        }
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script language=&quot;javascript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        sdsd(10,20)
+        document.write(c+1)
+        document.write(&quot;&lt;br&gt;&quot;)
+        
+        sd()
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt;
+&lt;/body&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <h3>내장함수  </h3>
+	 <p>
+	parseInt() 문자형 데이터를 정수형 데이터로 바꿈(소숫점 없는) <br>
+	parseFloat() 문자형 데이터를 실수형 데이터로 바꿈 <br>
+	String() 문자형 데이터로 바꿈<br>
+	Number() 숫자형 데이터로 바꿈<br>
+	Boolean() 논리형 데이터로 바꿈 <br>
+	IsNaN() 데이터에 숫자가 아닌 문자를 포함하면 true을 반환 <br>
+	eval() 문자형 데이터를 큰따옴표가 없는 스크립트 코드로 처리 산술계산해줌 <br>
+  </p>
+    <p>(사용예) 메세지 창을 열어주는 alert 내장함수 사용법</p>
+    
+<pre>
+&lt;script language=&quot;javascript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        alert(&quot;저의 집에 오신 것을 환영합니다.&quot;)
+    <span class="green">//--&gt;</span>
+&lt;/script&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <p>(사용예) alert를 응용 퀴즈문제 만들기</p>
+    
+<pre>
+&lt;head&gt;
+    &lt;title&gt;퀴즈문제&lt;/title&gt;
+    &lt;script languge=&quot;javascript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        function quiz()
+        {
+            alert(&quot;I know what you did last summer.  &quot;)
+        }
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt;
+&lt;/head&gt;<br>  <p>&lt;body style=&quot;background-color: black; color: white; margin-top: 50px;&quot;&gt;
+    &lt;p&gt;&lt;img src=&quot;quiz.jpg&quot; style=&quot;display: block; margin: 0 auto;&quot;&gt;&lt;/p&gt;
+    &lt;form name=&quot;form1&quot;&gt;
+        &lt;p style=&quot;text-align: center;&quot;&gt;위 영화 제목은
+        &lt;input type=&quot;submit&quot; value=&quot;  ??  &quot; onclick=&quot;quiz()&quot;&gt; 입니다.&lt;/p&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <h3>선택대화상자를 만들어 주는 confirm()함수</h3>
+    <p>(사용예) 미성년자 출입금지</p>
+<pre>
+&lt;script language=&quot;javascript&quot;&gt;
+<span class="green">&lt;!--</span>
+    haha=confirm(&quot;18세 이상이면 [확인] 단추를 클릭하세요&quot;)
+    if(haha==true) location.href=&quot;a.htm&quot;
+    else location.href=&quot;b.htm&quot;
+<span class="green">//--&gt;</span>
+&lt;/script&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <p>(사용예) 창크기 조절해서 열기 <span class="blue">(익스10 O / 파폭 X 다르게 반응)</span></p>
+    
+<pre>
+&lt;head&gt;
+    &lt;title&gt;창크기조절&lt;/title&gt;
+    &lt;script language=&quot;javascript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        haha=confirm(&quot;해상도가 모바일 (320*568)이면 [확인]단추를 <span class="blue">\n</span>태블릿 (1024*768)이라면[취소]단추를 클릭하세요&quot;)
+        if(haha==true) small()
+        else large()
+
+        function small()
+        {
+            window.resizeTo(320, 568)
+        }
+        
+        function large()
+        {
+            window.resizeTo(1024, 768)
+        }
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt;
+    &lt;style&gt;
+        #wrap{position: absolute; top: 50%; left: 50%; width: 200px; height: 200px; 
+              margin-top: -100px; margin-left: -100px; background: url(polornote.gif) no-repeat;}
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id=&quot;wrap&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <h3>입력 대화 상자를 만들어 주는 prompt()함수  </h3>
+    <p>(사용예) 비밀번호 홈페이지 만들기</p>
+    
+<pre>
+&lt;head&gt;
+    &lt;title&gt;비밀번호&lt;/title&gt;
+    &lt;script language=&quot;javascript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        code = prompt(&quot;비밀번호를 입력하세요.&quot;,&quot;&quot;)
+        if (code==&quot;1234&quot;) location.href=&quot;welcome.htm&quot;
+        else  document.write(&quot;비밀번호가 틀렸네요.&quot;)
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <p>문제) 비밀번호 홈페이지를 외부파일로 만들어 실행시켜 보세요.</p>
+    <p>&nbsp;</p>
+	
+	
+	 <p>함수에서 return문의 역할</p>
+  <p>&nbsp;</p>
+  <p>return문이란 함수에서 결괏값을 되돌려 줄 때 사용. 
+	함수에서  return문이 실행되면 반복문에서 break문과 비슷하게 실행문이 강제로 종료 즉, 함수정의문에 실행문으로 return문이 사용되었으면, 함수를 호출했을 때 결과값을 반환하고 진행중이던 실행문을 정지시키고 함수를 강제로 종료
+  </p>
+</div>
+</body>
+</html>
