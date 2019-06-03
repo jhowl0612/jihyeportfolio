@@ -5,11 +5,16 @@
 	<title>식품의약품안전처</title>
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/fullpage.css"/>
 	<link rel="stylesheet" href="css/style_index.css"/>
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/fullpage.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
+	<div class="skip_navigation">
+		<a href="#container">메뉴 건너뛰기</a>
+	</div>
 	<div id="wrap">
 		<div id="header">
 			<div class="header_top">
@@ -65,6 +70,7 @@
 											</div>
 											<div class="search_extend">고급검색
 												<div class="extend_display">
+													<button>고급검색 닫기</button>
 													<strong>고급 검색 옵션</strong>
 													<div class="search_input01 cf">
 														<strong>카테고리</strong>
@@ -99,6 +105,7 @@
 													</div>
 												</div>
 											</div>
+											<div class="search_close"><a href="#"><img src="images/icon_close.png" alt=""/></a></div>
 										</fieldset>
 									</div>
 								</form>
@@ -115,7 +122,7 @@
 			</div>
 			<div id="gnb">
 				<div class="gnb_center_mom">
-					<ul>
+					<ul class="cf">
 						<li class="gnb_depth1 gnb1"><a href="sub1.html">정보공개</a>
 							<div class="width100">
 								<div class="gnb_depth2 fl">
@@ -688,26 +695,27 @@
 								</div>
 							</div>
 						</li>
-						<li class="gnb_depth1 all_menu"><a href="sub8.html">전체메뉴</a></li>
+						<li class="all_menu"><a href="sub8.html">전체메뉴</a></li>
+						<li class="gnb_search"><a href="#">검색</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 		<div id="container">
 			<div class="main_nav">
-				<a href="#" class="m_n_up">이전</a>
-				<a href="#" class="m_n_down">다음</a>
+				<a class="m_n_up">이전</a>
+				<a class="m_n_down">다음</a>
 				<ul>
-					<li><a href="#">알림으로 이동</a></li>
-					<li><a href="#J_2">배너존으로 이동</a></li>
-					<li><a href="#J_3">정책정보로 이동</a></li>
-					<li><a href="#J_4">웹진으로 이동</a></li>
-					<li><a href="#J_5">타기관 홍보로 이동</a></li>
-					<li><a href="#footer">카피라이트로 이동</a></li>
+					<li class="active"><a href="#sec1">알림으로 이동</a></li>
+					<li><a href="#sec2">배너존으로 이동</a></li>
+					<li><a href="#sec3">정책정보로 이동</a></li>
+					<li><a href="#sec4">웹진으로 이동</a></li>
+					<li><a href="#sec5">타기관 홍보로 이동</a></li>
+					<li><a href="#foot">카피라이트로 이동</a></li>
 				</ul>
 			</div>
-			<div id="main_page">
-				<div class="main_section m_sec1">
+			<div id="fullpage">
+				<div class="main_section m_sec1" data-anchor="sec1">
 					<div class="m_cell">
 						<div class="m_s_in">
 							<div class="main1_top cf">
@@ -800,7 +808,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="main_section m_sec2" id="J_2">
+				<div class="main_section m_sec2" data-anchor="sec2" id="J_2">
 					<div class="m_cell">
 						<div class="m_s_in">
 							<div class="m2_banner_col col1">
@@ -854,7 +862,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="main_section m_sec3" id="J_3">
+				<div class="main_section m_sec3" data-anchor="sec3" id="J_3">
 					<div class="m_cell">
 						<div class="m_s_in">
 							<h2 class="m3_tit">정책정보</h2>
@@ -895,7 +903,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="main_section m_sec4" id="J_4">
+				<div class="main_section m_sec4" data-anchor="sec4" id="J_4">
 					<div class="m_cell">
 						<div class="m_s_in">
 							<h2 class="m4_tit">웹진 열린 마루</h2>
@@ -960,7 +968,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="main_section m_sec5" id="J_5">
+				<div class="main_section m_sec5" data-anchor="sec5" id="J_5">
 					<div class="m_cell">
 						<div class="m_s_in">
 							<h2 class="m5_tit">SNS/배너</h2>
@@ -1062,45 +1070,48 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div id="footer" class="cf">
-			<div class="info_bg">
-				<div class="footer_info">
-					<ul class="footer_info_txt">
-						<li class="fir"><a href="#"><strong>개인정보처리방침</strong></a></li>
-						<li><a href="#">저작권정책</a></li>
-						<li><a href="#">부서별전화번호</a></li>
-						<li><a href="#">RSS 이용안내</a></li>
-					</ul>
-					<div class="footer_sitelink">
-						<form action="#">
-							<div class="f_site_select fl">
-								<select title="산하기관홈페이지">
-									<option value="">산하기관홈페이지</option>
-									<option value="">한국식품안전관리인증원</option>
-									<option value="">한국의약품안전관리원</option>
-									<option value="">한국의료기기안전정보원</option>
-									<option value="">한국희귀필수의약품센터</option>
-									<option value="">한국마약퇴치운동본부</option>
-								</select>
+				<div id="footer" class="cf main_section fp-auto-height" data-anchor="foot">
+					<div class="info_bg">
+						<div class="footer_info">
+							<ul class="footer_info_txt">
+								<li class="fir"><a href="#"><strong>개인정보처리방침</strong></a></li>
+								<li><a href="#">저작권정책</a></li>
+								<li><a href="#">부서별전화번호</a></li>
+								<li><a href="#">RSS 이용안내</a></li>
+							</ul>
+							<div class="footer_sitelink">
+								<form action="#">
+									<div class="f_site_select fl">
+										<select title="산하기관홈페이지">
+											<option value="">산하기관홈페이지</option>
+											<option value="">한국식품안전관리인증원</option>
+											<option value="">한국의약품안전관리원</option>
+											<option value="">한국의료기기안전정보원</option>
+											<option value="">한국희귀필수의약품센터</option>
+											<option value="">한국마약퇴치운동본부</option>
+										</select>
+									</div>
+									<input type="submit" class="f_site_go fl" value="이동"/>
+								</form>
 							</div>
-							<input type="submit" class="f_site_go fl" value="이동"/>
-						</form>
+							<div class="top_go"><a href="#wrap">TOP</a></div>
+						</div>
 					</div>
-					<div class="top_go"><a href="#wrap">TOP</a></div>
-				</div>
-			</div>
-			<div class="footer_add">
-				<h1><img src="images/logo_copy.jpg" alt="footer logo"/></h1>
-				<ul class="address">
-					<li class="add1">종합상담센터 : 1577-1255</li>
-					<li>우) 28159 충청북도 청주시 흥덕구 오송읍 오송생명2로 187 오송보건의료행정타운 식품의약품안전처</li>
-					<li>Copyrightⓒ By Ministry of Food and Drug Safety. All rights reserved</li>
-				</ul>
-				<span class="footer_logo_wa">
-					<img src="images/logo_wa_last.jpg" alt="로고" />
-				</span>
+					<div class="footer_add">
+						<h1><img src="images/logo_copy.jpg" alt="footer logo"/></h1>
+						<ul class="address">
+							<li class="add1">종합상담센터 : 1577-1255</li>
+							<li>우) 28159 충청북도 청주시 흥덕구 오송읍 오송생명2로 187 오송보건의료행정타운 식품의약품안전처</li>
+							<li>Copyrightⓒ By Ministry of Food and Drug Safety. All rights reserved</li>
+						</ul>
+						<span class="footer_logo_wa">
+							<img src="images/logo_wa_last.jpg" alt="로고" />
+						</span>
+					</div>
+				</div><!-- id="footer" -->
+
+				
+				
 			</div>
 		</div>
 	</div>
