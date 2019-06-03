@@ -6,22 +6,99 @@
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css" />	
 	<link rel="stylesheet" href="css/style1.css" />
-	<!--[if IE 7, 8]>
+	<!--[if IE 7, 8]>낮은 브라우저용 조건부 주석
 		<link rel="stylesheet" type="text/css" href="css/style2.css">
 	<![endif]-->	
 	<script src="js/modernizr.min.js"></script><!-- 시멘틱 -->	
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery.UI.min.js"></script>	
-	<script src="js/html5shiv.js"></script><!-- 시멘틱 -->	
-	<script src="js/html5div.js"></script><!-- 시멘틱 -->		
-	<script src="js/mediaelement-and-player.min.js"></script>	<!-- 플레이 컨트롤 -->
-	<script src="js/prefixfree.min.js"></script>
-	<script src="js/script.js"></script>
+	<script src="js/jquery.min.js"></script> <!-- 낮은 브라우저 동영상 -->
+	<script src="js/jquery.UI.min.js"></script>	<!-- 낮은 브라우저 동영상 -->
+	<script src="js/html5shiv.js"></script><!-- 시멘틱 (figure) -->	
+	<script src="js/html5div.js"></script><!-- 시멘틱 (figure)-->		
+	<script src="js/mediaelement-and-player.min.js"></script>	<!-- 플레이 컨트롤 동영상을 flash로 컨버팅해 줌-->
+	<script src="js/prefixfree.min.js"></script> <!-- 벤더 프리픽스 (gradiant의 벤더 프리픽스 자동)-->
+	<script src="js/script.js"></script> <!-- 낮은 브라우저 우하단 화살표 animation용-->
 	
 </head>
 <body>
-
-	
+	<figure class="vid">
+		<video width="100%" height="100%" autoplay="autoplay" muted playsinline poster="img/poster.jpg">
+			<source src="img/nike.mp4" type="video/mp4" />
+			<source src="img/nike.webm" type="video/webm" />
+		</video>
+	</figure>
+	<h1><img src="img/logo2.png" alt="로고"/></h1>
+	<div id="header" class="cf">
+		<ul id="gnb" class="cf">
+			<li class="on">
+				<a href=""><em><i class="fa fa-refresh fa-spin"></i>About NIKE</em></a>
+				<ul class="cf">
+					<li><a href="#"><em><strong>English</strong></em></a></li>
+				</ul>
+			</li>
+			<li>
+				<a href=""><em>Brand Info</em></a>
+				<ul class="cf">
+					<li><a href="#"><em>sub1</em></a></li>
+					<li><a href="#"><em>sub2</em></a></li>
+					<li><a href="#"><em>sub3</em></a></li>
+					<li><a href="#"><em>sub4</em></a></li>
+				</ul>
+			</li>
+			<li>
+				<a href=""><em>Community</em></a>
+				<ul class="cf">
+					<li><a href="#"><em>sub1</em></a></li>
+					<li><a href="#"><em>sub2</em></a></li>
+					<li><a href="#"><em>sub3</em></a></li>
+				</ul>
+			</li>
+			<li>
+				<a href=""><em>Product Value</em></a>
+				<ul class="cf">
+					<li><a href="#"><em>sub1</em></a></li>
+					<li><a href="#"><em>sub2</em></a></li>
+				</ul>
+			</li>
+			<li>
+				<a href=""><em>Company History</em></a>
+				<ul class="cf">
+					<li><a href="#"><em>sub1</em></a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<ul id="sns" class="cf">
+		<li><a href=""><i class="fa fa-facebook"></i></a></li>
+		<li><a href=""><i class="fa fa-twitter"></i></a></li>
+		<li><a href=""><i class="fa fa-youtube"></i></a></li>
+		<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+		<li><a href=""><i class="fa fa-android"></i></a></li>
+	</ul>
+	<div id="section" class="txtBox">
+		<p class="txt">Best Qualified <strong>AIR MAX</strong></p>
+		<p class="tit">50 <em>/24</em></p>
+	</div>
+	<div id="side" class="cf">
+		<div class="con cf">
+			<p class="nth1">
+				<em>Event & Community</em>
+				<a href="#"><img src="img/pic1.png" alt="subimg1"/></a>
+			</p>
+			<p class="nth2">
+				<em>News & Notice</em>
+				<a href="#"><img src="img/pic2.png" alt="subimg1"/></a>
+			</p>
+			<p class="nth3">
+				<em>Product & Review</em>
+				<a href="#"><img src="img/pic3.png" alt="subimg1"/></a>
+			</p>
+		</div>
+		<div class="btnContents cf">
+			<i class="nth1 fa fa-angle-double-left"></i>
+			<i class="nth2 fa fa-angle-double-left"></i>
+			<i class="nth3 fa fa-angle-double-left"></i>
+		</div>
+	</div>
 <script>
 $(document).ready(function() {
 	$('video').mediaelementplayer({

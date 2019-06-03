@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
-body{overflow-x:hidden;}
+/* body{overflow-x:hidden;} */
 /* 기본 레이아웃 */
 #wrap{width: 1600px; margin: 0 auto; background-color: #ffffff; position: relative;}
 #header{height: 181px; position: relative; z-index: 10; background:url(../img/header_bg.png) repeat;}
