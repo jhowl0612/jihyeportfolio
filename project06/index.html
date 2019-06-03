@@ -2,19 +2,29 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>한국문학번역원</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/style.css"/>
 	<link rel="stylesheet" href="css/calender.css" />
 	<link rel="stylesheet" href="css/style2.css" media="only screen and (min-width:768px) and (max-width:1279px)"/>
 	<link rel="stylesheet" href="css/style3.css" media="only screen and (max-width:767px)"/>
+	<!--[if IE 7, 8]>
+		<link rel="stylesheet" type="text/css" href="css/style4.css">
+	<![endif]-->
 	<script src="js/jquery-1.7.1.min.js"></script>
 	<script src="js/underscore-min.js"></script> <!-- 갤린더 -->
 	<script src="js/moment-2.2.1.js"></script> <!-- 갤린더 -->
 	<script src="js/jhclndr.js"></script><!-- 갤린더 -->
 	<script src="js/site.js"></script><!-- 갤린더 -->	
-	<script type="text/javascript" src="js/script1.js"></script>
+	<script src="js/jquery.cookie.js"></script><!-- 팝업 하루동안 보지 않기 -->	
+	<script src="js/script1.js"></script>
 </head>
 <body>
+	<div class="skip_navigation">
+		<a href="#slider">메뉴 건너뛰기</a>
+	</div>
 	<div id="header">
 		<div class="header_top">
 			<div class="header_top_inner">
@@ -25,6 +35,35 @@
 				</ul>
 				<div class="lang">
 					<a href="#">ENG</a>
+				</div>
+			</div>
+		</div>
+		<div class="popup_content cf">
+			<div class="popup_visual">
+				<div class="popup_slider">
+					<ul class="pop_control">
+						<li class="prev"><a href="#"><img src="img/prev.png" alt="다음"/>이전</a></li>
+						<li class="next"><a href="#"><img src="img/next.png" alt="다음"/>다음</a></li>
+					</ul>
+					<a href="#" style="left:0;">
+						<div>
+							<img src="img/201904221116564541.jpg" alt="소통과 평화의 플랫폼"/>
+						</div>
+					</a>
+					<a href="#">
+						<div>
+							<img src="img/201903211709232531.jpg" alt="제 18회 한국 문학 번역 신인상 공모"/>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="popup_form">
+				<form action="popup">
+					<input type="checkbox" name="popup_1day" id="popup_1day"/>
+					<label for="popup_1day"> 오늘은 이 창을 다시 열지 않음</label>
+				</form>
+				<div class="popup_close">
+					<a href="#"><img src="img/layer_close.gif" alt="팝업 닫기"/></a>
 				</div>
 			</div>
 		</div>
@@ -44,7 +83,7 @@
 			<h1><a href="index.html"><img src="img/logo.gif" alt="한국문학번역원 로고"/>한국문학번역원</a></h1>
 			<div class="search">
 				<form action="#">
-					<select name="languege" id="">
+					<select name="languege">
 						<option selected="selected">Select Language</option>
 						<option value="ALBANIAN">Albanian</option>
 						<option value="ARABIC">Arabic</option>
@@ -119,7 +158,7 @@
 						<option value="TELUGU_PHONETIC\">Telugu - Phonetic</option>
 						<option value="THAI\">Thai</option>
 						<option value="TURKISH_F\">Turkish - F</option>
-						<option value="TURKISH_Q\">Turkish - Q<</option>
+						<option value="TURKISH_Q\">Turkish - Q</option>
 						<option value="UIGHUR\">Uighur</option>
 						<option value="UKRAINIAN_101\">Ukrainian - 101</option>
 						<option value="URDU\">Urdu</option>
@@ -445,7 +484,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="main_slider">
+			<div class="main_slider" id="#slider">
 				<div class="slidebox cf">
 					<img src="img/201905071743343181.jpg" alt="29회 유럽한국학회" class="slide_image"/>
 					<img src="img/201905070916565751.jpg" alt="2019 재일한인문학연구" class="slide_image"/>
@@ -520,11 +559,11 @@
 					<h2>외신에서 본 한국문학</h2>
 					<div class="more"><a href="#"><img src="img/more_icon.gif" alt="외신에서 본 한국문학 더보기"/></a>외신에서 본 한국문학 더보기</div>
 					<dl>
-						<dt><a href="#">[독일어] 안수길, 독역 <북간도> 작품소개</a></dt>
+						<dt><a href="#">[독일어] 안수길, 독역 〈북간도〉 작품소개</a></dt>
 						<dd>2019.05.08</dd>
-						<dt><a href="#">[이탈리아어] 신경숙, 이태리어역 <리진> 관련 인터뷰</a></dt>
+						<dt><a href="#">[이탈리아어] 신경숙, 이태리어역 〈리진〉 관련 인터뷰</a></dt>
 						<dd>2019.05.08</dd>
-						<dt><a href="#">[영어] 황석영, 영역 <바리데기> 북리뷰</a></dt>
+						<dt><a href="#">[영어] 황석영, 영역 〈바리데기〉 북리뷰</a></dt>
 						<dd>2019.05.08</dd>
 					</dl>
 				</div>
@@ -554,7 +593,7 @@
 					<div class="calender-pause">
 						<div class="calender-left">
 							<div class="column_right_grid calender">
-								  <div class="cal1"><div class="clndr"><div class="clndr-controls"><div class="clndr-control-button"><p class="clndr-previous-button">previous</p></div><div class="month">July 2015</div><div class="clndr-control-button rightalign"><p class="clndr-next-button">next</p></div></div><table class="clndr-table" border="0" cellspacing="0" cellpadding="0"><thead><tr class="header-days"><td class="header-day">SUN</td><td class="header-day">MON</td><td class="header-day">TUE</td><td class="header-day">WED</td><td class="header-day">THU</td><td class="header-day">FRI</td><td class="header-day">SAT</td></tr></thead><tbody><tr><td class="day past adjacent-month last-month calendar-day-2015-04-26"><div class="day-contents">26</div></td><td class="day past adjacent-month last-month calendar-day-2015-04-27"><div class="day-contents">27</div></td><td class="day past adjacent-month last-month calendar-day-2015-04-28"><div class="day-contents">28</div></td><td class="day past adjacent-month last-month calendar-day-2015-04-29"><div class="day-contents">29</div></td><td class="day past adjacent-month last-month calendar-day-2015-04-30"><div class="day-contents">30</div></td><td class="day past calendar-day-2015-05-01"><div class="day-contents">1</div></td><td class="day past calendar-day-2015-05-02"><div class="day-contents">2</div></td></tr><tr><td class="day past calendar-day-2015-05-03"><div class="day-contents">3</div></td><td class="day past calendar-day-2015-05-04"><div class="day-contents">4</div></td><td class="day past calendar-day-2015-05-05"><div class="day-contents">5</div></td><td class="day past calendar-day-2015-05-06"><div class="day-contents">6</div></td><td class="day past calendar-day-2015-05-07"><div class="day-contents">7</div></td><td class="day past calendar-day-2015-05-08"><div class="day-contents">8</div></td><td class="day past calendar-day-2015-05-09"><div class="day-contents">9</div></td></tr><tr><td class="day past event calendar-day-2015-05-10"><div class="day-contents">10</div></td><td class="day past event calendar-day-2015-05-11"><div class="day-contents">11</div></td><td class="day past event calendar-day-2015-05-12"><div class="day-contents">12</div></td><td class="day past event calendar-day-2015-05-13"><div class="day-contents">13</div></td><td class="day today event calendar-day-2015-05-14"><div class="day-contents">14</div></td><td class="day calendar-day-2015-05-15"><div class="day-contents">15</div></td><td class="day calendar-day-2015-05-16"><div class="day-contents">16</div></td></tr><tr><td class="day calendar-day-2015-05-17"><div class="day-contents">17</div></td><td class="day calendar-day-2015-05-18"><div class="day-contents">18</div></td><td class="day calendar-day-2015-05-19"><div class="day-contents">19</div></td><td class="day calendar-day-2015-05-20"><div class="day-contents">20</div></td><td class="day event calendar-day-2015-05-21"><div class="day-contents">21</div></td><td class="day event calendar-day-2015-05-22"><div class="day-contents">22</div></td><td class="day event calendar-day-2015-05-23"><div class="day-contents">23</div></td></tr><tr><td class="day calendar-day-2015-05-24"><div class="day-contents">24</div></td><td class="day calendar-day-2015-05-25"><div class="day-contents">25</div></td><td class="day calendar-day-2015-05-26"><div class="day-contents">26</div></td><td class="day calendar-day-2015-05-27"><div class="day-contents">27</div></td><td class="day calendar-day-2015-05-28"><div class="day-contents">28</div></td><td class="day calendar-day-2015-05-29"><div class="day-contents">29</div></td><td class="day calendar-day-2015-05-30"><div class="day-contents">30</div></td></tr><tr><td class="day calendar-day-2015-05-31"><div class="day-contents">31</div></td><td class="day adjacent-month next-month calendar-day-2015-06-01"><div class="day-contents">1</div></td><td class="day adjacent-month next-month calendar-day-2015-06-02"><div class="day-contents">2</div></td><td class="day adjacent-month next-month calendar-day-2015-06-03"><div class="day-contents">3</div></td><td class="day adjacent-month next-month calendar-day-2015-06-04"><div class="day-contents">4</div></td><td class="day adjacent-month next-month calendar-day-2015-06-05"><div class="day-contents">5</div></td><td class="day adjacent-month next-month calendar-day-2015-06-06"><div class="day-contents">6</div></td></tr></tbody></table></div></div>
+								  <div class="cal1"><div class="clndr"><div class="clndr-controls"><div class="clndr-control-button"><p class="clndr-previous-button">previous</p></div><div class="month">July 2015</div><div class="clndr-control-button rightalign"><p class="clndr-next-button">next</p></div></div><table class="clndr-table" ><thead><tr class="header-days"><td class="header-day">SUN</td><td class="header-day">MON</td><td class="header-day">TUE</td><td class="header-day">WED</td><td class="header-day">THU</td><td class="header-day">FRI</td><td class="header-day">SAT</td></tr></thead><tbody><tr><td class="day past adjacent-month last-month calendar-day-2015-04-26"><div class="day-contents">26</div></td><td class="day past adjacent-month last-month calendar-day-2015-04-27"><div class="day-contents">27</div></td><td class="day past adjacent-month last-month calendar-day-2015-04-28"><div class="day-contents">28</div></td><td class="day past adjacent-month last-month calendar-day-2015-04-29"><div class="day-contents">29</div></td><td class="day past adjacent-month last-month calendar-day-2015-04-30"><div class="day-contents">30</div></td><td class="day past calendar-day-2015-05-01"><div class="day-contents">1</div></td><td class="day past calendar-day-2015-05-02"><div class="day-contents">2</div></td></tr><tr><td class="day past calendar-day-2015-05-03"><div class="day-contents">3</div></td><td class="day past calendar-day-2015-05-04"><div class="day-contents">4</div></td><td class="day past calendar-day-2015-05-05"><div class="day-contents">5</div></td><td class="day past calendar-day-2015-05-06"><div class="day-contents">6</div></td><td class="day past calendar-day-2015-05-07"><div class="day-contents">7</div></td><td class="day past calendar-day-2015-05-08"><div class="day-contents">8</div></td><td class="day past calendar-day-2015-05-09"><div class="day-contents">9</div></td></tr><tr><td class="day past event calendar-day-2015-05-10"><div class="day-contents">10</div></td><td class="day past event calendar-day-2015-05-11"><div class="day-contents">11</div></td><td class="day past event calendar-day-2015-05-12"><div class="day-contents">12</div></td><td class="day past event calendar-day-2015-05-13"><div class="day-contents">13</div></td><td class="day today event calendar-day-2015-05-14"><div class="day-contents">14</div></td><td class="day calendar-day-2015-05-15"><div class="day-contents">15</div></td><td class="day calendar-day-2015-05-16"><div class="day-contents">16</div></td></tr><tr><td class="day calendar-day-2015-05-17"><div class="day-contents">17</div></td><td class="day calendar-day-2015-05-18"><div class="day-contents">18</div></td><td class="day calendar-day-2015-05-19"><div class="day-contents">19</div></td><td class="day calendar-day-2015-05-20"><div class="day-contents">20</div></td><td class="day event calendar-day-2015-05-21"><div class="day-contents">21</div></td><td class="day event calendar-day-2015-05-22"><div class="day-contents">22</div></td><td class="day event calendar-day-2015-05-23"><div class="day-contents">23</div></td></tr><tr><td class="day calendar-day-2015-05-24"><div class="day-contents">24</div></td><td class="day calendar-day-2015-05-25"><div class="day-contents">25</div></td><td class="day calendar-day-2015-05-26"><div class="day-contents">26</div></td><td class="day calendar-day-2015-05-27"><div class="day-contents">27</div></td><td class="day calendar-day-2015-05-28"><div class="day-contents">28</div></td><td class="day calendar-day-2015-05-29"><div class="day-contents">29</div></td><td class="day calendar-day-2015-05-30"><div class="day-contents">30</div></td></tr><tr><td class="day calendar-day-2015-05-31"><div class="day-contents">31</div></td><td class="day adjacent-month next-month calendar-day-2015-06-01"><div class="day-contents">1</div></td><td class="day adjacent-month next-month calendar-day-2015-06-02"><div class="day-contents">2</div></td><td class="day adjacent-month next-month calendar-day-2015-06-03"><div class="day-contents">3</div></td><td class="day adjacent-month next-month calendar-day-2015-06-04"><div class="day-contents">4</div></td><td class="day adjacent-month next-month calendar-day-2015-06-05"><div class="day-contents">5</div></td><td class="day adjacent-month next-month calendar-day-2015-06-06"><div class="day-contents">6</div></td></tr></tbody></table></div></div>
 							 </div>
 						</div>
 					</div><!-- class="calender-pause" -->
@@ -596,7 +635,7 @@
 								<option value="#">한국정책방송원</option>
 								<option value="#">해외문화홍보원</option>
 							</select>
-							<input type="image" src="img/go_btn.gif" class="relation_btn">
+							<input type="image" src="img/go_btn.gif" class="relation_btn" alt="go button">
 							<select name="institute" class="institute">
 								<option value="#">문화원안내</option>
 								<option value="#">주한독일문화원</option>
@@ -609,7 +648,7 @@
 								<option value="#">Seoul Selection</option>
 								<option value="#">KTLIT.com</option>
 							</select>
-							<input type="image" src="img/go_btn.gif" class="institute_btn">
+							<input type="image" src="img/go_btn.gif" class="institute_btn" alt="go button">
 						</fieldset>
 					</form>
 				</div>
@@ -637,7 +676,7 @@
 					<ul>
 						<li><a href="#"><img src="img/goodcontentsicon.jpg" alt="굿콘텐츠서비스"/></a></li>
 						<li><a href="#"><img src="img/mark_e.jpg" alt="굿콘텐츠서비스"/></a></li>
-						<li><a href="#"><img src="img/Family friendly.png" alt="굿콘텐츠서비스"/></a></li>
+						<li><a href="#"><img src="img/Family_friendly.png" alt="굿콘텐츠서비스"/></a></li>
 						<li><a href="#"><img src="img/foot_img7.gif" alt="굿콘텐츠서비스"/></a></li>
 					</ul>
 				</div>

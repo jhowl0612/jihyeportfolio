@@ -1,4 +1,7 @@
+body{padding-top:60px;}
 .header_top{display:none;}
+
+
 
 .header_bot{height:60px; z-index:98; position:fixed; top:0; width:100%; background:#ffffff;}
 .header_bot h1{padding-top:12px; float:none; width:202px; margin:0 auto;}
@@ -8,7 +11,7 @@
 .search a.close{display:inline;}
 .header_mobile{display:block;}
 
-.section1{margin:60px 0 8px; height:0; padding-bottom:39%;}
+.section1{margin:0 0 8px; height:0; padding-bottom:39%;}
 .nav_top{display:none;}
 .navT_mobile{display:block; background: #f0f0f0; width:64%; height:auto; position:fixed; top:0; bottom:0; margin-top:60px; left:-64%; z-index:110;}
 .nav_top .lang{display:block; background:#fe9538; padding:4px 16px; height:28px;}
