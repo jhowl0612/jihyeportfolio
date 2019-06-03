@@ -10,11 +10,14 @@
 	<link rel="stylesheet" href="css/style2.css" media="only screen and (min-width:700px) and (max-width:1039px)"/>
 	<link rel="stylesheet" href="css/style3.css" media="only screen and (min-width:480px) and (max-width:699px)"/>
 	<link rel="stylesheet" href="css/style4.css" media="only screen and (max-width:479px)"/>
-	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/script.js"></script>
 
 </head>
 <body>
+	<div class="skip_navigation">
+		<a href="#container">메뉴 건너뛰기</a>
+	</div>
 	<div id="wrap">
 		<div id="header">
 			<div class="header_center cf">
@@ -29,7 +32,7 @@
 								<option value="open" selected="selected">무료</option>
 								<option value="alright">유료</option>
 							</select>
-							<input type="text" placeholder="필요한 공공저작물을 찾아보세요 !"/>
+							<input type="text"/>
 							<button>검색</button>
 						</fieldset>
 					</form>
@@ -152,6 +155,129 @@
 					</div>
 				</li>
 			</ul>
+			<ul class="mobile_nav">
+				<li>
+					<div class="mobile_logo">
+						<div class="open_m_logo">
+							<a href="index.html"><img src="images/logo_open.png" alt="공공누리"/></a>
+						</div>
+						<div class="alright_m_logo">
+							<a href="index.html"><img src="images/logo_alright.png" alt="신탁관리시스템"/></a>
+						</div>
+					</div>
+				</li>
+				<li class="open fl">
+					<a href="#" class="menuIconL"><img src="images/icon_menu_off.png" alt="메뉴" class="over780"/><img src="images/icon_menu_2_off.png" alt="메뉴" width="36" class="under780"/>공공누리 전체메뉴</a>
+					<div class="gnb_box under780 left">
+						<ul class="depth2 cf">
+							<li>
+								<a href="#">추천공공저작물</a>
+								<ul>
+									<li class="fir"><a href="#">특별 테마전</a></li>
+									<li><a href="#">지역별 관광지</a></li>
+									<li><a href="#">지역별 문화재</a></li>
+									<li><a href="#">시대별 유물</a></li>
+									<li><a href="#">산업활용 3D</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">공공저작물</a>
+								<ul>
+									<li class="fir"><a href="#">공공저작물 검색</a></li>
+									<li><a href="#">공공저작물 큐레이션</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">우수활용 사례</a>
+								<ul>
+									<li class="fir"><a href="#">활용사례</a></li>
+									<li><a href="#">활용사례 등록</a></li>
+									<li><a href="#">활용지원 사업 안내</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">개방지원센터</a>
+								<ul>
+									<li class="fir"><a href="#">개방지원센터 안내</a></li>
+									<li><a href="#">자료실/강의실</a></li>
+									<li><a href="#">도입기관 소개</a></li>
+									<li><a href="#">질문과 답변</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">공공누리 소식</a>
+								<ul>
+									<li class="fir"><a href="#">공지사항</a></li>
+									<li><a href="#">보도자료</a></li>
+									<li><a href="#">콘텐츠·홍보물</a></li>
+									<li><a href="#">이벤트</a></li>
+									<li><a href="#">뉴스레터</a></li>
+								</ul>
+							</li>
+							<li class="la">
+								<a href="#">공공누리 소개</a>
+								<ul>
+									<li class="fir"><a href="#">공공누리란?</a></li>
+									<li><a href="#">공공저작물 자유이용</a></li>
+									<li><a href="#">공공누리 유형안내</a></li>
+									<li><a href="#">자주하는 질문</a></li>
+									<li><a href="#">질문과 답변</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="membership cf">
+							<li class="fir userlogin"><a href="#">일반 이용자 로그인</a></li>
+							<li class="login"><a href="#">공공기관 로그인</a></li>
+							<li class="join"><a href="#">회원가입</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="alright fl">
+					<a href="#" class="menuIconR">신탁관리시스템 전체메뉴<img src="images/icon_menu_off.png" alt="메뉴"/><img src="images/icon_menu_2_off.png" alt="메뉴" width="36" class="under780"/></a>
+					<div class="gnb_box under780 right">
+						<ul class="depth2 cf">
+							<li>
+								<a href="#">신탁저작물</a>
+								<ul>
+									<li class="fir"><a href="#">사진·미술</a></li>
+									<li><a href="#">어문/텍스트 관광지</a></li>
+									<li><a href="#">영상·음악</a></li>
+									<li><a href="#">공간·시설</a></li>
+									<li><a href="#">데이터베이스</a></li>
+									<li><a href="#">소프트웨어</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">기관가입 · 이용안내</a>
+								<ul>
+									<li class="fir"><a href="#">기관 가입안내</a></li>
+									<li><a href="#">신탁기관 안내</a></li>
+									<li><a href="#">이용안내</a></li>
+									<li><a href="#">신탁저작물 이용 신청</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">알림</a>
+								<ul>
+									<li class="fir"><a href="#">공지사항</a></li>
+									<li><a href="#">보도자료</a></li>
+									<li><a href="#">자료실</a></li>
+									<li><a href="#">FAQ</a></li>
+								</ul>
+							</li>
+							<li class="la">
+								<a href="#">ALRIGHT 소개</a>
+								<ul>
+									<li class="fir"><a href="#">ALRIGHT 소개</a></li>
+									<li><a href="#">자료실/강의실</a></li>
+									<li><a href="#">ALRIGHT BI</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<div class="nav_overlay"></div>
 		</div>
 		<div id="container">
 			<div id="content" class="cf">
@@ -219,6 +345,14 @@
 							<button class="stop center"></button>
 							<button class="next"></button>
 						</div>
+						<div class="slide_number">
+							<p class="active">1 / 6</p>
+							<p>2 / 6</p>
+							<p>3 / 6</p>
+							<p>4 / 6</p>
+							<p>5 / 6</p>
+							<p>6 / 6</p>
+						</div>
 					</div>
 					<div class="slide slideR">
 						<ul class="noticeR cf" id="noticeR">
@@ -233,6 +367,10 @@
 							<button class="prev"></button>
 							<button class="stop center"></button>
 							<button class="next"></button>
+						</div>
+						<div class="slide_number">
+							<p class="active">1 / 2</p>
+							<p>2 / 2</p>
 						</div>
 					</div>
 					<ul class="banner_open mainbn">
@@ -258,45 +396,89 @@
 								<li class="fl active">
 									<a class="recommend active" href="#photo01">추천</a>
 									<div class="photolist" id="photo01" style="display:block;">
-										<div>
-											<a href="#">
-												<span class="s2_img">
-													<img src="images/s2_101.jpg" alt="아산이충무공유허"/>
-												</span>
-												<span class="text">
-													<em>아산이충무공유허</em>
-												</span>
-											</a>
-										</div>
-										<div class="on">
-											<a href="#">
-												<span class="s2_img">
-													<img src="images/s2_102.jpg" alt="이순신공원"/>
-												</span>
-												<span class="text">
-													<em>이순신공원</em>
-												</span>
-											</a>
-										</div>
-										<div>
-											<a href="#">
-												<span class="s2_img">
-													<img src="images/s2_103.jpg" alt="한려해상국립공원"/>
-												</span>
-												<span class="text">
-													<em>한려해상국립공원</em>
-												</span>
-											</a>
-										</div>
-										<div>
-											<a href="#">
-												<span class="s2_img">
-													<img src="images/s2_104.jpg" alt="국립수목원"/>
-												</span>
-												<span class="text">
-													<em>국립수목원</em>
-												</span>
-											</a>
+										<div class="slide_mom">
+											<div class="s2Slidebox cf">
+												<div class="sl sl1">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_101.jpg" alt="아산이충무공유허"/>
+														</span>
+														<span class="text">
+															<em>아산이충무공유허</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl2">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_102.jpg" alt="이순신공원"/>
+														</span>
+														<span class="text">
+															<em>이순신공원</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl3">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_103.jpg" alt="한려해상국립공원"/>
+														</span>
+														<span class="text">
+															<em>한려해상국립공원</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl4">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_104.jpg" alt="국립수목원"/>
+														</span>
+														<span class="text">
+															<em>국립수목원</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl5">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_105.jpg" alt="사적및명승제1호 경주 불국사"/>
+														</span>
+														<span class="text">
+															<em>사적및명승제1호 경주 불국사</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl6">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_106.jpg" alt="베니의 비밀"/>
+														</span>
+														<span class="text">
+															<em>베니의 비밀</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl7">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_107.jpg" alt="미스터 브러쉬 브러쉬"/>
+														</span>
+														<span class="text">
+															<em>미스터 브러쉬 브러쉬</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl8">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_108.jpg" alt="영릉(세종대왕릉)"/>
+														</span>
+														<span class="text">
+															<em>영릉(세종대왕릉)</em>
+														</span>
+													</a>
+												</div>
+											</div>
 										</div>
 										<div class="ctrl fl">
 											<button class="prev"></button>
@@ -308,45 +490,89 @@
 								<li class="fl">
 									<a class="literary" href="#photo02">어문</a>
 									<div class="photolist" id="photo02">
-										<div>
-											<a href="#">
-												<span class="s2_img">
-													<img src="images/s2_201.jpg" alt="대한민국의 뿌리 대한민국 임시정부"/>
-												</span>
-												<span class="text">
-													<em>대한민국의 뿌리,<br/> 대한민국 임시정부</em>
-												</span>
-											</a>
-										</div>
-										<div>
-											<a href="#">
-												<span class="s2_img">
-													<img src="images/s2_202.jpg" alt="신동엽 시인을 만나는 곳"/>
-												</span>
-												<span class="text">
-													<em>신동엽 시인을 만나는 곳</em>
-												</span>
-											</a>
-										</div>
-										<div>
-											<a href="#">
-												<span class="s2_img">
-													<img src="images/s2_203.png" alt="충남의 봄꽃을 만나 봄"/>
-												</span>
-												<span class="text">
-													<em>충남의 봄꽃을 만나 봄</em>
-												</span>
-											</a>
-										</div>
-										<div>
-											<a href="#">
-												<span class="s2_img">
-													<img src="images/s2_204.jpg" alt="제주 4.3 70년. 기억해야 할 역사, 잊지 말아야 할 장소들"/>
-												</span>
-												<span class="text">
-													<em>제주 4.3 70년. 기억해야 할 역사, 잊지 말아야 할 장소들</em>
-												</span>
-											</a>
+										<div class="slide_mom">
+											<div class="s2Slidebox cf">
+												<div class="sl sl1">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_201.jpg" alt="대한민국의 뿌리 대한민국 임시정부"/>
+														</span>
+														<span class="text">
+															<em>대한민국의 뿌리,<br/> 대한민국 임시정부</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl2">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_202.jpg" alt="신동엽 시인을 만나는 곳"/>
+														</span>
+														<span class="text">
+															<em>신동엽 시인을 만나는 곳</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl3">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_203.png" alt="충남의 봄꽃을 만나 봄"/>
+														</span>
+														<span class="text">
+															<em>충남의 봄꽃을 만나 봄</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl4">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_204.jpg" alt="제주 4.3 70년. 기억해야 할 역사, 잊지 말아야 할 장소들"/>
+														</span>
+														<span class="text">
+															<em>제주 4.3 70년. 기억해야 할 역사, 잊지 말아야 할 장소들</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl5">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_205.jpg" alt="부처님 오신날 앞둔 계룡산 신원사"/>
+														</span>
+														<span class="text">
+															<em>부처님 오신날 앞둔 계룡산 신원사</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl6">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_206.jpg" alt="고즈넉한 절의 봄맞이, 각원사"/>
+														</span>
+														<span class="text">
+															<em>고즈넉한 절의 봄맞이, 각원사</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl7">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_207.jpg" alt="가정의 달 5월, 경기북부 수목원 즐겨보자!"/>
+														</span>
+														<span class="text">
+															<em>가정의 달 5월, 경기북부 수목원 즐겨보자!</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl8">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_208.jpg" alt="웃음꽃이 만발하는 가족문화 여행"/>
+														</span>
+														<span class="text">
+															<em>웃음꽃이 만발하는 가족문화 여행</em>
+														</span>
+													</a>
+												</div>
+											</div>
 										</div>
 										<div class="ctrl fl">
 											<button class="prev"></button>
@@ -358,45 +584,89 @@
 								<li class="fl">
 									<a class="photo" href="#photo03">사진</a>
 									<div class="photolist" id="photo03">
-										<div>
-											<a href="#">
-												<span class="s2_img">
-													<img src="images/s2_301.jpg" alt="제주4·3평화공원"/>
-												</span>
-												<span class="text">
-													<em>제주4·3평화공원</em>
-												</span>
-											</a>
-										</div>
-										<div>
-											<a href="#">
-												<span class="s2_img">
-													<img src="images/s2_302.jpg" alt="김수영 시비 정면"/>
-												</span>
-												<span class="text">
-													<em>김수영 시비 정면</em>
-												</span>
-											</a>
-										</div>
-										<div>
-											<a href="#">
-												<span class="s2_img">
-													<img src="images/s2_303.jpg"  alt="성큼 다가온 봄, 봄꽃 언제 피나요?"/>
-												</span>
-												<span class="text">
-													<em>성큼 다가온 봄, 봄꽃 언제 피나요?</em>
-												</span>
-											</a>
-										</div>
-										<div>
-											<a href="#">
-												<span class="s2_img">
-													<img src="images/s2_304.jpg" alt="남원에서 봄과 함께하는 꽃의 향연"/>
-												</span>
-												<span class="text">
-													<em>남원에서 봄과 함께하는 꽃의 향연</em>
-												</span>
-											</a>
+										<div class="slide_mom">
+											<div class="s2Slidebox cf">
+												<div class="sl sl1">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_301.jpg" alt="제주4·3평화공원"/>
+														</span>
+														<span class="text">
+															<em>제주4·3평화공원</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl2">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_302.jpg" alt="김수영 시비 정면"/>
+														</span>
+														<span class="text">
+															<em>김수영 시비 정면</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl3">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_303.jpg"  alt="성큼 다가온 봄, 봄꽃 언제 피나요?"/>
+														</span>
+														<span class="text">
+															<em>성큼 다가온 봄, 봄꽃 언제 피나요?</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl4">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_304.jpg" alt="남원에서 봄과 함께하는 꽃의 향연"/>
+														</span>
+														<span class="text">
+															<em>남원에서 봄과 함께하는 꽃의 향연</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl5">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_305.jpg" alt="일출부터 일몰까지 떠나보는 공주 여행"/>
+														</span>
+														<span class="text">
+															<em>일출부터 일몰까지 떠나보는 공주 여행</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl6">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_306.jpg" alt="어린이날 놀러가기 좋은 대구 동촌유원지"/>
+														</span>
+														<span class="text">
+															<em>어린이날 놀러가기 좋은 대구 동촌유원지</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl7">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_307.jpg" alt="아이들과 함께가기 좋은 과천 서울대공원"/>
+														</span>
+														<span class="text">
+															<em>아이들과 함께가기 좋은 과천 서울대공원</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl8">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_308.jpg" alt="우리나라 삼보사찰 순천 송광사"/>
+														</span>
+														<span class="text">
+															<em>우리나라 삼보사찰 순천 송광사</em>
+														</span>
+													</a>
+												</div>
+											</div>
 										</div>
 										<div class="ctrl fl">
 											<button class="prev"></button>
@@ -408,45 +678,89 @@
 								<li class="fl">
 									<a class="video" href="#photo04">영상</a>
 									<div class="photolist" id="photo04">
-										<div>
-											<a href="#">
-												<span class="s2_img">
-													<img src="images/s2_401.jpg" alt="중국에서 만난 대한민국 독립유적지 상하이편"/>
-												</span>
-												<span class="text">
-													<em>중국에서 만난 대한민국 독립유적지 - 상하이 편</em>
-												</span>
-											</a>
-										</div>
-										<div>
-											<a href="#">
-												<span class="s2_img">
-													<img src="images/s2_402.jpg" alt="이순신 장군 탄신 제473주년 기념행사 - 충무공 이순신 장군을 기리다"/>
-												</span>
-												<span class="text">
-													<em>이순신 장군 탄신 제473주년 기념행사 - 충무공 이순신 장군을 기리다</em>
-												</span>
-											</a>
-										</div>
-										<div>
-											<a href="#">
-												<span class="s2_img">
-													<img src="images/s2_403.jpg" alt="다큐멘터리로 만나는 청와대 나무 이야기"/>
-												</span>
-												<span class="text">
-													<em>다큐멘터리로 만나는 청와대 나무 이야기</em>
-												</span>
-											</a>
-										</div>
-										<div>
-											<a href="#">
-												<span class="s2_img">
-													<img src="images/s2_404.jpg" alt="신흥무관학교 교가"/>
-												</span>
-												<span class="text">
-													<em>신흥무관학교 교가</em>
-												</span>
-											</a>
+										<div class="slide_mom">
+											<div class="s2Slidebox cf">
+												<div class="sl sl1">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_401.jpg" alt="중국에서 만난 대한민국 독립유적지 상하이편"/>
+														</span>
+														<span class="text">
+															<em>중국에서 만난 대한민국 독립유적지 - 상하이 편</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl2">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_402.jpg" alt="이순신 장군 탄신 제473주년 기념행사 - 충무공 이순신 장군을 기리다"/>
+														</span>
+														<span class="text">
+															<em>이순신 장군 탄신 제473주년 기념행사 - 충무공 이순신 장군을 기리다</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl3">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_403.jpg" alt="다큐멘터리로 만나는 청와대 나무 이야기"/>
+														</span>
+														<span class="text">
+															<em>다큐멘터리로 만나는 청와대 나무 이야기</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl4">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_404.jpg" alt="신흥무관학교 교가"/>
+														</span>
+														<span class="text">
+															<em>신흥무관학교 교가</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl5">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_405.jpg" alt="소통과 헌신의 지도자, 세종대왕"/>
+														</span>
+														<span class="text">
+															<em>소통과 헌신의 지도자, 세종대왕</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl6">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_406.jpg" alt="꿈꾸는 명창, 스승을 노래하다 '소리꾼 고한돌'"/>
+														</span>
+														<span class="text">
+															<em>꿈꾸는 명창, 스승을 노래하다 '소리꾼 고한돌'</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl7">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_407.jpg" alt="시대창극 '당신의 의미'"/>
+														</span>
+														<span class="text">
+															<em>시대창극 '당신의 의미'</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl8">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_408.jpg" alt="불교의 요람, 오대산"/>
+														</span>
+														<span class="text">
+															<em>불교의 요람, 오대산</em>
+														</span>
+													</a>
+												</div>
+											</div>
 										</div>
 										<div class="ctrl fl">
 											<button class="prev"></button>
@@ -458,45 +772,89 @@
 								<li class="fl">
 									<a class="font" href="#photo05">폰트</a>
 									<div class="photolist" id="photo05">
-										<div>
-											<a href="#">
-												<span class="s2_img">
-													<img src="images/s2_501.jpg" alt="빛고을광주체"/>
-												</span>
-												<span class="text">
-													<em>빛고을광주체</em>
-												</span>
-											</a>
-										</div>
-										<div>
-											<a href="#">
-												<span class="s2_img">
-													<img src="images/s2_502.jpg" alt="경기도천년체"/>
-												</span>
-												<span class="text">
-													<em>경기도천년체</em>
-												</span>
-											</a>
-										</div>
-										<div>
-											<a href="#">
-												<span class="s2_img">
-													<img src="images/s2_503.jpg" alt="고양체"/>
-												</span>
-												<span class="text">
-													<em>고양체</em>
-												</span>
-											</a>
-										</div>
-										<div>
-											<a href="#">
-												<span class="s2_img">
-													<img src="images/s2_504.jpg" alt="남양주서체"/>
-												</span>
-												<span class="text">
-													<em>남양주서체</em>
-												</span>
-											</a>
+										<div class="slide_mom">
+											<div class="s2Slidebox cf">
+												<div class="sl sl1">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_501.jpg" alt="빛고을광주체"/>
+														</span>
+														<span class="text">
+															<em>빛고을광주체</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl2">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_502.jpg" alt="경기도천년체"/>
+														</span>
+														<span class="text">
+															<em>경기도천년체</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl3">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_503.jpg" alt="고양체"/>
+														</span>
+														<span class="text">
+															<em>고양체</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl4">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_504.jpg" alt="남양주서체"/>
+														</span>
+														<span class="text">
+															<em>남양주서체</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl5">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_505.jpg" alt="남양주서체"/>
+														</span>
+														<span class="text">
+															<em>남양주서체</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl6">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_506.jpg" alt="남양주서체"/>
+														</span>
+														<span class="text">
+															<em>남양주서체</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl7">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_507.jpg" alt="남양주서체"/>
+														</span>
+														<span class="text">
+															<em>남양주서체</em>
+														</span>
+													</a>
+												</div>
+												<div class="sl sl8">
+													<a href="#">
+														<span class="s2_img">
+															<img src="images/s2_508.jpg" alt="제주상징체"/>
+														</span>
+														<span class="text">
+															<em>제주상징체</em>
+														</span>
+													</a>
+												</div>
+											</div>
 										</div>
 										<div class="ctrl fl">
 											<button class="prev"></button>
@@ -547,7 +905,7 @@
 								<img src="images/s3_4.jpg" alt="thum04"/>
 							</a>
 							<a href="#" class="alt">
-								<img src="images/s3_10.jpg"/>
+								<img src="images/s3_10.jpg" alt="thum10"/>
 							</a>
 						</li>
 						<li>
@@ -586,25 +944,29 @@
 						<li class="fir">
 							<div class="family" id="family">
 								<a href="#" >패밀리사이트</a>
-								<ul>
-									<li><a href="#">한국문화정보원</a></li>
-									<li><a href="#">공공저작권 신탁관리시스템</a></li>
-									<li><a href="#">문화포털</a></li>
-									<li><a href="#">문화셈터</a></li>
-									<li><a href="#">전통문화포털</a></li>
-									<li><a href="#">문화정보서비스 지원센터</a></li>
-								</ul>
+								<div>
+									<ul>
+										<li><a href="#">한국문화정보원</a></li>
+										<li><a href="#">공공저작권 신탁관리시스템</a></li>
+										<li><a href="#">문화포털</a></li>
+										<li><a href="#">문화셈터</a></li>
+										<li><a href="#">전통문화포털</a></li>
+										<li><a href="#">문화정보서비스 지원센터</a></li>
+									</ul>
+								</div>
 							</div>
 						</li>
 						<li>
 							<div class="relation" id="relation">
 								<a href="#">관련사이트</a>
-								<ul>
-									<li><a href="#">문화체육관광부</a></li>
-									<li><a href="#">한국저작권위원회</a></li>
-									<li><a href="#">공공데이터포털</a></li>
-									<li><a href="#">CCKOREA</a></li>
-								</ul>
+								<div>
+									<ul>
+										<li><a href="#">문화체육관광부</a></li>
+										<li><a href="#">한국저작권위원회</a></li>
+										<li><a href="#">공공데이터포털</a></li>
+										<li><a href="#">CCKOREA</a></li>
+									</ul>
+								</div>
 							</div>
 						</li>
 					</ul>

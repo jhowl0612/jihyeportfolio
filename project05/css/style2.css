@@ -26,16 +26,10 @@
 
 .search{top:60px; right:70px; margin-right:0; z-index:10; width:370px;}
 .search fieldset{border:0; padding:13px 0 13px 16px;}
-.search select{background:transparent; color:#ffffff; font-weight:600; padding-left:5px; background:url(../images/select_box2.gif) no-repeat 45px center; margin-right:0; line-height:26px;}
-select {border-radius:0;/*아이폰 사파리 보더*/ -webkit-appearance:none; -moz-appearance:none; appearance:none}
-select::-ms-expand{display:none;/*IE10*/ }
+.search select{background:transparent; color:#ffffff; font-weight:600; padding-left:5px; margin-right:0; line-height:26px;}
+select {border-radius:0;}
 .search option{background:#333333;}
-.search input{background:transparent; color:#ffffff; border-bottom:1px solid #ffffff; width:270px; font-weight:500; font-size:15px; letter-spacing:-0.8px; padding-left:0;}
-input::-webkit-input-placeholder{color:#fff;}
-input::-moz-input-placeholder{color:#fff;}
-input::-ms-input-placeholder{color:#fff;}
-input::-o-input-placeholder{color:#fff;}
-input::input-placeholder{color:#fff;}
+.search input{background:transparent url(../images/placeholder2.png) no-repeat 4px center; color:#ffffff; border-bottom:1px solid #ffffff; width:270px; font-weight:500; font-size:15px; letter-spacing:-0.8px; padding-left:0;}
 .search button{width:50px; height:50px; background-image:url(../images/btn_search_white.png);}
 
 
@@ -66,11 +60,11 @@ input::input-placeholder{color:#fff;}
 .section2 li>a{width:120px; font-size:1.15em; padding-left:24px;}
 .section2 li>a:before{background-size:auto 90%;}
 .photolist{top:64px; width:700px;}
-.photolist>div{padding:5px 2px;}
-.photolist>div>a{width:155px; height:240px;}
-.photolist>div>a .s2_img{height:155px;}
-.photolist>div>a img{width:155px;}
-.photolist>div>a .text{height:80px; padding:0 5px;}
+.photolist .sl{padding:5px 2px;}
+.photolist .sl>a{width:155px; height:240px;}
+.photolist .sl>a .s2_img{height:155px;}
+.photolist .sl>a img{width:155px;}
+.photolist .sl>a .text{height:80px; padding:0 5px;}
 .section2 .ctrl{top:-42px; right:4px;}
 .section2 .ctrl button{float:left; margin:0 4px;}
 
