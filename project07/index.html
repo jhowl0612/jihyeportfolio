@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>국립암센터</title>
+	<link rel="stylesheet" href="css/style.css"/>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+	<div class="skip_navigation">
+		<a href="#main_cont">본문 바로가기</a>
+	</div>
+	<div id="wrap">
+		<div id="header">
+			<div class="header_top">
+				<div class="top_menu">
+					<ul id="loginarea" class="fl">
+						<li><a href="#">로그인</a></li>
+						<li><a href="#">회원가입</a></li>
+						<li><a href="#">ID/PW찾기</a></li>
+					</ul>
+					<ul class="fr">
+						<li><a href="#">English</a></li>
+						<li><a href="#">Mobile</a></li>
+						<li><a href="#">SiteMap</a></li>
+						<li><a href="#">사이버연수원</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="header_center">
+				<p class="home fl"><a href="#"><img src="images/home.png" alt="HOME 바로가기"/></a></p>
+				<p class="gov30 fl"><a href="#"><img src="images/gov30.png" alt="정보공개"/></a></p>
+				<h1 id="logo"><a href="#"><img src="images/logo.png" alt="국립암센터 NATIONAL CANCER CENTER"/></a></h1>
+				<div id="search" class="fr">
+					<form action="#">
+						<fieldset>
+							<legend>통합검색</legend>
+							<label for="all_search">검색어입력</label>
+							<input type="text" id="all_search" class="all_search"/>
+							<input type="image" src="images/top_search.png" alt="검색"/>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<div id="gnb">
+				<div class="gnb_inner">
+					<ul class="main_menu">
+						<li>
+							<a href="#"><img src="images/gnb01_off.png" alt="국립암센터 소개"/></a>
+							<ul class="snav1 snav">
+								<li><a href="#">기관장 인사말</a></li>
+								<li><a href="#">기관소개/전략체계도</a></li>
+								<li><a href="#">경영공시</a></li>
+								<li class="dep3_mom">
+									<a href="#">윤리경영</a>
+									<ul class="dep3">
+										<li><a href="#">추진목표 및 전략</a></li>
+										<li><a href="#">공익신고센터</a></li>
+										<li><a href="#">청탁금지법 위반행위<br/>신고</a></li>
+										<li><a href="#">반부패·청렴자료</a></li>
+										<li><a href="#">정보공개</a></li>
+									</ul>
+								</li>
+								<li><a href="#">전체조직도</a></li>
+								<li class="dep3_mom">
+									<a href="#">주요사업현황/사업실명제</a>
+									<ul class="dep3 dep3_top">
+										<li><a href="#">개요</a></li>
+										<li><a href="#">연구사업</a></li>
+										<li><a href="#">진료사업</a></li>
+										<li><a href="#">국가암관리사업 지원</a></li>
+										<li><a href="#">암 교육훈련 사업</a></li>
+										<li><a href="#">국제암대학원대학교 운영</a></li>
+										<li><a href="#">사업실명제</a></li>
+									</ul>
+								</li>
+								<li><a href="#">대외협력</a></li>
+								<li><a href="#">역대기관장</a></li>
+								<li class="la"><a href="#">관련기관</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><img src="images/gnb02_off.png" alt="연구소"/></a>
+							<ul class="snav2 snav">
+								<li class="dep3_mom">
+									<a href="#">연구소 소개</a>
+									<ul class="dep3">
+										<li><a href="#">소개</a></li>
+										<li><a href="#">조직도</a></li>
+										<li><a href="#">연구진 소개</a></li>
+										<li><a href="#">코어랩 이용안내</a></li>
+										<li><a href="#">시설 및 장비안내</a></li>
+									</ul>
+								</li>
+								<li><a href="#">정밀의학연구부</a></li>
+								<li><a href="#">이행성연구부</a></li>
+								<li><a href="#">융합기술연구부</a></li>
+								<li><a href="#">종양먼역학연구부</a></li>
+								<li><a href="#">임상의학연구부</a></li>
+								<li><a href="#">암생물학학연구부</a></li>
+								<li><a href="#">암역학예방연구부</a></li>
+								<li><a href="#">실험동물운용팀</a></li>
+								<li><a href="#">생물의약품생산실</a></li>
+								<li><a href="#">유전체분석팀</a></li>
+								<li><a href="#">단백체분석팀</a></li>
+								<li><a href="#">생물정보분석팀</a></li>
+								<li><a href="#">의학통계분석팀</a></li>
+								<li><a href="#">유세포분석팀</a></li>
+								<li><a href="#">면역세포치료사업단</a></li>
+								<li><a href="#">기술평가이전센터</a></li>
+								<li class="la"><a href="#">연구논문 및 특허성과</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><img src="images/gnb03_off.png" alt="병원"/></a>
+							<ul class="snav3 snav">
+								<li class="dep3_mom">
+									<a href="#">병원 소개</a>
+									<ul class="dep3">
+										<li><a href="#">소개</a></li>
+										<li><a href="#">조직도</a></li>
+										<li><a href="#">의료진 소개</a></li>
+										<li><a href="#">시설 및 장비안내</a></li>
+									</ul>
+								</li>
+								<li class="dep3_mom">
+									<a href="#">각 센터 소개</a>
+									<ul class="dep3">
+										<li><a href="#">희귀암센터</a></li>
+										<li><a href="#">폐암센터</a></li>
+										<li><a href="#">간담도췌장암센터</a></li>
+										<li><a href="#">대장암센터</a></li>
+										<li><a href="#">위암센터</a></li>
+										<li><a href="#">유방암센터</a></li>
+										<li><a href="#">자궁난소암센터</a></li>
+										<li><a href="#">갑상선암센터</a></li>
+										<li><a href="#">소아청소년암센터</a></li>
+										<li><a href="#">비뇨기암센터</a></li>
+										<li><a href="#">혈액암센터</a></li>
+										<li><a href="#">통합케어센터</a></li>
+										<li><a href="#">임상시험센터</a></li>
+										<li><a href="#">지원부서</a></li>
+									</ul>
+								</li>
+								<li><a href="#">암예방검진센터</a></li>
+								<li><a href="#">양성자치료센터</a></li>
+								<li><a href="#">진료협력실</a></li>
+								<li class="dep3_mom">
+									<a href="#">진료예약실</a>
+									<ul class="dep3">
+										<li><a href="#">진료안내</a></li>
+										<li><a href="#">진료일정</a></li>
+										<li><a href="#">진료예약</a></li>
+										<li><a href="#">환자의 권리와 의무</a></li>
+									</ul>
+								</li>
+								<li><a href="#">입퇴원안내</a></li>
+								<li><a href="#" style="letter-spacing:-1.7px;">암생존자통합지지센터</a></li>
+								<li class="dep3_mom">
+									<a href="#">자원봉사자 모집</a>
+									<ul class="dep3">
+										<li><a href="#">공지사항</a></li>
+										<li><a href="#">활동분야 안내</a></li>
+									</ul>
+								</li>
+								<li><a href="#">암환자설명회</a></li>
+								<li><a href="#">의료급여환자안내</a></li>
+								<li><a href="#">증명서 발급</a></li>
+								<li><a href="#">가정간호</a></li>
+								<li class="dep3_mom">
+									<a href="#">연명의료결정제도</a>
+									<ul class="dep3">
+										<li><a href="#">사전연명의료의향서</a></li>
+										<li><a href="#">연명의료중단등결정</a></li>
+										<li><a href="#">의료기관윤리위원회</a></li>
+									</ul>
+								</li>
+								<li><a href="#">호스피스완화의료실</a></li>
+								<li class="dep3_mom">
+									<a href="#">비급여 진료비</a>
+									<ul class="dep3 dep3_top">
+										<li><a href="#">행위</a></li>
+										<li><a href="#">치료재료대</a></li>
+										<li><a href="#">약제</a></li>
+										<li><a href="#">제증명 수수료</a></li>
+									</ul>
+								</li>
+								<li class="la"><a href="#">법률자문 및 소송<br/>수행 현황</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><img src="images/gnb04_off.png" alt="국가암관리사업본부"/></a>
+							<ul class="snav4 snav">
+								<li><a href="#">국가암관리사업</a></li>
+								<li class="dep3_mom">
+									<a href="#">사업본부 소개</a>
+									<ul class="dep3">
+										<li><a href="#">소개</a></li>
+										<li><a href="#">조직도</a></li>
+										<li><a href="#">연구진 소개</a></li>
+									</ul>
+								</li>
+								<li><a href="#">암빅데이터센터</a></li>
+								<li><a href="#">암관리사업부</a></li>
+								<li><a href="#">중앙암등록사업부</a></li>
+								<li><a href="#">암예방사업부</a></li>
+								<li class="la"><a href="#">정보시스템</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><img src="images/gnb05_off.png" alt="국제암대학원대학교"/></a>
+							<ul class="snav5 snav">
+								<li class="dep3_mom">
+									<a href="#">국립암센터<br/>국제암대학원대학교 소개</a>
+									<ul class="dep3">
+										<li><a href="#">인사말</a></li>
+										<li><a href="#">설립근거 및 배경</a></li>
+										<li><a href="#">조직도</a></li>
+										<li><a href="#">교수진 소개</a></li>
+										<li><a href="#">교육목표 및 전략</a></li>
+										<li><a href="#">상징</a></li>
+									</ul>
+								</li>
+								<li><a href="#">교수진 소개</a></li>
+								<li><a href="#">암관리학과</a></li>
+								<li><a href="#">암의생명과학과</a></li>
+								<li class="dep3_mom la">
+									<a href="#">입학안내</a>
+									<ul class="dep3 dep3_top">
+										<li><a href="#">입학안내</a></li>
+										<li><a href="#">장학제도</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><img src="images/gnb06_off.png" alt="교육"/></a>
+							<ul class="snav6 snav">
+								<li class="dep3_mom">
+									<a href="#">교육훈련소개</a>
+									<ul class="dep3">
+										<li><a href="#">소개</a></li>
+										<li><a href="#">미션&비전</a></li>
+										<li><a href="#">업무별 담당자</a></li>
+										<li><a href="#">교육시설 사용</a></li>
+									</ul>
+								</li>
+								<li><a href="#">교육공지</a></li>
+								<li class="dep3_mom">
+									<a href="#">수련</a>
+									<ul class="dep3">
+										<li><a href="#">전공의</a></li>
+										<li><a href="#">전임의</a></li>
+									</ul>
+								</li>
+								<li class="dep3_mom">
+									<a href="#">전문교육 및 세미나</a>
+									<ul class="dep3 dep3_top">
+										<li><a href="#">집담회</a></li>
+										<li><a href="#">화요암세미나</a></li>
+										<li><a href="#">수요강좌</a></li>
+										<li><a href="#">금요연구세미나</a></li>
+										<li><a href="#">온라인직원교육</a></li>
+										<li><a href="#">간호사보수교육</a></li>
+									</ul>
+								</li>
+								<li class="dep3_mom">
+									<a href="#">암전문가양성교육</a>
+									<ul class="dep3 dep3_top2">
+										<li><a href="#">고위/전문 교육과정</a></li>
+										<li><a href="#">국가암관리사엽교육</a></li>
+										<li><a href="#">모집</a></li>
+									</ul>
+								</li>
+								<li class="la"><a href="#">심포지엄</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><img src="images/gnb07_off.png" alt="알림마당"/></a>
+							<ul class="snav7 snav">
+								<li><a href="#">학술행사</a></li>
+								<li><a href="#">일반행사</a></li>
+								<li><a href="#">교육공지</a></li>
+								<li><a href="#">입찰공지</a></li>
+								<li><a href="#">채용공고</a></li>
+								<li class="la"><a href="#">기타공지</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><img src="images/gnb08_off.png" alt="이용안내"/></a>
+							<ul class="snav8 snav">
+								<li><a href="#">찾아오시는 길</a></li>
+								<li><a href="#">전화번호안내</a></li>
+								<li><a href="#">원내배치</a></li>
+								<li><a href="#">편의시설 및 주차</a></li>
+								<li class="la"><a href="#">웹접근성안내</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><img src="images/gnb09_off.png" alt="사이버홍보센터"/></a>
+							<ul class="snav9 snav">
+								<li><a href="#">보도자료</a></li>
+								<li><a href="#">암연구동향</a></li>
+								<li><a href="#">관련기사</a></li>
+								<li class="dep3_mom">
+									<a href="#">출판물</a>
+									<ul class="dep3">
+										<li><a href="#">도서</a></li>
+										<li><a href="#">뉴스레터</a></li>
+										<li><a href="#">연보 및 브로셔</a></li>
+									</ul>
+								</li>
+								<li><a href="#">포토갤러리</a></li>
+								<li><a href="#">NCC 심벌 마크</a></li>
+								<li class="la"><a href="#">친절직원</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><img src="images/gnb10_off.png" alt="고객서비스"/></a>
+							<ul class="snav10 snav">
+								<li><a href="#">자주하는 질문</a></li>
+								<li><a href="#">고객의 소리</a></li>
+								<li><a href="#">클린신고센터</a></li>
+								<li><a href="#">익명신고</a></li>
+								<li class="dep3_mom">
+									<a href="#">정보공개</a>
+									<ul class="dep3">
+										<li><a href="#">고위/전문 교육과정</a></li>
+										<li><a href="#">국가암관리사엽교육</a></li>
+										<li><a href="#">모집</a></li>
+									</ul>
+								</li>
+								<li><a href="#">고객헌장</a></li>
+								<li><a href="#">제안샘</a></li>
+								<li><a href="#">증명서발급</a></li>
+								<li class="la"><a href="#">온라인제증명발급</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div><!-- id="gnb" -->
+		</div><!-- id="header" -->
+		<div id="main_cont">
+			<div id="area1">
+				<ul class="main_banner main_left fl">
+					<li class="banner1"><a href="#">진료예약</a><span></span></li>
+					<li class="banner2"><a href="#">진료일정</a><span></span></li>
+					<li class="banner3"><a href="#">찾아오시는 길</a><span></span></li>
+					<li class="banner4"><a href="#">진료협력실</a><span></span></li>
+				</ul>
+				<div class="mainslide fl">
+					<div class="slidebox">
+						<div class="control">
+							<div class="control_bullet fl">
+								<a href="#" class="active">1</a>
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">4</a>
+								<a href="#">5</a>
+								<a href="#">6</a>
+								<a href="#">7</a>
+							</div>
+							<div class="play_stop fl">
+								<a href="#" class="stop">멈춤</a>
+								<a href="#" class="play">재생</a>
+							</div>
+						</div>
+						<ul class="slide">
+							<li class="active"><a href="#"><img src="images/1903_01.jpg" alt="공공기관고객만족도2"/></a></li>
+							<li><a href="#"><img src="images/1903_02.jpg" alt="소극행정신고"/></a></li>
+							<li><a href="#"><img src="images/1903_03.jpg" alt="병문안자제안내1"/></a></li>
+							<li><a href="#"><img src="images/1903_04.jpg" alt="병문안자제안내2"/></a></li>
+							<li><a href="#"><img src="images/1903_05.jpg" alt="병문안자제안내3"/></a></li>
+							<li><a href="#"><img src="images/1903_06.jpg" alt="면회출입제한"/></a></li>
+							<li><a href="#"><img src="images/1903_07.jpg" alt="정부보조금부정수급신고기간"/></a></li>
+						</ul>
+					</div>
+				</div>
+				<ul class="main_banner main_right fl">
+					<li class="banner1"><a href="#">증명서발급서비스</a><span></span></li>
+					<li class="banner2"><a href="#">암예방건강검진</a><span></span></li>
+					<li class="banner3"><a href="#">암예방생활수칙</a><span></span></li>
+					<li class="banner4"><a href="#">주요전화번호</a><span></span></li>
+				</ul>
+			</div>
+			<div id="area2">
+				<ul>
+					<li><a href="#">암정복추진기획단</a></li>
+					<li><a href="#">항암신약개발사업단</a></li>
+					<li><a href="#">임상연구협력센터</a></li>
+					<li><a href="#">Velos eResearch</a></li>
+					<li><a href="#">암연구동향</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">암예방검진센터</a></li>
+					<li><a href="#">암성자치료센터</a></li>
+					<li><a href="#">임상연구보호실</a></li>
+					<li><a href="#">진료협력실</a></li>
+					<li><a href="#">의생명연구심의위원회(IRB)</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">중앙암등록본부</a></li>
+					<li><a href="#">금연길라잡이</a></li>
+					<li><a href="#">호스피스완화의료</a></li>
+					<li><a href="#">국가암정보센터</a></li>
+					<li><a href="#">암예방생활수칙</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">자원봉사자</a></li>
+					<li><a href="#">도서관</a></li>
+					<li class="fund"><a href="#">국립암센터 발전기금<img src="images/2019_main_icon_go.png" alt="국립암센터 발전기금 바로가기"/></a></li>
+				</ul>
+			</div>
+			<div id="area3">
+				<div class="news_area fl">
+					<div class="news_inner on">
+						<h3><a href="#">보도자료</a></h3>
+						<ul>
+							<li><a href="#">국립암센터, 글로벌 암 유전체 지역데이터센터 아시아 최초 유치</a><span>05.30</span></li>
+							<li><a href="#">올림푸스한국, 소아암 환우 위해 사진전 수익금 국립암센터에 기부</a><span>05.28</span></li>
+							<li><a href="#">소아암 환아 대상 재활 프로그램 진행</a><span>05.28</span></li>
+							<li><a href="#">마이크로바이옴, 암 치료와의 연결고리는?</a><span>05.22</span></li>
+						</ul>
+						<p><a href="#">더보기 +</a></p>
+					</div>
+					<div class="news_inner">
+						<h3 class="tab_right"><a href="#">공지사항</a></h3>
+						<ul>
+							<li><a href="#">2019년 3차 의생명과학포럼 안내</a><span>05.30</span></li>
+							<li><a href="#">6월 환자설명회</a><span>05.28</span></li>
+							<li><a href="#">2019 암생존자 주간기념 심포지엄</a><span>05.28</span></li>
+							<li><a href="#">6월 암생존자통합지지센터 프로그램</a><span>05.22</span></li>
+						</ul>
+						<p><a href="#">더보기 +</a></p>
+					</div>
+				</div>
+				<div class="news_area fr">
+					<div class="news_inner on">
+						<h3><a href="#">채용공고</a></h3>
+						<ul>
+							<li><a href="#">청년인턴 방사선사 채용공고</a><span>05.30</span></li>
+							<li><a href="#">임시직 언어치료사 채용공고(이비인후과)</a><span>05.28</span></li>
+							<li><a href="#">업무직 채용공고</a><span>05.28</span></li>
+							<li><a href="#">임시직 간호사 채용공고(임상시험센터)</a><span>05.22</span></li>
+						</ul>
+						<p><a href="#">더보기 +</a></p>
+					</div>
+					<div class="news_inner">
+						<h3 class="tab_right"><a href="#">입찰공고</a></h3>
+						<ul>
+							<li><a href="#">연구장비 4종  구매 (제한확대) 입찰공고</a><span>05.30</span></li>
+							<li><a href="#">국립암센터 전담특허사무소 선정 입찰 공고</a><span>05.28</span></li>
+							<li><a href="#">2019년도 검사재료 연간 단가계약 입찰공고</a><span>05.28</span></li>
+							<li><a href="#">특수(일반) 구급차 운영 위탁 입찰재공고</a><span>05.22</span></li>
+						</ul>
+						<p><a href="#">더보기 +</a></p>
+					</div>
+				</div>
+			</div>
+			<div id="area4">
+				<h3><span>NCC PHOTO</span></h3>
+				<ul>
+					<li>
+						<a href="#">
+							<img src="images/ncc_photo1.png" alt="희귀암센터 강현귀 센터장, 대한3D프린팅융합의료학회 제2대 부이사장 임명"/>
+							<span>희귀암센터 강현귀 센터장, 대한3D프린팅융합의료학회 제2대 부이사장 임명</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/ncc_photo2.png" alt="희귀암센터 박종웅 전문의, 3D프린팅융합의료학회 우수구연발표상 수상"/>
+							<span>희귀암센터 박종웅 전문의, 3D프린팅융합의료학회 우수구연발표상 수상</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/ncc_photo3.png" alt="개그맨 유상무, 유튜브 수익금으로 소아암 기부 마라톤 선행"/>
+							<span>개그맨 유상무, 유튜브 수익금으로 소아암 기부 마라톤 선행</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/ncc_photo4.png" alt="피부종양클리닉 송기훈, 〈똑똑! 암정보파일 시즌2〉 인터뷰 촬영"/>
+							<span>피부종양클리닉 송기훈, 〈똑똑! 암정보파일 시즌2〉 인터뷰 촬영</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div><!-- id="main_cont" -->
+		<div id="footer">
+			<div class="foot_inner cf">
+				<div class="foot_menu fl">
+					<ul>
+						<li><a href="#">이용안내</a></li>
+						<li class="color"><a href="#">개인정보처리방침</a></li>
+						<li class="color"><a href="#">환자의 권리와 의무</a></li>
+						<li><a href="#">CONTACT WEBMASTER</a></li>
+					</ul>
+					<address>경기도 고양시 일산동구 일산로 323 (마두1동 809번지) 우편번호 10408<br/>대표전화 1588-8110</address>
+					<p class="copyrights">Copyright National Cancer Center. All Rights Reserved.</p>
+				</div>
+				<div class="sitelink">
+					<a href="#"><img src="images/intro_bottom_webaward.png" alt="웹어워드 코리아 대상"/></a>
+					<a href="#"><img src="images/intro_bottom_btn3.png" alt="청렴정보공개"/></a>
+					<a href="#"><img src="images/intro_bottom_web_wa.png" alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)"/></a>
+					<a href="#"><img src="images/intro_bottom_btn1.png" alt="가족친화 인증 기관"/></a>
+					<a href="#"><img src="images/intro_bottom_btn2.png" alt="인증의료기관 보건복지부"/></a>
+					<a href="#"><img src="images/intro_bottom_btn5.png" alt="청탁금지법 통합검색"/></a>
+				</div>
+				<div class="foot_banner">
+					<a href="#">
+						<img src="images/intro_bottom_isms.png" alt="정보보호 관리체계 인증서"/>
+						<span>[인증범위] 통합의료정보시스템(EMR, OCS)및 홈페이지 서비스 운영<br/>[유효기간] 2018.10.17 ~ 2021.10.16</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
