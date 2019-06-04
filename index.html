@@ -7,47 +7,108 @@
 	<meta name="Keywords" content="웹퍼블리셔, 퍼블리싱, HTML5, CSS, jQuery, 제이쿼리"/>
 	<meta name="Author" content="최지혜">
 	<title>최지혜 포트폴리오</title>
-	<link rel="stylesheet" href="css/style.css"/>
-	<script src="js/script.js"></script>
-	<style type="text/css">
-		.gitbash_tip span{color:#4c79ff;}
-	</style>
+	<link rel="shortcut icon" href="index_file/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="index_file/css/style.css"/>
+	<script src="index_file/js/jquery-1.9.1.min.js"></script>
+	<script src="index_file/js/script.js"></script>
 </head>
 <body>
 	<div id="wrap">
 		<div id="header">
 			<div class="header_inner">
-				<h1><a href="index.html"><img src="img/logo.png" alt="웹퍼블리셔 최지혜 포트폴리오" title="최지혜 포트폴리오"/></a></h1>
+				<h1><a href="index.html"><img src="index_file/img/logo.png" alt="웹퍼블리셔 최지혜 포트폴리오" title="최지혜 포트폴리오"/></a></h1>
 				<ul class="nav">
-					<li><a href="#">Intro</a></li>
+					<li class="active"><a href="#">Intro</a></li>
+					<li><a href="#">About me</a></li>
 					<li><a href="#">Portfolio</a></li>
-					<li><a href="#">About Me</a></li>
-					<li class="diary"><a href="#">Coding Diary</a></li>
+					<li><a href="#">Contact</a></li>
+					<li class="diary"><a href="diary/index.html" target="_blank">Coding diary</a></li>
 				</ul>
 			</div>
-		</div>
+		</div><!-- id="header" -->
 		<div id="container">
-			<div id="intro" class="section"></div>
+			<div id="intro">
+				
+			</div><!-- id="intro" -->
+			<div id="about me">
+				<div class="about_inner">
+					<h2>About me</h2>
+					
+				</div>
+			</div><!-- id="about me" -->
+			<div id="Portfolio">
+				<div class="portfolio_inner">
+					<h2>Portfolio</h2>
+					<div class="best">
+						<h3>Best projects</h3>
+						<ul class="best_list">
+							<li>
+								<div class="project_tit">First 06번역원</div>
+								<div class="project_wrap" style="height:600px;">
+									<a href="#"><img src="" alt=""/></a>
+								</div>
+							</li>
+							<li>
+								<div class="project_tit">Second 04식약청</div>
+								<div class="project_wrap">
+									<a href="#"><img src="" alt=""/></a>
+								</div>
+							</li>
+							<li>
+								<div class="project_tit">Third 07암센터</div>
+								<div class="project_wrap">
+									<a href="#"><img src="" alt=""/></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="other">
+						<h3>Other projects</h3>
+						<div class="other_wrap">
+							<div class="col1">
+								<div class="box1">
+									01식약청 css
+								</div>
+								<div class="box2">
+									02공공누리 css 자바스크립트 건드린 것
+								</div>
+								<div class="box3">
+									03현대
+								</div>
+							</div>
+							<div class="col2">
+								<div class="box4">
+									05공공누리
+								</div>
+								<div class="box5">
+									04_02식약청 ie8
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- id="portfolio" -->
+			<div id="contact">
+				<div class="top_go"></div>
+				<p>COPYRIGHT ⓒ 2019 CHOEJIHYE. All rights reserved.</p>
+			</div><!-- id="contact" -->
 		</div>
-		<div id="footer">
+	
+	
+	
+	
 		
-		</div>
-		
-		
-		
-		
-		
-		
-		
-		<a href="project01/index.html" target="_blank">project01</a>
-		<a href="project02/index.html" target="_blank">project02</a>
-		<a href="project03/index.html" target="_blank">project03</a>
-		<a href="project04/index.html" target="_blank">project04</a>
-		<a href="project04_02/index.html" target="_blank">project04_02</a>
-		<a href="project05/index.html" target="_blank">project05</a>
-		<a href="project06/index.html" target="_blank">project06</a>
-		<a href="project07/index.html" target="_blank">project07</a><br/>
-		<a href="diary/index.html" target="_blank"><strong>일기장</strong></a>
+		<br/>
+		<ul>
+			<li><a href="project01/index.html" target="_blank">[project01] 식약청 (css)</a></li>
+			<li><a href="project02/index.html" target="_blank">[project02] 공공누리 반응형 (css)</a></li>
+			<li><a href="project03/index.html" target="_blank">[project03] 현대카드</a></li>
+			<li><a href="project04/index.html" target="_blank">[project04] 식약청 제이쿼리 적용 (풀페이지. ie8 대응x)</a></li>
+			<li><a href="project04_02/index.html" target="_blank">[project04_02] 식약청 제이쿼리 적용 (풀페이지 삭제. ie8 대응)</a></li>
+			<li><a href="project05/index.html" target="_blank">[project05] 공공누리 제이쿼리 적용</a></li>
+			<li><a href="project06/index.html" target="_blank">[project06] 한국문학번역원 반응형</a></li>
+			<li><a href="project07/index.html" target="_blank">[project07] 국립암센터 3뎁스</a></li>
+		</ul>
 		
 		<h4>git bash</h4>
 		<ul class="gitbash_tip">
@@ -56,7 +117,10 @@
 			<li>git commit -m "<span>설명</span>" : 대기상태의 대상을 커밋상태로 올림. 설명서를 붙임</li>
 			<li>git remote add origin <span>https://github.com/jihye0612/jihyeportfolio.git</span> : 해당 링크의 저장소를 'origin'이라는 이름으로 연결. 연결저장소로 지정.</li>
 			<li>git push -u origin master : 커밋 상태의 대상들을 원격저장소 origin으로 옮김. 이후부터는 git push만 입력해도 됨.</li>
+			<li>git rm --cached -r  <span>폴더이름</span>/</li>
 		</ul>
+		
+		
 	</div>
 </body>
 </html>
