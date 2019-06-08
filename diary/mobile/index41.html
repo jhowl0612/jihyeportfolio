@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery Mobile</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1>Header</h1>
+        </div>
+        <div data-role="content">
+			<fieldset data-role="controlgroup">
+				<legend>학년</legend>
+				<input type="radio" id="year1" value="1" name="year1" />
+				<label for="year1">1학년</label>
+				<input type="radio" id="year2" value="2" name="year1" checked="checked" />
+				<label for="year2">2학년</label>
+			</fieldset><br/>
+			<fieldset data-role="controlgroup">
+				<legend>나이대</legend>
+				<input type="checkbox" id="type1" value="1" name="type2" />
+				<label for="type1">1학년</label>
+				<input type="checkbox" id="type2" value="2" name="type2" checked="checked" />
+				<label for="type2">2학년</label>
+			</fieldset>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h4>Footer</h4>
+        </div>
+    </div>
+</body>
+</html>

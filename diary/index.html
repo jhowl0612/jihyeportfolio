@@ -11,8 +11,8 @@
 		body{line-height:180%; font-family: 'Noto Sans KR', sans-serif; background:#ffbb88; letter-spacing:-0.3px;}
 		h2{font-size:1.1em;}
 		hr{margin:5px 0;}
-		#wrap{width:1000px; margin:40px auto 0;}
-		#container>div>div{background:#ffffff; border:3px solid #73dcff; padding:15px 20px; 5px 20px; margin-bottom:15px;}
+		#wrap{width:1100px; margin:40px auto 0;}
+		#container>div>div{background:#ffffff; border:3px solid #73dcff; padding:15px 20px 5px 20px; margin-bottom:15px;}
 		ul{margin: 0 0 10px 40px;}
 		li{font-size:1.1em; margin-bottom:2px;}
 		li>ul li{font-size:16px;}
@@ -34,7 +34,7 @@
 			<li><a href="#Mar">Mar</a><li>
 			<li><a href="#Apr">Apr</a><li>
 			<li><a href="#May">May</a><li>
-			<li><a href="#bot">Jun</a><li>
+			<li><a href="#Jun">Jun</a><li>
 			<li><a href="#bot">Jul</a><li>
 			<li class="arr"><a href="#bot">↓</a><li>
 		</ul>
@@ -64,6 +64,16 @@
 								<li>src는 원천,자료. source</li>
 							</ul>
 						</li>
+					</ul>
+					<h4>git bash</h4>
+					<ul class="gitbash_tip">
+						<li>git init : 현재 폴더를 로컬 저장소로 지정</li>
+						<li>git add <span>폴더이름/파일이름</span> : 해당 폴더/파일을 대기상태로 올림</li>
+						<li>git commit -m "<span>설명</span>" : 대기상태의 대상을 커밋상태로 올림. 설명서를 붙임</li>
+						<li>git remote add origin <span>https://github.com/jihye0612/jihyeportfolio.git</span> : 해당 링크의 저장소를 'origin'이라는 이름으로 연결. 연결저장소로 지정.</li>
+						<li>git push -u origin master : 커밋 상태의 대상들을 원격저장소 origin으로 옮김. 이후부터는 git push만 입력해도 됨.</li>
+						<li>git rm --cached -r  <span>폴더이름</span>/ : 폴더와 하위 폴더&파일 삭제</li>
+						<li>git push origin +master : 강제 push</li>
 					</ul>
 				</div>
 				<div>
@@ -822,11 +832,12 @@
 						<li>
 							<a href="HTML5_CSS3/ex_07_Check_Box/index.html" target="_blank">( float:left, transiton, 속성·동위선택자 )</a>
 							<ul>
-								<li>input[type=checkbox]:checked~div.check{height:0px;}</li>
+								<li>input[type=checkbox]:checked~div.check{height:0px;}
 									<ul>
 										<li>강아지 사진이 미디어 쿼리</li>
 										<li>type이 checkbox인 input이 checked되면, 동위의 .check(클래스)의 height를 0으로 만들기</li>
 									</ul>
+								</li>
 							</ul>
 						</li>
 						<li>
@@ -1043,7 +1054,7 @@
 										<li>상위 div에 overflow:auto</li>
 										<li>상위 div에 border : solid 1px;</li>
 										<li>부모 요소에 padding을 주고 margin을 죽임</li>
-										<li>↑<a href="https://gun0123.tistory.com/298"target="_blank">참고</a></li>
+										<li>↑<a href="https://gun0123.tistory.com/298" target="_blank">참고</a></li>
 									</ul>
 								</li>
 								<li>부모 요소 안에서 padding-bottom을 주면 높이를 안 줘도 형태를 가지고 공간을 확보함 ←?</li>
@@ -1074,7 +1085,7 @@
 					<h2>2019년 03월 25일 (월)</h2>
 					<ul>
 						<li>
-							<a href="../project01/sub1.html"target="_blank">(Project01) 서브페이지1 (1뎁스)</a>
+							<a href="../project01/sub1.html" target="_blank">(Project01) 서브페이지1 (1뎁스)</a>
 							<ul>
 								<li>글 문단 하나 안에서 여러 스타일 줄 때, b, strong, span 등 다른 속성에서 휘말릴 일 없는 태그를 끌어다 씀
 								<ul>
@@ -1089,7 +1100,7 @@
 					<h2>2019년 03월 26일 (화)</h2>
 					<ul>
 						<li>
-							<a href="../project01/sub2.html"target="_blank">(Project01) 서브페이지2 (1뎁스)</a>
+							<a href="../project01/sub2.html" target="_blank">(Project01) 서브페이지2 (1뎁스)</a>
 							<ul>
 								<li>border 1px 주면서도 요소가 아래로 내려가게 하고 싶지 않으면 margin-top -1px 줌</li>
 								<li>혹은 relative 주고 :after에 absolute, content:" ", border를 주어서 위에 덮음
@@ -1101,13 +1112,13 @@
 							</ul>
 						</li>
 						<li>
-							<a href="../project01/sub4.html"target="_blank">(Project01) 서브페이지4 (1뎁스)</a>
+							<a href="../project01/sub4.html" target="_blank">(Project01) 서브페이지4 (1뎁스)</a>
 							<ul>
 								<li>nth-child는 낮은 브라우저 안 먹힘 수정함</li>
 							</ul>
 						</li>
 						<li>
-							<a href="../project01/sub5.html"target="_blank">(Project01) 서브페이지5 (1뎁스)</a>
+							<a href="../project01/sub5.html" target="_blank">(Project01) 서브페이지5 (1뎁스)</a>
 							<ul>
 								<li>익스플로러는 font-size 속성에 background 이미지까지 영향 받을 때 있음 = 글자크기 0 주면 이미지도 사라짐
 									<ul>
@@ -1117,14 +1128,14 @@
 							</ul>
 						</li>
 						<li>
-							<a href="../project01/sub6.html"target="_blank">(Project01) 서브페이지6 (1뎁스)</a>
+							<a href="../project01/sub6.html" target="_blank">(Project01) 서브페이지6 (1뎁스)</a>
 							<ul>
 								<li>div 내용물 양 끝 요소의 마진을 없애고 싶으면 각각 클래스 주고 없애는 것보다 부모인 div에 그만큼의 margin 마이너스를 주는 게 편함</li>
 								<li>background - position을 px 말고 %로 줄 수 있음 (ie 8에도 괜찮음)</li>
 							</ul>
 						</li>
 						<li>
-							<a href="../project01/sub7.html"target="_blank">(Project01) 서브페이지7 (1뎁스)</a>
+							<a href="../project01/sub7.html" target="_blank">(Project01) 서브페이지7 (1뎁스)</a>
 							<ul>
 								<li>text-align과 vertical-align을 먹이면서 요소 크기도 조정하고 싶으면 inlile-block</li>
 							</ul>
@@ -1135,7 +1146,7 @@
 					<h2>2019년 03월 27일 (수)</h2>
 					<ul>
 						<li>
-							<a href="../project01/login.html"target="_blank">(Project01) 로그인페이지 (수정)</a>
+							<a href="../project01/login.html" target="_blank">(Project01) 로그인페이지 (수정)</a>
 							<ul>
 								<li>float : left 를 주면 margin : auto는 안 먹지만 margin ± nnn px은 먹음</li>
 							</ul>
@@ -1147,13 +1158,13 @@
 				<div>
 					<h2>2019년 4월 1일 (월)</h2>
 					<ul>
-						<li><a href="../project01/sub8.html"target="_blank">(Project01) 서브페이지8 (1뎁스)</a></li>
+						<li><a href="../project01/sub8.html" target="_blank">(Project01) 서브페이지8 (1뎁스)</a></li>
 					</ul>
 				</div>
 				<div>
 					<h2>2019년 4월 2일 (화)</h2>
 					<ul>
-						<li><a href="HTML5_CSS3/response/index.html"target="_blank">파리바게뜨 반응형 페이지</a>
+						<li><a href="HTML5_CSS3/response/index.html" target="_blank">파리바게뜨 반응형 페이지</a>
 							<ul>
 								<li>meta name="viewport" content="width=device-width, initial-scale=1.0" - 모바일 해상도용★</li>
 								<li>li : nth-child(3n) - li 중 3, 6, 9, 12... 등 3의 배수에 일괄 적용</li>
@@ -1166,7 +1177,7 @@
 				<div>
 					<h2>2019년 4월 3일 (수)</h2>
 					<ul>
-						<li><a href="HTML5_CSS3/response2/cona_step_0/index.html"target="_blank">아이코나 반응형 페이지</a>
+						<li><a href="HTML5_CSS3/response2/cona_step_0/index.html" target="_blank">아이코나 반응형 페이지</a>
 							<ul>
 								<li><strong>&lsaquo;!--[if lt IE 9]&rsaquo;</strong> href="css/style2.css" <strong>&lsaquo;![endif]--&rsaquo;</strong> &nbsp;&nbsp;=&nbsp;&nbsp; <strong>만약(if) 브라우저가 IE 9 이하라면</strong> style2.css를 써라
 									<ul>
@@ -1176,7 +1187,7 @@
 								<li>반응형은 보통 시멘틱 태그. 어차피 낮은 브라우저를 신경쓸 필요 없으므로</li>
 								<li>transition은 미디어 쿼리에도 적용됨.</li>
 								<li>font-awesome 페이지 사용(아이콘 사이트 폰트어썸)</li>
-							<ul>
+							</ul>
 						</li>
 					</ul>
 				</div>
@@ -1208,7 +1219,7 @@
 					<h2>2019년 4월 9일 (화)</h2>
 					<ul>
 						<li>
-							<a href="00_javascript/javascript01/index.html"target="_blank">자바스크립트 기초</a>
+							<a href="00_javascript/javascript01/index.html" target="_blank">자바스크립트 기초</a>
 							<ul>
 								<li><a href="00_javascript/javascript01/javascript01.html" target="_blank">기초 참고 교안 (01)</a>
 									<ul>
@@ -1222,7 +1233,7 @@
 								<li>스크립트 언어 한줄주석 <strong>//</strong></li>
 								<li>CDATA : 스크립트 안에서 html 태그 쓸 때 오류라고 판단되는 것을 방지하는 구문
 									<ul>
-										<li>document.write("< br/ >"); 줄바꿈. 이 용법 때문에 CDATA를 씀</li>
+										<li>document.write("&lt; br/ &gt;"); 줄바꿈. 이 용법 때문에 CDATA를 씀</li>
 									</ul>
 								</li>
 								<li>document.write
@@ -1411,7 +1422,6 @@
 						<li>
 							<a href="01_jQuery_basic/ex00_1/14_not_필터셀렉터.html" target="_blank">not 필터 셀렉터 $(' # el > li : not (.not) ')</a>
 						</li>
-						<hr/>
 						<li>
 							<a href="01_jQuery_basic/ex00_2/01_size_메소드.html" target="_blank">size 메소드 .size()</a>
 							<ul>
@@ -1454,7 +1464,6 @@
 								<li>//console.log($(this));// ←확인후 주석</li>
 							</ul>
 						</li>
-						<hr/>
 						<li>
 							<a href="01_jQuery_basic/ex00_3/01_children_메소드.html" target="_blank">children 메소드 .children()</a>
 						</li>
@@ -1485,7 +1494,6 @@
 								<li>$('#el>ul>li').is('#nextEl') = #el 밑 ul 및 li 중에 #nextEl 가 있는가?</li>
 							</ul>
 						</li>
-						<hr/>
 						<li>
 							<a href="01_jQuery_basic/ex04/index.html" target="_blank">hide, show 메소드</a>
 						</li>
@@ -1609,7 +1617,6 @@
 								<li>alert(div1.css('font-size')) = div1의 css속성 font-size의 값은 얼마인가?</li>
 							</ul>
 						</li>
-						<hr/>
 						<li>
 							<a href="01_jQuery_basic/ex05_rollover/index.html" target="_blank">hover시 이미지 변경 기능 일괄적용 (replace 메소드)</a>
 							<ul>
@@ -2056,7 +2063,7 @@
 							<ul>
 								<li>popup_img.not(':first').hide() / 첫 이미지 제외 전부 숨기기</li>
 								<li>e.preventDefault() 쓸 때는 function(e) e를 써 넣어야함</li>
-								<li>★toggle 대신 쓰는 if문★  cond_num=1/ if(cond_num<=1) {cond_num++} else {cond_num--}
+								<li>★toggle 대신 쓰는 if문★  cond_num=1/ if(cond_num&lt;=1) {cond_num++} else {cond_num--}
 									<ul>
 										<li>bb=true보다 보기 좋은 듯함</li>
 										<li>마찬가지로 cond_num=1 은 click(function(){})의 밖에 있어야 함</li>
@@ -2331,6 +2338,262 @@
 							<a href="04_fn_jquery/morebtn/index.html" target="_blank">더보기, 태그 검색 기능이 있는 검색 페이지 morebtn</a>
 							<ul>
 								<li>국토지리플랫폼에 있었던, 호버시 마우스방향을 따라 생겨나는 div의 제이쿼리가 있음</li>
+								<li>ajon 파일은 서버에 올라가야만 작동하고, 쉼표 하나 오류에 전체가 멈춤</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div><!-- id="May" -->
+			<div id="Jun">
+				<div>
+					<h2>2019년 6월 3일 (월)</h2>
+					<ul>
+						<li>
+							<a href="mobile/index.html" target="_blank">모바일 제이쿼리 내부링크</a>
+							<ul>
+								<li>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+									<ul>
+										<li>- width=device-width : 페이지의 너비를 기기의 스크린 너비와 동일하게 맞춤.</li>
+										<li>- initial-scale=1.0 : 처음 페이지 로딩시 확대/축소가 되지 않은 원래 크기를 사용하도록</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/page1.html" target="_blank">모바일 제이쿼리 외부링크</a>
+							<ul>
+								<li>a태그가 해당 파일 외부를 링크할 때, data-ajax="false" 혹은 rel="external" 속성을 달아 줘야 오류가 사라짐</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/index2.html" target="_blank">모바일 제이쿼리 버튼 종류, position fixed</a>
+							<ul>
+								<li>a, button, input으로 만든 버튼 모두 같은 형태이므로 기능상 편한 쪽 사용</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/index3.html" target="_blank">모바일 제이쿼리 a의 data-*** 속성</a>
+							<ul>
+								<li>content 영역에선 data-role="button" 속성이 있어야만 버튼 형태를 띔.</li>
+								<li>inline, mini 등의 속성으로 인라인 속성을 주거나 형태 다소 조절 가능</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/index4.html" target="_blank">모바일 제이쿼리 data-role="none", input의 타입</a>
+							<ul>
+								<li>data-role="none"을 사용하면, 모바일 제이쿼리를 무시하고 pc버전의 버튼이 생성됨. 단 오류 나기 쉬움</li>
+								<li>input 타입이 달라도 형태는 같음</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/index5.html" target="_blank">모바일 제이쿼리 data-icon</a>
+							<ul>
+								<li>data-icon 속성으로 모바일 제이쿼리에 기본적으로 저장된 아이콘 사용 가능
+									<ul>
+										<li>arrow-l, arrow-r, arrow-u-l, check, search, grid, alert, home, info 등 종류 다양</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/index6.html" target="_blank">모바일 data-iconpos="notext"</a>
+							<ul>
+								<li>data-role="none"일 경우 data-icon 안 먹음</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/index7.html" target="_blank">모바일 data-iconpos="top" 버튼 내 아이콘 위치</a>
+						</li>
+						<li>
+							<a href="mobile/index8.html" target="_blank">모바일 data-icon="my-icon" 아이콘 직접 지정</a>
+							<ul>
+								<li>style에서 background로 넣어줘야 함</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/index9.html" target="_blank">모바일 버튼 안에 image 태그, 혹은 input image</a>
+							<ul>
+								<li>style 필요없음.</li>
+								<li>input image는 기본설정이 inline처럼 나오게 된다</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/index10.html" target="_blank">모바일 data-role="controlgroup" data-type="horizontal"</a>
+							<ul>
+								<li>버튼끼리 서로 마진 없이 딱 달라붙게 됨.</li>
+								<li>horizontal: 인라인요소, 혹은 float된 요소처럼 가로로 붙음</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/index11.html" target="_blank">모바일 제이쿼리 테마</a>
+							<ul>
+								<li><a href="https://themeroller.jquerymobile.com/" target="_blank">테마 제작 사이트</a> 만들어서 다운로드받은 후 css연결</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/index12.html" target="_blank">모바일 data-role="listview" 모바일 리스트 형태</a>
+						</li>
+						<li>
+							<a href="mobile/index13.html" target="_blank">모바일 data-role="listview" li + a = 화살표 아이콘 자동생성</a>
+						</li>
+						<li>
+							<a href="mobile/index14.html" target="_blank">모바일 data-role="listview" ol 리스트</a>
+						</li>
+						<li>
+							<a href="mobile/index15.html" target="_blank">모바일 data-role="listview" data-inset="true" 좌우 마진이 생기고 모서리가 둥근 리스트</a>
+						</li>
+						<li>
+							<a href="mobile/index16.html" target="_blank">모바일 data-role="listview" li 안에 a태그 두 개 - 화살표 아이콘 영역(두 번째 a)이 세로선으로 분리됨</a>
+						</li>
+						<li>
+							<a href="mobile/index17.html" target="_blank">모바일 data-role="listview" data-split-icon="grid"  data-split-theme="b" 분리된 영역만 테마적용</a>
+						</li>
+						<li>
+							<a href="mobile/index18.html" target="_blank">모바일 data-role="listview" + class="ui-li-count" 우측 끝에 숫자 상자 생성</a>
+						</li>
+						<li>
+							<a href="mobile/index19.html" target="_blank">모바일 data-role="listview" + li data-role="listdivider" / listdivider가 붙은 li는 소분류 타이틀이 됨</a>
+						</li>
+						<li>
+							<a href="mobile/index20.html" target="_blank">모바일 data-role="listview" + data-inset과 listdivider 병용</a>
+						</li>
+						<li>
+							<a href="mobile/index21.html" target="_blank">모바일 data-role="listview" + li>a>img / img를 커다란 아이콘처럼 사용</a>
+						</li>
+						<li>
+							<a href="mobile/index22.html" target="_blank">모바일 data-role="listview" + img class="ui-li-icon" / 아이콘으로 바꿔 주는 클래스. 기본 background색 없이 깔끔함.</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h2>2019년 6월 4일 (화)</h2>
+					<ul>
+						<li>
+							<a href="mobile/index23.html" target="_blank">모바일 class="ui-li-aside" 오른쪽정렬</a>
+						</li>
+						<li>
+							<a href="mobile/index24.html" target="_blank">모바일 data-filter="true" data-filter-placeholder="검색키워드를 입력해주세요" / 검색기능</a>
+						</li>
+						<li>
+							<a href="mobile/index25.html" target="_blank">모바일 탭 / data-role="tabs" , data-role="navbar" , div id="tab1"</a>
+						</li>
+						<li>
+							<a href="mobile/index26.html" target="_blank">모바일 탭2 탭에 이미지 삽입 / data-role="tabs" , data-role="navbar" , div id="tab1"</a>
+						</li>
+						<li>
+							<a href="mobile/index27.html" target="_blank">모바일 테이블/ table class="ui-responsive table-stripe" data-mode="columntoggle" data-role="table" 열 삭제/추가</a>
+						</li>
+						<li>
+							<a href="mobile/index28.html" target="_blank">모바일 패널 / data-role="panel" , data-display="overlay" , data-position="right"</a>
+							<ul>
+								<li>로그인 패널 input에 data-mini="true" data-clear-btn="true" 입력내용 전체삭제버튼 추가</li>
+								<li>div에 class="ui-block-a"</li>
+								<li>a에 data-role="button" , data-rel="close" 자동으로 닫기 기능이 부여됨</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/index29.html" target="_blank">모바일 복습</a>
+							<ul>
+								<li>data-title="첫번쨰 페이지"</li>
+								<li>class="ui-btn-right" 버튼 오른쪽 정렬</li>
+								<li>header에 data-add-back-btn="true" / 뒤로가기 버튼</li>
+								<li>footer에 class="ui-bar" / 밑의 div 안에 있는 a가 자동 button 상태를 유지하도록</li>
+								<li>footer 아래에 data-role="controlgroup" data-type="horizontal" 아래 a 버튼들을 마진 없이 따닥따닥 붙임</li>
+								<li>ui-li-aside 클래스는 p에 주어야 작은 글씨로 뜸</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/index30.html" target="_blank">페이지 전환 효과 팝업</a>
+							<ul>
+								<li>page에도 data-position="fixed" 가능</li>
+								<li>a에 있는 data-rel="dialog" 가 대화상자형 페이지를 만드는 기능. D드라이브에선 안 되고 바탕화면에선 됨(이유 모름)
+									<ul>
+										<li>대화상자형 페이지가 되어야 할 페이지의 data-role="page"를 dialog로 바꾸어도 같은 결과</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/index31.html" target="_blank">페이지 전환 효과2 슬라이드다운</a>
+							<ul>
+								<li>a에 있는 data-transition="slidedown" / 해당 페이지가 위에서 내려옴</li>
+								<li>액션시트 페이지의 a에 있는 data-rel="back" / 해당 페이지가 위로 사라짐</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/index32.html" target="_blank">모바일 복습2 홈버튼 다음버튼</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h2>2019년 6월 6일 (화)</h2>
+					<ul>
+						<li>
+							<a href="mobile/index33.html" target="_blank">모바일 소제목 상자와 내용 상자 / class="ui-bar" , class="ui-body"</a>
+							<ul>
+								<li>class="ui-bar-b" , class="ui-body-a" 테마에 저장된 색을 부여하는 클래스</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/index34.html" target="_blank">모바일 가로 균등분할 / class="ui-grid-★" , class="ui-block-a", class="ui-block-b"...</a>
+							<ul>
+								<li>class="ui-grid-a" 일때 50% 두 개, b일 때 33.3...% 세 개, c일 때 25% 네 개로 일정함</li>
+								<li>class="ui-block-a" 는 "ui-grid-★" 밑의 칸에 해당</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/index35.html" target="_blank">모바일 접이식 패널 / div data-role="collapsible"</a>
+							<ul>
+								<li>collapsible 아래 첫 번째 h★ 요소는 접혔을 때도 노출됨, 두 번째부터는 h요소이더라도 펼쳤을 때만 보이는 내용물</li>
+								<li>collapsible 밑에 collapsible 중첩 가능</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/index36.html" target="_blank">모바일 접이식 패널 세트 / data-role="collapsible-set"</a>
+							<ul>
+								<li>collapsible-set 아래의 접이식 패널 간 상하 간격 사라짐</li>
+								<li>collapsible-set에  [ data-theme="b" data-content-theme="a" ] / 접이식 패널의 노출구간은 테마 b, 내용 공간은 테마 a</li>
+								<li>접이식 패널 div에 [ data-collapsed="false" ] / 페이지를 열 때 펼쳐진 상태로 로드됨</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/index37.html" target="_blank">모바일 form, fieldset 아래의 input, select</a>
+							<ul>
+								<li>input과 select에 [ data-role="none" ] / "pc가 아니라 모바일 제이쿼리를 따라라"</li>
+								<li>input에 [ disabled ] / "사용 불가능한 상태(회색)로" / 모바일에서만 가능</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/index38.html" target="_blank">모바일 방식으로 input 쓰기 / fieldset 대신 div data-role="fieldcontain"</a>
+							<ul>
+								<li>input[text]는 브라우저 8할 정도의 너비를 가지고 br 안 먹음, 나머지는 label이 차지. textarea도 input과 너비 같은 채로 변경이 불가함</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/index39.html" target="_blank">모바일 input[range] / 슬라이더 모양의 input</a>
+						</li>
+						<li>
+							<a href="mobile/index40.html" target="_blank">모바일 input[slider] / on-off 똑딱 슬라이더 모양의 input</a>
+						</li>
+						<li>
+							<a href="mobile/index41.html" target="_blank">모바일 방식으로 input 쓰기 / fieldset data-role="controlgroup" 밑의 input[radio]와 [checkbox]</a>
+						</li>
+						<li>
+							<a href="mobile/index42.html" target="_blank">모바일 optgroup / select 내 option 소분류 그룹</a>
+							<ul>
+								<li>select data-inline="true"</li>
+								<li>option에도 disabled 속성 넣을 수 있음. 회색 글씨에 선택 불가능한 옵션</li>
+							</ul>
+						</li>
+						<li>
+							<a href="mobile/dokdoApp/home.html" target="_blank">모바일 복습 - 독도 앱</a>
+							<ul>
+								<li>data-next="intro" 이 페이지의 다음 페이지로 intro를 지정</li>
+								<li>data-prev="gallery" 이 페이지의 이전 페이지로 gallery를 지정</li>
+								<li>data-dom-cache="true" html 전체를 스와이프하기 위해 필요</li>
+								<li>data-direction="reverse" 이전 버튼. / data-rel="back" 과는 달리, 스크롤 상태나 정보를 초기화함</li>
+								<li>data-transition="slide"</li>
+								<li>모바일 제이쿼리 스와이프swipe 적용</li>
 							</ul>
 						</li>
 					</ul>
@@ -2358,7 +2621,7 @@
 						</li>
 					</ul>
 				</div>
-			</div><!-- id="May" -->
+			</div><!-- id="Jun" -->
 		</div><!-- id="container" -->
 	</div><!-- id="wrap" -->
 	<div id="bot"></div>

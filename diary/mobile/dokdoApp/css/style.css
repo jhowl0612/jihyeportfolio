@@ -1,0 +1,8 @@
+l1,ul{list-style:none;}
+
+.picture li, .picture ul{margin:0; padding:0; color:#666666;}
+.picture li{border-bottom:1px solid #cccccc; padding-bottom:10px;}
+.picture li:last-child{border-bottom:none;}
+.picture li img{float:left; border-radius:4px; padding:5px; border:1px solid #cccccc; box-shadow:1px 1px 2px #cccccc; margin:-8px 20px 10px 0; height:100%; width:140px;}
+.picture li h3{padding-top:5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.picture li p{white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
