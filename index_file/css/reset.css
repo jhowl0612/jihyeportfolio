@@ -1,0 +1,35 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap');
+
+*{margin:0;padding:0;border:0;}
+html,body{width:100%;height:100%;}
+html{overflow-y:scroll;overflow-x:hidden; overflow-y: -moz-scrollbars-none; -ms-overflow-style: none;}
+html::-webkit-scrollbar {display:none;}
+html.addModal{overflow-y:hidden;overflow-x:hidden;}
+body{font-family:'NotoSansR','돋움',normal dotum, sans-serif; color:#303030; min-width:1400px;}
+
+ul{list-style-type:none;}
+i,em,address{font-style:normal;}
+a{color:inherit; text-decoration:none;}
+form{display:block;}
+img{border:0; vertical-align:top;}
+button{background:transparent;cursor:pointer;}
+input,select,textarea{box-shadow:none;-webkit-appearance:none;appearance:none;border-radius:0;outline:0;background-image:none;}
+input:focus,select:focus,textarea:focus{outline:1px solid #626262;}
+legend{display:none;}
+button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+.cf{*zoom:1;}
+.fl{float:left;}
+.cf:after{content:'';display:block;clear:both;}
+.hidden{display:none;}
+.blind{display:block;text-indent:-2000px;overflow:hidden;}
+
+#wrap{position:relative;width:100%;height:auto;margin:0 auto;}
+
+.skip_navigation a{position:absolute; width:100%; height:50px; left:0; top:-50px; display:block; text-align:center; font-size:18px; color:#ffffff; background:#333333; line-height:50px; z-index:10000;}
+.skip_navigation a:focus,.skip_navigation a:hover,.skip_navigation a:focus{top:0;}
+
+@font-face{font-family:'NotoSansR'; src:url('font/NotoSans-Regular.eot'); src:url('font/NotoSans-Regular.eot?#iefix') format('embedded-opentype'), url('font/NotoSans-Regular.woff2') format('woff2'), url('font/NotoSans-Regular.woff') format('woff'); font-style:normal; font-weight:normal;}
+@font-face{font-family:'NotoSansL'; src:url('font/NotoSans-Light.eot'); src:url('font/NotoSans-Light.eot?#iefix') format('embedded-opentype'), url('font/NotoSans-Light.woff2') format('woff2'), url('font/NotoSans-Light.woff') format('woff'); font-style:normal; font-weight:normal;}
+@font-face{font-family:'NotoSansB'; src:url('font/NotoSans-Bold.eot'); src:url('font/NotoSans-Bold.eot?#iefix') format('embedded-opentype'), url('font/NotoSans-Bold.woff2') format('woff2'), url('font/NotoSans-Bold.woff') format('woff'); font-style:normal; font-weight:normal;}
