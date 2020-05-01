@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<title>코딩 일기장 2020</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css"/>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<div id="top">
+			<h1><a href="index.html">코딩 일기장 2020</a></h1>
+			<h2><a href="../diary2019/index.html" target="_blank">일기장 2019 →</a></h2>
+		</div>
+		<div id="container" class="cf">
+			<div id="left">
+				<ul>
+					<li><a href="#">Vue</a></li>
+					<li><a href="#">React</a></li>
+					<li><a href="#">spring</a></li>
+				</ul>
+			</div>
+			<div id="right">
+				<ul class="article">
+					<li class="vue on">
+						<div>
+							<p>인프런 강의 : 웹 게임을 만들며 배우는 Vue</p>
+							<ul>
+								<li>
+									<a href="vue/vue-webgame/01/like.html" target="_blank">좋아요 버튼 예제 ( el, data, methods, v-on, v-if, v-else )</a>
+									<ul>
+										<li><strong>v-on</strong> : HTML과 Vue 메소드 연결. HTML에서 이벤트가 일어날 때 뷰에서 실행할 메소드 지정.</li>
+										<li><strong>v-if / v-else</strong> : 조건에 따라 가시/비가시화</li>
+										<li>Vue와 React의 요점은 "데이터가 바뀔 시 화면은 프레임워크가 알아서 바꾸어 준다" → <strong>양방향 바인딩</strong></li>
+										<li>show() 같은 것 필요 없음</li>
+										<li>v-on: 은 생략하고 @로 대체 가능. ( v-on:submit → @submit )</li>
+									</ul>
+								</li>
+								<li>
+									<a href="vue/vue-webgame/01/gugudan.html" target="_blank">구구단 문제 예제 ( v-model, ref, Math.random(), parseInt() )</a>
+									<ul>
+										<li><strong>v-model</strong> : HTML의 input과 Vue 데이터 연결. 인풋에서 받은 데이터를 뷰에서 무엇으로 부를지 지정.</li>
+										<li>Vue는 싱글페이지가 강점인 프레임워크(싱글페이지 어플리케이션)이므로 form의 새로고침을 막아야 함. 하면 의미 없음.</li>
+										<li><strong>ref</strong> : 데이터 조작 없이 화면에 보이는 것을 따로 조작할 때, 태그에 별명을 붙이기 위해 사용</li>
+										<li>ref="answer" / this.$refs.answer.focus()</li>
+										<li>새로고침을 막기 위해 methods에 e.preventDefault를 작성해야 하지만, 이벤트리스너에 .prevent를 추가하면 생략 가능.<br> ( @submit → @submit.prevent )</li>
+									</ul>
+								</li>
+								<li>
+									<a href="vue/vue-webgame/02/wordChain.html" target="_blank">끝말잇기 예제</a>
+									<ul>
+										<li>구구단 예제의 복습 + 문자열 마지막 글자, 첫 글자 비교</li>
+										<li>wordChain(카멜표기법) / WordChain(파스칼표기법) / word-chain(케밥표기법)</li>
+									</ul>
+								</li>
+								<li>
+									<a href="vue/vue-webgame/02/wordChain2.html" target="_blank">끝말잇기 예제 x 3 (전역 컴포넌트component, 프롭스props)</a>
+									<ul>
+										<li><strong>컴포넌트</strong>의 필요성 : 불필요한 반복 방지. 코드를 재사용하여 서로 독립된 끝말잇기 게임을 만듦.<br/>같은 코드를 참조하나, 다른 데이터를 다룬다.</li>
+										<li>HTML에서 케밥표기법으로 부르고 Javascript와 Vue에서 카멜표기법으로 부르더라도 알아서 같은 것으로 인식해 줌.<br/>(word-chian = wordChain)</li>
+										<li>const app = new Vue ({ }) 방식은 '뷰 인스턴스' / Vue.component( ) 방식은 '뷰 컴포넌트'</li>
+										<li>인스턴스에 el: '태그 이름'만 남기고 컴포넌트에 중요 요소를 입력, html 태그도 컴포넌트 template에 입력</li>
+										<li>template 안의 태그는 최상위 태그 하나로 감싸여 있어야 함.
+										<br/>최상위 태그 div 대신 template으로 감싸 불필요한 태그 추가를 방지할 수 있으나, cdn으로는 불가능(→ <strong>webpack</strong> 필요성)</li>
+										<li>각 컴포넌트에서 다른 데이터를 다루어야 하기 때문에, 컴포넌트의 data는 지정식이 아니라 return이 있는 함수 형태로 입력</li>
+										<li>script는 통제할 div보다는 아래에, 컴포넌트는 인스턴스보다 위에 작성</li>
+										<li><strong>프롭</strong>은 컴포넌트마다 조금씩 차이점이 필요할 때 사용</li>
+										<li>Vue는 복잡할수록, 많은 컴포넌트를 사용할 수록 스크립트의 수와 길이가 많아짐(→ <strong>webpack</strong> 필요성2)</li>
+									</ul>
+								</li>
+								<li>
+									<a href="vue/vue-webgame/03/numberBaseball.html" target="_blank">숫자 야구 예제 (webpack, nodejs, v-for)</a>
+									<ul>
+										<li><strong>npm init</strong> → <strong>npm install vue</strong> → <strong>npm i webpack webpack-cli -D</strong></li>
+										<li>↑ webpack 개발환경 구축 시 터미널에 입력할 명령어 / -D는 '개발 환경에서만 사용' 의미</li>
+										<li>package.json : 사용되는 스크립트들의 버전정보 저장.</li>
+										<li>webpack.config.js : 옵션 작성. 배포 시 스크립트를 한 개로 압축.(=웹패킹) <br>entry, moduls(rules), plugin, output 4 파트가 필수적.</li>
+										<li>main.js 는 뷰 인스턴스, numberBaseball.vue 는 뷰 컴포넌트</li>
+										<li>vue 파일은 template, script, style 태그로 구성되어 있지만 그 안은 js 문법. (함께 작성할 수 있도록 조치되어 있는 것)</li>
+										<li>[webpack.config.js] <strong>const path = require( 'path' )</strong>; / 노드js 에 내장된 path 모듈 부르기.</li>
+										<li>[webpack.config.js] <strong>path.join(__dirname, '/test')</strong> / 현재 위치의 절대 경로 + test(하위 폴더 or 파일) / path 모듈의 기능</li>
+										<li>[package.json] <strong>"scripts": { "build(임의지정명)" : "webpack" }</strong></li>
+										<li>↑ 터미널에서 npm run build 를 입력할 시 웹패킹 시작. 스크립트를 수정할 때마다 run build를 다시 하기.</li>
+										<li>[webpack.config.js] vue 파일은 100% js문법이 아니기 때문에 뷰 로더를 사용하도록 "rules"에 명시.</li>
+										<li>↑ (+ 터미널로 뷰 로더 설치) <strong>npm i vue-loader -D</strong></li>
+										<li>↑ (+ 컴파일러 설치) <strong>npm i vue-template-compiler -D</strong> / 컴파일러는 vue와 버전이 같아야 함.</li>
+										<li>npm i vue@2.7.0 ← 버전 명시하면 해당 버전으로 깔림</li>
+										<li>&lt;li v-for="t in tries"&gt; : tries는 배열, t는 각 값, v-for는 반복문 / "tries를 돌면서 값을 한 번씩 호출하시오"</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="react">
+						<div>
+							<p>인프런 강의 : 리액트 처음이시라구요?</p>
+							<ul>
+								<li>
+									<a href="#">리액트 기초 예제</a>
+									<ul>
+										<li></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="spring">
+						<div>
+							<p>인프런 강의 : 예제로 배우는 스프링 입문</p>
+							<ul>
+								<li>
+									<a href="#">예제 프로젝트 PetClinic</a>
+									<ul>
+										<li></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

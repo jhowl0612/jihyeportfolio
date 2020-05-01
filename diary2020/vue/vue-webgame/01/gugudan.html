@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>구구단</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="root">
+		<div>{{first}} 곱하기 {{second}}(은)는?</div>
+		<!-- 중괄호 두 번 - 데이터 텍스트를 화면에 표시할 수 있음 -->
+		<!-- 중괄호 안에서 자바스크립트 식 ( first + second , first + 100 등) 가능 -->
+		<form v-on:submit="onSubmitForm"> 
+			<input type="number" ref="answer" v-model="value"/>
+			<!-- v-model이 input과 데이터를 연결 -->
+			<button type="submit">입력</button>
+			<!-- <div>{{value}}</div> 양방향 바인딩 확인용-->
+		</form>
+		<div id="result">{{result}}</div>
+	</div>
+</body>
+<script>
+	const app = new Vue({
+		el: '#root', 
+		data: {
+			first: Math.ceil(Math.random() * 9), // 0~1 사이 실수에 곱하기 9, 이후 정수화
+			second: Math.ceil(Math.random() * 9),
+			value: '',
+			result: '',
+		},
+		methods: {
+			onSubmitForm(e){
+				e.preventDefault();
+				// 이벤트리스너는 자바스크립트와 같음. form은 클릭시 페이지 새로고침시키므로 방지
+				console.log(this.first, this.second, this.value);
+				console.log(this);
+				// 콘솔로그 가능, this라고만 적을 경우 전체 출력
+				if (this.first * this.second === parseInt(this.value)){ //문자타입을 숫자로 바꿈
+					this.result = '정답';
+					this.first = Math.ceil(Math.random() * 9);
+					this.second = Math.ceil(Math.random() * 9);
+					this.value = '';
+					this.$refs.answer.focus();
+				} else {
+					this.result = '오답';
+					this.value = '';
+					this.$refs.answer.focus();
+				}
+			},
+		}, 
+	});
+</script>
+</html>

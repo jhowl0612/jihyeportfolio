@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>끝말잇기</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <word-chain start-word="제로초"></word-chain> <!-- 컴포넌트 이름에서 대소문자 인식 못 하므로 케밥표기법으로 -->
+        <word-chain start-word="호위"></word-chain> <!-- 컴포넌트를 쓰는 측에서 프롭 지정. 역시 케밥표기법으로 -->
+        <word-chain start-word="광속"></word-chain>
+    </div>
+    <script>
+        Vue.component('wordChain',{ // 전역 컴포넌트. HTML에서 케밥표기법으로 지정했더라도 카멜표기법으로 받을 수 있음. 뷰가 알아서 처리해 줌.
+            template: ` <!-- 백틱으로 작성 -->
+                <div> <!-- 최상위 태그 하나가 되도록 감싸기. 웹팩일 경우 <template>로 감싸 태그 계층 추가 방지 가능 -->
+                    <div>{{word}}</div>
+                    <form v-on:submit="onSubmitForm">
+                        <input type="text" ref="answer" v-model="value">
+                        <button type="submit">입력!</button>
+                    </form>
+                    <div>{{result}}</div>
+                </div>
+            `,
+            props: ['startWord'], // HTML에서 케밥표기법으로 지정했더라도 카멜표기법으로 받을 수 있음22
+            data() {
+                return {
+                    word: this.startWord,
+                    result: '',
+                    value: '',
+                };
+            },
+            methods: {
+                onSubmitForm(e){
+                    e.preventDefault();
+                    if (this.word[this.word.length-1] === this.value[0]){ // word의 마지막 글자 === value의 첫 글자
+                        this.result = '딩동댕';
+                        this.word = this.value;
+                    } else {
+                        this.result = '땡';
+                    }
+                    this.value = '';
+                    this.$refs.answer.focus();
+                },
+            },
+        });
+    </script>
+    <script>
+        const app = new Vue({
+            el: '#root',
+        });
+    </script>
+</body>
+</html>
