@@ -1,126 +1,782 @@
 <!doctype html>
 <html lang="ko">
 <head>
+	<script>
+		var mobileKeyWords = new Array('iPhone', 'iPod', 'BlackBerry', 'Android', 'Windows CE', 'LG', 'MOT', 'SAMSUNG', 'SonyEricsson','Windows Phone');
+		for (var word in mobileKeyWords){
+		if (navigator.userAgent.match(mobileKeyWords[word]) != null){
+		location.href = "https://jihye0612.github.io/jihyeportfolio/m/";
+		break;
+		}
+		}
+	</script>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 	<meta name="description" content="웹퍼블리셔 최지혜 포트폴리오" />
-	<meta name="Keywords" content="웹퍼블리셔, 퍼블리싱, HTML5, CSS, jQuery, 제이쿼리"/>
+	<meta name="Keywords" content="웹퍼블리셔, 퍼블리싱, HTML5, CSS, jQuery, 제이쿼리, 크로스 브라우징, 웹표준, 웹접근성, 모바일, 반응형, 적응형"/>
 	<meta name="Author" content="최지혜">
-	<title>최지혜 포트폴리오</title>
+	<title>웹퍼블리셔 최지혜 포트폴리오</title>
 	<link rel="shortcut icon" href="index_file/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="index_file/css/reset.css"/>
 	<link rel="stylesheet" href="index_file/css/style.css"/>
 	<script src="index_file/js/jquery-1.9.1.min.js"></script>
+	<script src="index_file/js/jquery.easing.1.3.min.js"></script>
 	<script src="index_file/js/script.js"></script>
 </head>
 <body>
+	<div class="skip_navigation">
+		<a href="#container">메뉴 건너뛰기</a>
+	</div>
 	<div id="wrap">
-		<div id="header">
+		<div id="popup">
+			<div class="popup_inner">
+				<p class="redirect">모바일 디바이스로 접속 시 모바일 페이지로 자동 리다이렉트됩니다</p>
+				<a href="m/index.html">모바일 페이지 바로가기</a>
+				<button>닫기</button>
+			</div>
+		</div>
+		<!-- #header -->
+		<div id="header" class="pop active">
 			<div class="header_inner">
 				<h1><a href="index.html"><img src="index_file/img/logo.png" alt="웹퍼블리셔 최지혜 포트폴리오" title="최지혜 포트폴리오"/></a></h1>
 				<ul class="nav">
 					<li class="active"><a href="#">Intro</a></li>
 					<li><a href="#">About me</a></li>
+					<li><a href="#">Skill</a></li>
 					<li><a href="#">Portfolio</a></li>
-					<li><a href="#">Contact</a></li>
-					<li class="diary"><a href="diary/index.html" target="_blank">Coding diary</a></li>
+					<li><a href="#">Outro</a></li>
+					<li class="diary"><a href="diary2020/index.html" target="_blank" title="코딩 일기장 새 창 열림"><span>Coding diary</span></a></li>
 				</ul>
+				<div class="nav_under"></div>
 			</div>
-		</div><!-- id="header" -->
+		</div>
+		<!-- // #header -->
+		<!-- #container -->
 		<div id="container">
+			<!-- #intro -->
 			<div id="intro">
-				
-			</div><!-- id="intro" -->
-			<div id="about me">
-				<div class="about_inner">
-					<h2>About me</h2>
-					
+				<div class="intro_inner">
+					<div class="col1">
+						<div class="box1">
+							<a href="project04/index.html" target="_blank">
+								<img src="index_file/img/intro1.png" alt="intro1"/>
+								<div class="imgcontainer">
+									<img src="index_file/img/work1.jpg" alt="Work1 page"/>
+								</div>
+								<div class="box_overlay">
+									<p>work 1</p>
+									<hr/>
+								</div>
+							</a>
+						</div>
+						<div class="box2">
+							<img src="index_file/img/intro2.png" alt="intro2"/>
+						</div>
+						<div class="box3">
+							<a href="project06/index.html" target="_blank">
+								<img src="index_file/img/intro3.png" alt="intro3"/>
+								<div class="imgcontainer">
+									<img src="index_file/img/work3_03.jpg" alt="Work3 page03"/>
+								</div>
+								<div class="box_overlay">
+									<p>work 3</p>
+									<hr/>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col2">
+						<div class="box4">
+							<img src="index_file/img/intro4.jpg" alt="intro4"/>
+						</div>
+					</div>
+					<div class="col3">
+						<div class="box5">
+							<h4>Keyword</h4>
+							<hr/>
+							<p>HTML, CSS, JavaScript, jQuery, Ajax, JSON, WordPress, Bootstrap<br/><br/>Python 공부중</p>
+						</div>
+						<div class="box6">
+							<a href="project03/index.html" target="_blank">
+								<img src="index_file/img/intro6.png" alt="intro6"/>
+								<div class="imgcontainer">
+									<img src="index_file/img/work4.jpg" alt="Work4 page"/>
+								</div>
+								<div class="box_overlay">
+									<p>work 4</p>
+									<hr/>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col4">
+						<div class="box7">
+							<img src="index_file/img/intro7.jpg" alt="intro7"/>
+							<div class="box_overlay">
+								<p>#꼼꼼하고<br/>#끈기 있는<br/>#신입<br/>#웹퍼블리셔<br/>#프론트엔드</p>
+							</div>
+						</div>
+						<div class="box8">
+							<a href="project09/index.html" target="_blank">
+								<img src="index_file/img/intro8.jpg" alt="intro8"/>
+								<div class="box_overlay">
+									<p>work 9</p>
+									<hr/>
+								</div>
+							</a>
+						</div>
+					</div>
 				</div>
-			</div><!-- id="about me" -->
-			<div id="Portfolio">
-				<div class="portfolio_inner">
-					<h2>Portfolio</h2>
-					<div class="best">
-						<h3>Best projects</h3>
-						<ul class="best_list">
-							<li>
-								<div class="project_tit">First 06번역원</div>
-								<div class="project_wrap" style="height:600px;">
-									<a href="#"><img src="" alt=""/></a>
-								</div>
-							</li>
-							<li>
-								<div class="project_tit">Second 04식약청</div>
-								<div class="project_wrap">
-									<a href="#"><img src="" alt=""/></a>
-								</div>
-							</li>
-							<li>
-								<div class="project_tit">Third 07암센터</div>
-								<div class="project_wrap">
-									<a href="#"><img src="" alt=""/></a>
-								</div>
-							</li>
+			</div>
+			<!-- // #intro -->
+			<!-- #about_me -->
+			<div id="about_me" class="cf">
+				<h2>About me</h2>
+				<hr/>
+				<div class="profile_character cf">
+					<div class="profile">
+						<h3>Profile</h3>
+						<ul>
+							<li>최지혜</li>
+							<li>1996.06.12</li>
 						</ul>
 					</div>
-					<div class="other">
-						<h3>Other projects</h3>
-						<div class="other_wrap">
-							<div class="col1">
-								<div class="box1">
-									01식약청 css
-								</div>
-								<div class="box2">
-									02공공누리 css 자바스크립트 건드린 것
-								</div>
-								<div class="box3">
-									03현대
-								</div>
+					<div class="edu_license">
+						<h3>Education & License</h3>
+						<ul>
+							<li>수리고등학교 졸업</li>
+							<li>가천대학교 졸업</li>
+							<li>더조은아카데미 웹퍼블리셔(웹디자인)<br/>ui/ux 프론트엔드 840시간 과정</li>
+							<li>운전면허 2종 보통</li>
+							<li>웹디자인기능사 필기 합격</li>
+							<li>컴퓨터그래픽스운용기능사 필기 합격</li>
+						</ul>
+					</div>
+					<div class="advantage">
+						<h3>Advantage</h3>
+						<ul>
+							<li>포기하지 않고 매달리는 끈기</li>
+							<li>새로운 지식에 대한 도전정신</li>
+							<li>배운 것은 잊지 않고 기록하는 꼼꼼함</li>
+							<li>약속 시간을 절대로 어기지 않는 성실함</li>
+						</ul>
+					</div>
+				</div>
+				<div class="introduce cf">
+					<img src="index_file/img/introduce.jpg" alt="소개"/>
+					<div class="introduce_txt">
+						<h3>끊임없이 배우는 신입</h3>
+						<p>새로운 기술은 언제나 생소하지만 그를 이용한 작업물이 완성되어 갈 때, 낯선 감각은 다대한 즐거움으로 변모합니다. 웹프로그래밍의 길을 걷기로 결정하게 된 지는 오래 되지 않았지만 웹퍼블리셔에서 시작하여 프론트엔드, 언젠가는 백엔드 개발에도 발을 딛고 싶다는 욕심을 가지고 있습니다. 현재는 그누보드와 워드프레스를 다뤄보기 위한 '생활코딩' PHP 튜토리얼을 공부하고 있습니다.</p>
+					</div>
+					<div class="introduce_txt">
+						<h3>경청하고 소통하는 사람</h3>
+						<p>설령 가족이라 할지라도 제대로 된 대화를 통해 서로를 이해할 것을 중요시하는 가풍 아래에서 경청과 소통의 태도를 익히며 자랐습니다. 무언가를 이해하기 어려워하는 사람에게 설명해주는 일에 익숙하고, 또 그 일에 기쁨과 보람을 느끼기도 합니다.</p>
+					</div>
+				</div>
+			</div>
+			<!-- // #about_me -->
+			<!-- #skills -->
+			<div id="skills">
+				<h2>Skill</h2>
+				<hr/>
+				<ul class="skills cf">
+					<li class="html">
+						<div>
+							<div class="move">
+								<img src="index_file/img/skill_bg1.png" alt="HTML"/>
 							</div>
-							<div class="col2">
-								<div class="box4">
-									05공공누리
-								</div>
-								<div class="box5">
-									04_02식약청 ie8
-								</div>
+							<img src="index_file/img/skill.png" alt="frame"/>
+							<p class="skill_tit">HTML</p>
+						</div>
+						<p>
+							<span class="skill_number">90</span>
+							<span class="skill_percent">%</span>
+						</p>
+						<p class="skill_txt">
+							웹 표준과 웹 접근성 구성 요인을 숙지하고 있습니다. 시맨틱 태그 마크업이 가능합니다. HTML5 규약을 준수하는 문서를 제작하고 있습니다.
+						</p>
+					</li>
+					<li class="css">
+						<div>
+							<div class="move">
+								<img src="index_file/img/skill_bg1.png" alt="css"/>
+							</div>
+							<img src="index_file/img/skill.png" alt="frame"/>
+							<p class="skill_tit">CSS </p>
+						</div>
+						<p>
+							<span class="skill_number">90</span>
+							<span class="skill_percent">%</span>
+						</p>
+						<p class="skill_txt">
+							반응형 웹, 모바일 페이지를 제작할 수 있습니다. 조건부 주석 등 크로스 브라우징 작업에 대해 숙지하고 있습니다. transform, transition 애니메이션 구현이 가능합니다.
+						</p>
+					</li>
+					<li class="js">
+						<div>
+							<div class="move">
+								<img src="index_file/img/skill_bg2.png" alt="jQuery"/>
+							</div>
+							<img src="index_file/img/skill.png" alt="frame"/>
+							<p class="skill_tit md">jQuery</p>
+						</div>
+						<p>
+							<span class="skill_number">85</span>
+							<span class="skill_percent">%</span>
+						</p>
+						<p class="skill_txt">
+							플러그인을 사용하지 않고도 의도한 기능을 구현할 수 있고, 플러그인에서 필요한 부분을 수정해 이용할 수 있습니다. 반복문, 제어문 등의 함수 구문을 활용할 수 있습니다.
+						</p>
+					</li>
+					<li class="ps_ai">
+						<div>
+							<div class="move">
+								<img src="index_file/img/skill_bg3.png" alt="Photoshop & Illustrator"/>
+							</div>
+							<img src="index_file/img/skill.png" alt="frame"/>
+							<p class="skill_tit md">Ps / Ai </p>
+						</div>
+						<p>
+							<span class="skill_number">80</span>
+							<span class="skill_percent">%</span>
+						</p>
+						<p class="skill_txt">
+							Photoshop, Illustrator 등의 디자인 툴으로 이미지 보정, 배너 제작, 페이지 디자인 시안 제작 등이 가능합니다.
+						</p>
+					</li>
+					<li class="ajax">
+						<div>
+							<div class="move">
+								<img src="index_file/img/skill_bg2.png" alt="ajax"/>
+							</div>
+							<img src="index_file/img/skill.png" alt="frame"/>
+							<p class="skill_tit">Ajax</p>
+						</div>
+						<p>
+							<span class="skill_number">40</span>
+							<span class="skill_percent">%</span>
+						</p>
+						<p class="skill_txt">
+							JSON 문서에서 정보를 가져와 웹 페이지에 로드할 수 있습니다.
+						</p>
+					</li>
+					<li class="wp">
+						<div>
+							<div class="move">
+								<img src="index_file/img/skill_bg4.png" alt="WordPress"/>
+							</div>
+							<img src="index_file/img/skill.png" alt="frame"/>
+							<p class="skill_tit sm">WordPress</p>
+						</div>
+						<p>
+							<span class="skill_number">45</span>
+							<span class="skill_percent">%</span>
+						</p>
+						<p class="skill_txt">
+							기본적인 테마와 플러그인, 페이지 구조를 조정할 수 있습니다.
+						</p>
+					</li>
+					<li class="bs">
+						<div>
+							<div class="move">
+								<img src="index_file/img/skill_bg4.png" alt="Bootstrap"/>
+							</div>
+							<img src="index_file/img/skill.png" alt="frame"/>
+							<p class="skill_tit sm">Bootstrap</p>
+						</div>
+						<p>
+							<span class="skill_number">75</span>
+							<span class="skill_percent">%</span>
+						</p>
+						<p class="skill_txt">
+							부트스트랩의 그리드 시스템을 이해하고 클래스를 이용해 다양한 해상도에 유동적으로 대응하는 레이아웃을 짤 수 있습니다.
+						</p>
+					</li>
+					<li class="python">
+						<div>
+							<div class="move">
+								<img src="index_file/img/skill_bg2.png" alt="python"/>
+							</div>
+							<img src="index_file/img/skill.png" alt="frame"/>
+							<p class="skill_tit sm">Python</p>
+						</div>
+						<p>
+							<span class="skill_number">40</span>
+							<span class="skill_percent">%</span>
+						</p>
+						<p class="skill_txt">
+							검색엔진을 크롤링해 DB에 업로드하는 파이썬 웹 크롤러를 제작할 수 있습니다.
+						</p>
+					</li>
+				</ul>
+			</div>
+			<!-- // #skills -->
+			<!-- #portfolio -->
+			<div id="portfolio">
+				<!-- .portfolio_inner -->
+				<div class="portfolio_inner cf">
+					<h2>Portfolio</h2>
+					<hr/>
+					<div class="port_list port01">
+						<span class="tag_area">
+							<span class="tag publ">퍼블리싱</span>
+							<span class="tag dep3">3 Depth</span>
+						</span>
+						<div class="thumb">
+							<img src="index_file/img/work1.jpg" alt="work1"/>
+							<div class="caption">
+								<p>식품의약품안전처 홈페이지</p>
+								<span>퍼블리싱</span>
+								<button>More</button>
+								<a href="project04/index.html" target="_blank" title="새 창 바로가기">식품의약품안전처</a>
+							</div>
+						</div>
+					</div>
+					<div class="port_list port02">
+						<span class="tag_area">
+							<span class="tag publ">퍼블리싱</span>
+							<span class="tag resp">반응형</span>
+						</span>
+						<div class="thumb">
+							<img src="index_file/img/work2.jpg" alt="work2"/>
+							<div class="caption">
+								<p>공공누리 홈페이지</p>
+								<span>퍼블리싱</span>
+								<button>More</button>
+								<a href="project05/index.html" target="_blank" title="새 창 바로가기">공공누리</a>
+							</div>
+						</div>
+					</div>
+					<div class="port_list port03">
+						<span class="tag_area">
+							<span class="tag publ">퍼블리싱</span>
+							<span class="tag resp">반응형</span>
+						</span>
+						<div class="thumb">
+							<img src="index_file/img/work3.jpg" alt="work3"/>
+							<div class="caption">
+								<p>한국문학번역원 홈페이지</p>
+								<span>퍼블리싱</span>
+								<button>More</button>
+								<a href="project06/index.html" target="_blank" title="새 창 바로가기">한국문학번역원</a>
+							</div>
+						</div>
+					</div>
+					<div class="port_list port04">
+						<span class="tag_area">
+							<span class="tag publ">퍼블리싱</span>
+						</span>
+						<div class="thumb">
+							<img src="index_file/img/work4.jpg" alt="work4"/>
+							<div class="caption">
+								<p>현대카드 홈페이지</p>
+								<span>퍼블리싱</span>
+								<button>More</button>
+								<a href="project03/index.html" target="_blank" title="새 창 바로가기">현대카드</a>
+							</div>
+						</div>
+					</div>
+					<div class="port_list port05">
+						<span class="tag_area">
+							<span class="tag publ">퍼블리싱</span>
+							<span class="tag dep3">3 Depth</span>
+						</span>
+						<div class="thumb">
+							<img src="index_file/img/work5.jpg" alt="work5"/>
+							<div class="caption">
+								<p>국립암센터 홈페이지</p>
+								<span>퍼블리싱</span>
+								<button>More</button>
+								<a href="project07/index.html" target="_blank" title="새 창 바로가기">국립암센터</a>
+							</div>
+						</div>
+					</div>
+					<div class="port_list port06">
+						<span class="tag_area">
+							<span class="tag publ">퍼블리싱</span>
+							<span class="tag mobi">모바일</span>
+						</span>
+						<div class="thumb">
+							<img src="index_file/img/work6.jpg" alt="work6"/>
+							<div class="caption">
+								<p>FINAL FANTASY COMPANION</p>
+								<span>퍼블리싱</span>
+								<button>More</button>
+								<a href="project08/index.html" target="_blank" title="새 창 바로가기">FINAL FANTASY COMPANION</a>
+							</div>
+						</div>
+					</div>
+					<div class="port_list port07">
+						<span class="tag_area">
+							<span class="tag desi">디자인</span>
+							<span class="tag publ">퍼블리싱</span>
+							<span class="tag mobi">모바일</span>
+						</span>
+						<div class="thumb">
+							<img src="index_file/img/work7.jpg" alt="work7"/>
+							<div class="caption">
+								<p>포트폴리오 모바일 페이지</p>
+								<span>디자인 & 퍼블리싱</span>
+								<button>More</button>
+								<a href="m/index.html" target="_blank" title="새 창 바로가기">포트폴리오 모바일</a>
+							</div>
+						</div>
+					</div>
+					<div class="port_list port08">
+						<span class="tag_area">
+							<span class="tag resp">반응형</span>
+							<span class="tag word">워드프레스</span>
+						</span>
+						<div class="thumb">
+							<img src="index_file/img/work8.jpg" alt="work8"/>
+							<div class="caption">
+								<p>워드프레스</p>
+								<span>워드프레스</span>
+								<button>More</button>
+								<a href="http://sep0612.dothome.co.kr/wordpress/" target="_blank" title="새 창 바로가기">워드프레스</a>
+							</div>
+						</div>
+					</div>
+					<div class="port_list port09">
+						<span class="tag_area">
+							<span class="tag desi">리뉴얼</span>
+							<span class="tag publ">퍼블리싱</span>
+							<span class="tag resp">반응형</span>
+							<span class="tag boot">부트스트랩</span>
+						</span>
+						<div class="thumb">
+							<img src="index_file/img/work9.jpg" alt="work9"/>
+							<div class="caption">
+								<p>브릿G 홈페이지</p>
+								<span>리뉴얼 디자인 & 퍼블리싱</span>
+								<button>More</button>
+								<a href="project09/index.html" target="_blank" title="새 창 바로가기">브릿G</a>
+							</div>
+						</div>
+					</div>
+					<div class="port_list port10">
+						<span class="tag_area">
+							<span class="tag publ">퍼블리싱</span>
+							<span class="tag resp">반응형</span>
+							<span class="tag ajax">Ajax</span>
+						</span>
+						<div class="thumb">
+							<img src="index_file/img/work10.jpg" alt="work10"/>
+							<div class="caption">
+								<p>꿈에 펜션 예약페이지</p>
+								<span>퍼블리싱</span>
+								<button>More</button>
+								<a href="project11/index.html" target="_blank" title="새 창 바로가기">꿈에 펜션</a>
+							</div>
+						</div>
+					</div>
+					<div class="port_list port11">
+						<span class="tag_area">
+							<span class="tag desi">디자인</span>
+							<span class="tag publ">퍼블리싱</span>
+							<span class="tag para">패럴랙스</span>
+						</span>
+						<div class="thumb">
+							<img src="index_file/img/work11.jpg" alt="work11"/>
+							<div class="caption">
+								<p>마리공방 홈페이지</p>
+								<span>디자인 & 퍼블리싱</span>
+								<button>More</button>
+								<a href="project12/index.html" target="_blank" title="새 창 바로가기">마리공방</a>
+							</div>
+						</div>
+					</div>
+					<div class="port_list port12">
+						<span class="tag_area">
+							<span class="tag publ">퍼블리싱</span>
+							<span class="tag dep3">3 Depth</span>
+						</span>
+						<div class="thumb">
+							<img src="index_file/img/work12.jpg" alt="work12"/>
+							<div class="caption">
+								<p>노랑풍선 해외패키지 페이지</p>
+								<span>퍼블리싱</span>
+								<button>More</button>
+								<a href="project10/index.html" target="_blank" title="새 창 바로가기">노랑풍선 해외패키지</a>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div><!-- id="portfolio" -->
-			<div id="contact">
-				<div class="top_go"></div>
-				<p>COPYRIGHT ⓒ 2019 CHOEJIHYE. All rights reserved.</p>
-			</div><!-- id="contact" -->
+				<!-- // .portfolio_inner" -->
+			</div>
+			<!-- // #portfolio -->
+			<!-- #modal_wrap -->
+			<div id="modal_wrap">
+				<div class="modal_bg"></div>
+				<div class="modal modal01">
+					<h3><a href="project04/index.html" target="_blank" title="새 창 바로가기">식품의약품안전처</a></h3>
+					<button class="close">닫기</button>
+					<div class="modal_inner cf">
+						<a href="project01/index.html" target="_blank" title="새 창 바로가기" class="version">HTML + CSS Only</a>
+						<a href="project04_02/index.html" target="_blank" title="새 창 바로가기" class="version">풀페이지 제거 (IE8 지원)</a>
+						<span class="tag_area cf">
+							<span class="tag publ">퍼블리싱</span>
+							<span class="tag dep3">3 Depth</span>
+						</span>
+						<p><i class="position"></i>퍼블리싱 100%</p>
+						<p><i class="period"></i>8일</p>
+						<p><i class="ie"></i>IE8+</p>
+						<ul class="modal_txt">
+							<li>HTML과 CSS를 사용해 처음으로 제작한 페이지입니다. 메인 페이지와 8개의 서브 페이지, 로그인 페이지를 제작하였습니다.</li>
+							<li>jQuery를 배운 후 풀페이지 플러그인을 적용한 버전, 풀페이지 플러그인을 제외하고 ie8 대응을 유지한 버전을 별도로 추가하였습니다.</li>
+							<li>플러그인의 유료 버전과 무료 배포된 버전에서 옵션과 지정 함수 등이 달랐기 때문에 원본 페이지, 플러그인 파일의 구문을 확인하고 플러그인 제작자의 Q&A페이지와 Rebuild페이지를 살피는 등의 과정을 거쳐 적용을 마쳤습니다.</li>
+						</ul>
+						<hr/>
+						<a href="project04/index.html" target="_blank" title="새 창 바로가기"><img src="index_file/img/work1.jpg" alt="식품의약품안전처"/></a>
+					</div>
+				</div>
+				<div class="modal modal02">
+					<h3><a href="project05/index.html" target="_blank" title="새 창 바로가기">공공누리</a></h3>
+					<button class="close">닫기</button>
+					<div class="modal_inner cf">
+						<a href="project02/index.html" target="_blank" title="새 창 바로가기" class="version">HTML + CSS + 약간의 JavaScript</a>
+						<span class="tag_area cf">
+							<span class="tag publ">퍼블리싱</span>
+							<span class="tag resp">반응형</span>
+						</span>
+						<p><i class="position"></i>퍼블리싱 100% / 1040px 미만 해상도 레이아웃 디자인</p>
+						<p><i class="period"></i>7일</p>
+						<ul class="modal_txt">
+							<li>처음으로 제작한 반응형 페이지입니다. 미디어 쿼리를 사용하였으므로 IE 8 이하에는 대응하지 않습니다.</li>
+							<li>복수의 기관이 운영하는 페이지이기 때문에 왼쪽, 오른쪽 두 개의 메뉴를 가지고 있습니다.</li>
+							<li>CSS 페이지 제작 당시 jQuery의 선행학습으로서 javascript 기초를 배우고 있었기 때문에, javascript로 애니메이션 없는 간단한 슬라이드와 탭 기능을 적용해 보았습니다.</li>
+						</ul>
+						<hr/>
+						<a href="project05/index.html" target="_blank" title="새 창 바로가기"><img src="index_file/img/work2.jpg" alt="공공누리"/></a>
+					</div>
+				</div>
+				<div class="modal modal03">
+					<h3><a href="project06/index.html" target="_blank" title="새 창 바로가기">한국문학번역원</a></h3>
+					<button class="close">닫기</button>
+					<div class="modal_inner cf">
+						<span class="tag_area cf">
+							<span class="tag publ">퍼블리싱</span>
+							<span class="tag resp">반응형</span>
+						</span>
+						<p><i class="position"></i>퍼블리싱 100% / 1280px 미만 해상도 레이아웃 디자인</p>
+						<p><i class="period"></i>4일</p>
+						<p><i class="ie"></i>IE7+</p>
+						<ul class="modal_txt">
+							<li>두 번째로 제작한 반응형 페이지입니다. 조건부 주석을 사용하여 IE 7까지 대응되도록 제작하였습니다.</li>
+							<li>브라우저의 너비에 따라 유동적으로 변화하는 슬라이드의 크기와 상하좌우로 움직이는 슬라이드의 기능을 양립시키기 위하여 고민했습니다. 또한 random 함수를 사용하여 페이지 로드 시 슬라이드가 무작위 순번에서 시작되도록 하였습니다.</li>
+							<li>원본 페이지의 직관성이 떨어지는 메뉴바 형태를 수정하였으며, Pc, 태블릿, 모바일 해상도에서 메뉴바가 각각 다른 형태를 갖습니다.</li>
+						</ul>
+						<hr/>
+						<a href="project06/index.html" target="_blank" title="새 창 바로가기"><img src="index_file/img/work3.jpg" alt="한국문학번역원"/></a>
+					</div>
+				</div>
+				<div class="modal modal04">
+					<h3><a href="project03/index.html" target="_blank" title="새 창 바로가기">현대카드</a></h3>
+					<button class="close">닫기</button>
+					<div class="modal_inner cf">
+						<span class="tag_area cf">
+							<span class="tag publ">퍼블리싱</span>
+						</span>
+						<p><i class="position"></i>퍼블리싱 100%</p>
+						<p><i class="period"></i>3일</p>
+						<p><i class="ie"></i>IE8+</p>
+						<ul class="modal_txt">
+							<li>컨텐츠가 많은 페이지를 되도록 빠르게 완성하는 것을 목표로 삼아 제작했습니다.</li>
+							<li>메뉴 바 호버, 검색 창 팝업 시 페이지를 어둡게 하거나, 검색 창 팝업 시 메뉴바가 펼쳐지는 기능에 retuen false를 사용하는 등 jQuery를 사용해야 구현할 수 있는 기능들을 익히고 숙달되는 부분에 중점을 두었습니다.</li>
+						</ul>
+						<hr/>
+						<a href="project03/index.html" target="_blank" title="새 창 바로가기"><img src="index_file/img/work4.jpg" alt="현대카드"/></a>
+					</div>
+				</div>
+				<div class="modal modal05">
+					<h3><a href="project07/index.html" target="_blank" title="새 창 바로가기">국립암센터</a></h3>
+					<button class="close">닫기</button>
+					<div class="modal_inner cf">
+						<span class="tag_area cf">
+							<span class="tag publ">퍼블리싱</span>
+							<span class="tag dep3">3 Depth</span>
+						</span>
+						<p><i class="position"></i>퍼블리싱 100%</p>
+						<p><i class="period"></i>1일</p>
+						<p><i class="ie"></i>IE7+</p>
+						<ul class="modal_txt">
+							<li>현대카드 페이지와 마찬가지로 컨텐츠가 많은 페이지의 빠른 제작을 중점으로 삼은 작업입니다.</li>
+							<li>메인 슬라이드에 커서가 지나갈 때마다 어지럽게 순서가 바뀌는 점, 탭 부분의 border에 의해 레이아웃이 무너지는 점 등 몇몇 부적절한 부분을 수정했습니다.</li>
+						</ul>
+						<hr/>
+						<a href="project07/index.html" target="_blank" title="새 창 바로가기"><img src="index_file/img/work5.jpg" alt="국립암센터"/></a>
+					</div>
+				</div>
+				<div class="modal modal06">
+					<h3><a href="project08/index.html" target="_blank" title="새 창 바로가기">FINAL FANTASY XIV COMPANION</a></h3>
+					<button class="close">닫기</button>
+					<div class="modal_inner cf">
+						<span class="tag_area cf">
+							<span class="tag publ">퍼블리싱</span>
+							<span class="tag mobi">모바일</span>
+						</span>
+						<p><i class="position"></i>퍼블리싱 100% / 메인화면 국소 리뉴얼</p>
+						<p><i class="period"></i>2일</p>
+						<ul class="modal_txt">
+							<li>유료 PC 게임의 상점 관리 어플리케이션을 jQuery Mobile로 퍼블리싱하여 메인 페이지와 아이콘 메뉴 6 개의 서브 페이지를 제작하였습니다.</li>
+							<li>일부 브라우저에 한해 PC에서도 스와이프(Swipe) 기능을 확인할 수 있습니다.</li>
+						</ul>
+						<hr/>
+						<a href="project08/index.html" target="_blank" title="새 창 바로가기"><img src="index_file/img/work6.jpg" alt="FINAL FANTASY XIV COMPANION"/></a>
+					</div>
+				</div>
+				<div class="modal modal07">
+					<h3><a href="m/index.html" target="_blank" title="새 창 바로가기">포트폴리오 모바일 페이지</a></h3>
+					<button class="close">닫기</button>
+					<div class="modal_inner cf">
+						<span class="tag_area cf">
+							<span class="tag desi">디자인</span>
+							<span class="tag publ">퍼블리싱</span>
+							<span class="tag mobi">모바일</span>
+						</span>
+						<p><i class="position"></i>퍼블리싱 100% / 디자인 100%</p>
+						<p><i class="period"></i>2일</p>
+						<ul class="modal_txt">
+							<li>FINAL FANTASY XIV COMPANION 앱과는 다른 방식으로 제작하기 위하여 jQuery Mobile을 사용하지 않고 다른 스와이프 플러그인을 사용하였습니다.</li>
+							<li>디자인을 모바일에 맞도록 깔끔하게 축약하면서도 필요한 정보를 유지할 수 있도록 고민했습니다.</li>
+						</ul>
+						<hr/>
+						<a href="m/index.html" target="_blank" title="새 창 바로가기"><img src="index_file/img/work7.jpg" alt="포트폴리오 모바일 페이지"/></a>
+					</div>
+				</div>
+				<div class="modal modal08">
+					<h3><a href="http://sep0612.dothome.co.kr/wordpress/" target="_blank" title="새 창 바로가기">워드프레스 페이지</a></h3>
+					<button class="close">닫기</button>
+					<div class="modal_inner cf">
+						<span class="tag_area cf">
+							<span class="tag resp">반응형</span>
+							<span class="tag word">워드프레스</span>
+						</span>
+						<p><i class="position"></i>워드프레스 사용</p>
+						<p><i class="period"></i>2일</p>
+						<ul class="modal_txt">
+							<li>포트폴리오 페이지를 워드프레스로 다시금 제작해보았습니다.</li>
+							<li>슬라이더 플러그인, 문의 폼 플러그인을 사용했습니다.</li>
+						</ul>
+						<hr/>
+						<a href="http://sep0612.dothome.co.kr/wordpress/" target="_blank" title="새 창 바로가기"><img src="index_file/img/work8.jpg" alt="워드프레스 페이지"/></a>
+					</div>
+				</div>
+				<div class="modal modal09">
+					<h3><a href="project09/index.html" target="_blank" title="새 창 바로가기">브릿G</a></h3>
+					<button class="close">닫기</button>
+					<div class="modal_inner cf">
+						<span class="tag_area cf">
+							<span class="tag desi">리뉴얼</span>
+							<span class="tag publ">퍼블리싱</span>
+							<span class="tag resp">반응형</span>
+							<span class="tag boot">부트스트랩</span>
+						</span>
+						<p><i class="position"></i>퍼블리싱 100%(부트스트랩) / 리뉴얼 디자인</p>
+						<p><i class="period"></i>3일</p>
+						<ul class="modal_txt">
+							<li>부트스트랩으로 제작된 온라인 소설 플랫폼을 마찬가지로 부트스트랩을 사용하여 반응형으로 리뉴얼했습니다.</li>
+							<li>소설이 표지 이미지가 아니라 글 자체로서 평가받게 한다는 운영방침을 반영하기 위해 작품 소개가 메인 화면에서도 보이도록 하고, 이미지가 표지가 아니라 작가 프로필이라는 것을 직관적으로 드러내기 위해 작가 이름을 이미지 옆으로 이동시키는 등의 수정을 하였습니다.</li>
+						</ul>
+						<hr/>
+						<a href="project09/index.html" target="_blank" title="새 창 바로가기"><img src="index_file/img/work9.jpg" alt="브릿G"/></a>
+					</div>
+				</div>
+				<div class="modal modal10">
+					<h3><a href="project11/index.html" target="_blank" title="새 창 바로가기">꿈에 펜션 예약 페이지</a></h3>
+					<button class="close">닫기</button>
+					<div class="modal_inner cf">
+						<span class="tag_area cf">
+							<span class="tag publ">퍼블리싱</span>
+							<span class="tag resp">반응형</span>
+							<span class="tag ajax">Ajax</span>
+						</span>
+						<p><i class="position"></i>퍼블리싱 100%</p>
+						<p><i class="period"></i>1일</p>
+						<p><i class="ie"></i>IE7+</p>
+						<ul class="modal_txt">
+							<li>JSON을 사용하여 요금안내 표를 포함하는 펜션 예약 페이지를 제작했습니다.</li>
+							<li>IE7에서도 해상도가 일정 이하 수치로 줄어들면 gnb의 폰트 크기가 커지도록 하였습니다.</li>
+						</ul>
+						<hr/>
+						<a href="project11/index.html" target="_blank" title="새 창 바로가기"><img src="index_file/img/work10.jpg" alt="꿈에 펜션 예약 페이지"/></a>
+					</div>
+				</div>
+				<div class="modal modal11">
+					<h3><a href="project12/index.html" target="_blank" title="새 창 바로가기">마리공방</a></h3>
+					<button class="close">닫기</button>
+					<div class="modal_inner cf">
+						<span class="tag_area cf">
+							<span class="tag desi">디자인</span>
+							<span class="tag publ">퍼블리싱</span>
+							<span class="tag para">패럴랙스</span>
+						</span>
+						<p><i class="position"></i>퍼블리싱 100% / 디자인 100%</p>
+						<p><i class="period"></i>3일</p>
+						<ul class="modal_txt">
+							<li>패럴랙스를 사용하여 가상의 온라인 플라워샵 홈페이지를 제작했습니다.</li>
+							<li>플러그인을 사용하지 않고 직접 스크립트를 작성했습니다.</li>
+							<li>패럴렉스 페이지는 IE8, 7 등 구형 브라우저에서는 작동하지 않으므로 시멘틱 태그를 사용하였습니다.</li>
+						</ul>
+						<hr/>
+						<a href="project12/index.html" target="_blank" title="새 창 바로가기"><img src="index_file/img/work11_2.jpg" alt="마리공방"/></a>
+					</div>
+				</div>
+				<div class="modal modal12">
+					<h3><a href="project10/index.html" target="_blank" title="새 창 바로가기">노랑풍선 해외패키지 페이지</a></h3>
+					<button class="close">닫기</button>
+					<div class="modal_inner cf">
+						<span class="tag_area cf">
+							<span class="tag publ">퍼블리싱</span>
+							<span class="tag dep3">3 Depth</span>
+						</span>
+						<p><i class="position"></i>퍼블리싱 100%</p>
+						<p><i class="period"></i>5일</p>
+						<ul class="modal_txt">
+							<li>컨텐츠가 많은 3Depth를 목적으로 한 작업입니다.</li>
+							<li>원본 페이지의 메뉴바가 3Depth이지만 3Depth로서 작동하지 않는 점을 수정하였고, 원본 페이지에서 사용된 슬라이더 플러그인 없이 직접 제작한 스크립트를 통해 동일한 움직임을 보이도록 하였습니다.</li>
+						</ul>
+						<hr/>
+						<a href="project10/index.html" target="_blank" title="새 창 바로가기"><img src="index_file/img/work12.jpg" alt="노랑풍선 해외패키지 페이지"/></a>
+					</div>
+				</div>
+			</div>
+			<!-- //#modal_wrap -->
+			<!-- #outro -->
+			<div id="outro">
+				<h2>Outro</h2>
+				<hr/>
+				<div class="epilogue cf">
+					<div>
+						<h3>한 발 늦었지만 굳은 결심</h3>
+						<p>웹코딩에 흥미를 느끼게 된 계기는 고등학교 3학년의 기술시간이었습니다. Python과 HTML을 배우는 수업에 동기들은 당혹해했지만 저는 일주일에 한 번 뿐인 기술 시간을 손꼽아 기다린 기억이 생생합니다. 당시 이미 문과계 학생이었고, 또 부모님께서 딸아이가 프로그래밍이라는 분야에 손을 대고 힘들어하지 않을까 걱정하셨기 때문에 한국어문학과로 진학했으나 대학교 졸업반이 될 때 즈음 다시 고개를 치켜든 것은 코딩에 대한 욕심이었습니다. 그래서 대학을 졸업하기도 전에 웹 퍼블리셔 훈련 중 커리큘럼에 jQuery, JavaScript 등이 포함되는 웹퍼블리셔/프론트엔드 과정을 신청하여 이 길에 올라서게 되었습니다.</p>
+					</div>
+					<div>
+						<h3>지혜와 지혜가 나란히</h3>
+						<p>멀리서 망연히 바라만 보던 코딩의 세계는 상상했던 것보다도 방대하고 복잡하며, 과거의 안이한 선택은 돌아볼 때마다 아쉬움을 부릅니다. 이제야 출발점을 뛰기 시작했지만, 오히려 그러하므로, 지혜智慧와 지혜智慧가 함께할 때라고 생각하기로 하였습니다. 지식이란 말은 '배우고 익혀 알게 된 이해'를 뜻하지만 제 이름과 한자 획까지 똑같은 지혜라는 말은 '사물의 이치를 빨리 깨닫고 정확하게 처리하는 능력'을 뜻합니다. 이제 걸음을 걸을 수 있는 지식을 쌓았으니 앞으로는 지혜를 통하여 더더욱 풍부한 지식을 쌓고 연구하고 발전하는 사람이 되려 합니다.</p>
+					</div>
+				</div>
+				<div class="contact">
+					<p>010-2663-0612</p>
+					<p>sep9606@naver.com</p>
+					<a href="https://www.pinterest.co.kr/sep9606/" target="_blank" title="핀터레스트"><img src="index_file/img/contact_pinterest.png" alt="핀터레스트"/></a>
+					<a href="https://github.com/jihye0612/jihyeportfolio" target="_blank" title="GitHub 저장소"><img src="index_file/img/contact_github.png" alt="GitHub 저장소"/></a>
+					<a href="tel:01026630612" title="전화"><img src="index_file/img/contact_tel.png" alt="전화"/></a>
+					<a href="mailto:sep9606@naver.com" title="메일"><img src="index_file/img/contact_mail.png" alt="메일"/></a>
+				</div>
+				<p class="copy">COPYRIGHT ⓒ 2019 JIHYE CHOE. All rights reserved</p>
+			</div>
+			<!-- // #outro -->
+			<div class="contact_fixed">
+				<span><img src="index_file/img/fixed_tel.png" alt="tel"/><em>010-2663-0612</em></span>
+				<span><img src="index_file/img/fixed_mail.png" alt="mail"/><em>sep9606@naver.com</em></span>
+			</div>
+			<div class="top_go">
+				<a href="#"><img src="index_file/img/top.png" alt="top_go"/></a>
+			</div>
 		</div>
-	
-	
-	
-	
-		
-		<br/>
-		<ul>
-			<li><a href="project01/index.html" target="_blank">[project01] 식약청 (css)</a></li>
-			<li><a href="project02/index.html" target="_blank">[project02] 공공누리 반응형 (css)</a></li>
-			<li><a href="project03/index.html" target="_blank">[project03] 현대카드</a></li>
-			<li><a href="project04/index.html" target="_blank">[project04] 식약청 제이쿼리 적용 (풀페이지. ie8 대응x)</a></li>
-			<li><a href="project04_02/index.html" target="_blank">[project04_02] 식약청 제이쿼리 적용 (풀페이지 삭제. ie8 대응)</a></li>
-			<li><a href="project05/index.html" target="_blank">[project05] 공공누리 제이쿼리 적용</a></li>
-			<li><a href="project06/index.html" target="_blank">[project06] 한국문학번역원 반응형</a></li>
-			<li><a href="project07/index.html" target="_blank">[project07] 국립암센터 3뎁스</a></li>
-		</ul>
-		
-		<h4>git bash</h4>
-		<ul class="gitbash_tip">
-			<li>git init : 현재 폴더를 로컬 저장소로 지정</li>
-			<li>git add <span>폴더이름/파일이름</span> : 해당 폴더/파일을 대기상태로 올림</li>
-			<li>git commit -m "<span>설명</span>" : 대기상태의 대상을 커밋상태로 올림. 설명서를 붙임</li>
-			<li>git remote add origin <span>https://github.com/jihye0612/jihyeportfolio.git</span> : 해당 링크의 저장소를 'origin'이라는 이름으로 연결. 연결저장소로 지정.</li>
-			<li>git push -u origin master : 커밋 상태의 대상들을 원격저장소 origin으로 옮김. 이후부터는 git push만 입력해도 됨.</li>
-			<li>git rm --cached -r  <span>폴더이름</span>/</li>
-		</ul>
-		
-		
+		<!-- // #container -->
 	</div>
 </body>
 </html>
