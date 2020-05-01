@@ -1,0 +1,56 @@
+﻿	<script type="text/javascript">
+		var mobileKeyWords = new Array('iPhone', 'iPod', 'BlackBerry', 'Android', 'Windows CE', 'LG', 'MOT', 'SAMSUNG', 'SonyEricsson','Windows Phone');
+		for (var word in mobileKeyWords){
+		if (navigator.userAgent.match(mobileKeyWords[word]) != null){
+		location.href = "https://jihye0612.github.io/jihyeportfolio/m/index.html";
+		break;
+		}
+		}
+	</script>
+
+	<?php if (strpos($_SERVER['HTTP_USER_AGENT'], 'iPhone') !== FALSE)
+		{ header('Location: http://www.example.com/iphone/'); }
+	?>
+
+	<?php
+		$mobileKeyWords=array('iPhone','iPod','BlackBerry','Android','Windows CE','LG','MOT','SAMSUNG','SonyEricsson','Mobile','Symbian','Opera Mobi','Opera Mini','IEmobile','Windows Phone');
+		for($i=0;$i<count($mobileKeyWords);$i++)
+		{
+		if(strpos($_SERVER['HTTP_USER_AGENT'], $mobileKeyWords[$i]) !== FALSE)
+		{
+		header('Location: https://jihye0612.github.io/jihyeportfolio/m/index.html');
+		}
+		}
+	?>
+
+<?
+	$iphone = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");    
+	$android = strpos($_SERVER['HTTP_USER_AGENT'],"Android");  
+	$palmpre = strpos($_SERVER['HTTP_USER_AGENT'],"webOS");    
+	$berry = strpos($_SERVER['HTTP_USER_AGENT'],"BlackBerry");  
+	$ipod = strpos($_SERVER['HTTP_USER_AGENT'],"iPod");        
+
+	if ($iphone || $android || $palmpre || $ipod || $berry == true) 
+	{ 
+	
+	header('Location: https://jihye0612.github.io/jihyeportfolio/m/index.html'); 
+	} 
+?>
+
+<?
+	include('index_file/mobile_device_detect.php');
+	$mobile = mobile_device_detect(); //파일 내 함수 실행. 모바일 판별
+	if($mobile==true){
+	echo "<script language='JavaScript'> location.replace('https://jihye0612.github.io/jihyeportfolio/m/index.html'); </script>";
+	exit;
+	} //밑에서부터는 메인페이지
+?>
+
+
+<?
+	include('index_file/mobile_device_detect.php');
+	$mobile = mobile_device_detect();
+	if($mobile==true){header("Location: http://jihye0612.github.io/jihyeportfolio/m/index.html"); exit;}
+?>
+
+

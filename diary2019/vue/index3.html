@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>뷰 3, v-for</title>
+	<style type="text/css">
+		h1,h2,h3,h4{width:650px; text-align:center; font-weight:500; letter-spacing:-0.5px;}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<h2>투두리스트</h2>
+		<ul>
+			<li v-for="(todo,index) in todos">{{ index }}. {{ todo.text }}</li>
+		</ul>
+	</div>
+	<div id="root">
+		<h2>인터넷에서 본 예문 따라 적기</h2>
+		<h4>인풋에 적고 엔터 or 버튼 누르면 투두에 추가. 추가된 글자를 클릭하면 완료, 미완료 토글</h4>
+		<input type="text" v-model="input" @keydown.enter="addTodo" />
+		<button @click="addTodo">Add TODO</button>
+		<ul>
+			<li v-for="todo2 in todos2" v-text="todo2.text2" v-bind:style="{ textDecoration: todo2.isDone ? 'line-through' : 'none' }" @click="toggleTodo(todo2)"></li>
+		</ul>
+		<p>Total: {{ todos2Count }}</p>
+		<p>Active: {{ todos2Count - doneTodos2Count }}</p>
+		<p>Done: {{ doneTodos2Count }}</p>
+	</div>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script>
+		var app=new Vue({
+			el:'#app',
+			data: {
+				todos: [
+					{ text: 'Vue.js 튜토리얼 기초 익히기' },
+					{ text: '다이어리 쓰기' },
+					{ text: '생활 코딩 PHP편 하나 보기' }
+				]
+			}
+		});
+		var root=new Vue({
+			el:'#root',
+			data: {
+				input: '',
+				todos2: []
+			},
+			computed: {
+				todos2Count(){
+					return this.todos2.length.toString();
+				},
+				doneTodos2Count(){
+					return this.todos2.filter(e => e.isDone).length;
+				}
+			},
+			methods: {
+				addTodo(){
+					this.todos2.push({
+						text2: this.input,
+						isDone: false,
+					});
+					this.input = '';
+				},
+				toggleTodo(todo2){
+					todo2.isDone = !todo2.isDone;
+				}
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>뷰 5, v-on, 이벤트 리스너</title>
+	<style type="text/css">
+		#app{width:600px; text-align:center;}
+		h1{font-weight:500; letter-spacing:-0.5px;}
+		hr{margin:20px 0;}
+		button{display:inline-block; height:32px; line-height:26px; vertical-align:top; font-size:20px;}
+	</style>
+</head>
+<body>
+	<div id="app" v-cloak>
+		<h1>카운터 : {{ number }}</h1>
+		<button @click="increment">증가</button>
+		<button @click="decrement">감소</button>
+		<hr/>
+		<button v-on:click="greet">Greet</button>
+		<button v-on:click="say('Hi')">Say Hi</button>
+		<button v-on:click="say('Bye')">Say Bye</button>
+		<button v-on:click.once="say('한 번 끝 !')">한 번만</button>
+	</div>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script>
+		var app=new Vue({
+			el:'#app',
+			data: {
+				number:0,
+				name: 'vue'
+			},
+			methods:{ //메소드 안의 this는 Vue 인스턴스를 가리킨다. = new Vue
+				increment: function(){
+					this.number++;
+				},
+				decrement: function(){
+					this.number--;
+				},
+				greet: function (event){ //event는 네이티브 DOM 이벤트 (?) v-on:click을 말하는 것 같음
+					alert('Hello, ' + this.name + ' !') //헬로 뷰 알림
+					if (event){
+						alert(event.target.tagName)//'버튼'이라고 뜬다!
+					}
+				},
+				say: function (message){
+					alert(message)
+				}
+			}
+		});
+	</script>
+</body>
+</html>

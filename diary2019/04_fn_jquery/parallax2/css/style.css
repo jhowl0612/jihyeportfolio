@@ -1,0 +1,137 @@
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+
+@charset "utf-8";
+
+
+.ap_img li{position:absolute; left:50%;}
+img{vertical-align:top;}
+.scrollbox{height:1000px; position:relative; overflow:hidden;}
+
+/* header */
+#header{position:relative; z-index:99; margin:0 0 -5px 0; height:45px; background:url(../img/header_pt.png) repeat-x left top;}
+#header h1{position:absolute; left:50%; top:2px; margin:0 0 0 -54px;}
+#header .topmenu{width:860px; margin:0 auto; padding:12px 0 0 0;}
+#header .topmenu li{float: left; margin:0 0 0 36px; padding:0 0 0 37px; background:url(../img/topmenu_line.gif) no-repeat left top;}
+#header .topmenu li.first{margin:0; padding:0; background:none;}
+#header .topmenu li.menu4{margin:3px 0 0 180px; padding: 0; background:none; font-family: "Jeju Gothic", snas-serif; font-size: 1em; color:#14007e; font-weight: normal; cursor:pointer;}
+#header .topmenu li a{font-family: "Jeju Gothic", snas-serif; font-size: 0.8em; color:#14007e;}
+
+/* main */
+#main{position:relative; overflow:hidden; height:1808px; background:url(../img/main_bg.jpg) no-repeat center top;}
+#main .ap_img li.img01{top:246px; margin:0 0 0 -350px;}
+#main .ap_img li.img02{top:85px; margin:155px 0 0 50px; text-align:right; font-family: "Nanum Brush Script", cursive; font-weight: bold;}
+#main .ap_img li.img02 p.one{font-size: 6.2em; color: #1b429a;}
+#main .ap_img li.img02 p.two{font-size: 4.2em; color: #34a3e3; margin: -20px -20px 0 0;}
+#main .ap_img li.img02 p.three{font-size: 7.2em; color: #1b429a; margin: -10px -20px 0 0;}
+#main .ap_img li.img02 p.four{font-size: 6.2em; color: #34a3e3; margin: -20px -20px 0 0;}
+#main .ap_img li.img03{top:575px; margin: 0 0 0 10px; text-align:right;}
+#main .ap_img li.img03 p.top{font-family:"Nanum Gothic", sans-serif; font-size: 1.6em; color: #1b429a; letter-spacing:-2px;}
+#main .ap_img li.img03 p.top b{font-family:"Jeju Gothic", sans-serif; color: #1b429a; font-weight: bold;}
+#main .ap_img li.img03 p.bottom{font-family:"Nanum Gothic", sans-serif; font-size: 0.8em; color: #a5a7ab; letter-spacing:-1px; margin-top: -12px; font-weight:bold;}
+#main .ap_img li.img03 p.bottom b{font-family:"Jeju Gothic", sans-serif; color: #b8b220;}
+#main .ap_img li.img04{top:788px; margin: 0 0 0 -25px; cursor: pointer;}
+#main .ap_img li.img05{top: 1005px; margin: 0 0 0 -220px;}
+#main .ap_img li.img05 p{text-align: center; font-size: 3.1em; font-family:"Nanum Gothic", sans-serif; color:#1440a3; line-height: 115%; letter-spacing:-3px;}
+#main .ap_img li.img05 p span{font-family:"Jeju Gothic", sans-serif; font-weight: bold;}
+#main .ap_img li.img06{top: 1125px; margin:0 0 0 -426px;}
+#main .ap_img li.img06:hover{background:url(../img/select_btn01_on.png) no-repeat;}
+#main .ap_img li.img06 .txt{color: #1440a3; font-family: "Nanum Gothic", sans-serif; font-size: 2.3em; margin-left:140px;}
+#main .ap_img li.img06 .txt span{font-family: "Jeju Gothic", sans-serif; font-weight: bold;}
+#main .ap_img li.img06 .txt2{color: #7f7f7f; font-family: "Nanum Gothic", sans-serif; font-size: 1em; padding-top: 15px; text-align: center;}
+#main .ap_img li.img06 .txt3{color: #6b6b6b; font-family: "Nanum Gothic", sans-serif; font-size: 1em; padding-top: 7px; text-align: center; font-weight: bold;}
+#main .ap_img li.img07{top: 1125px; margin:0 0 0 0;}
+#main .ap_img li.img07:hover{background:url(../img/select_btn01_on.png) no-repeat;}
+#main .ap_img li.img07 .txt{color: #1440a3; font-family: "Nanum Gothic", sans-serif; font-size: 2.3em; margin-left:140px;}
+#main .ap_img li.img07 .txt span{font-family: "Jeju Gothic", sans-serif; font-weight: bold;}
+#main .ap_img li.img07 .txt2{color: #7f7f7f; font-family: "Nanum Gothic", sans-serif; font-size: 1em; padding-top: 15px; text-align: center;}
+#main .ap_img li.img07 .txt3{color: #6b6b6b; font-family: "Nanum Gothic", sans-serif; font-size: 1em; padding-top: 7px; text-align: center; font-weight: bold;}
+
+/* scene01 */
+#scene01{height:2040px;}
+#scene01>div{position:absolute; left:50%; top:0; margin-left:-1050px; overflow:hidden;}
+#scene01>div.img02{height:0; overflow:hidden;}
+#scene01 .txt01{position:absolute; left:50%; top:480px; z-index:9; margin:0 0 0 1000px;}
+#scene01 .txt01 span.bold{font-family: "Jeju Gothic", sans-serif; font-weight:bold; color:#ffffff; font-size: 4.3em; text-shadow: 4px 5px 1px #000000;}
+#scene01 .txt01 span.normal{font-family: "Nanum Gothic", sans-serif; color:#ffffff; font-size: 2.5em; text-shadow: 4px 5px 1px #000000; line-height:130%;}
+
+/* scene02 */
+#scene02{height:2770px;}
+#scene02>div{position:absolute; left:50%; top:0; margin-left:-1195px; overflow:hidden;}
+#scene02>div.img02{height:0; overflow:hidden;}
+#scene02 .txt01{position:absolute; right:50%; top:296px; z-index:9; margin:0 1000px 0 0;}
+#scene02 ul.txt01{margin-top: 160px; text-align: reight; font-family: "Nanum Gothic", sans-serif; color: #ffffff; font-size: 1.05em; line-height: 25px; letter-spacing:-0.5px; text-shadow: 2px 2px 1px #333333;}
+#scene02 ul.txt01 li.first{margin-bottom: 25px;}
+#scene02 .img03{position: absolute; left: 50%; top: 979px; z-index: 9; margin: 0 0 0 -582px; opacity:0;}
+
+/* scene03 */
+#scene03{height:2490px;}
+#scene03>div{position:absolute; left:50%; top:0; margin-left:-1195px; overflow:hidden;}
+#scene03>div.img02{height:0; overflow:hidden;}
+#scene03 .txt01{position:absolute; right:50%; top:296px; z-index:9; margin:0 1000px 0 0;}
+#scene03 ul.txt01{margin-top: 160px; text-align: reight; font-family: "Nanum Gothic", sans-serif; color: #ffffff; font-size: 1.05em; line-height: 25px; letter-spacing:-0.5px; text-shadow: 2px 2px 1px #333333;}
+#scene03 ul.txt01 li.first{margin-bottom: 25px;}
+#scene03 .img03{position: absolute; left: 50%; top: 839px; z-index: 9; margin: 0 0 0 -582px; opacity:0;}
+
+/* scene04 */
+#scene04{height:2630px;}
+#scene04>div{position:absolute; left:50%; top:0; margin-left:-1195px; overflow:hidden;}
+#scene04>div.img02{height:0; overflow:hidden;}
+#scene04 .txt01{position:absolute; right:50%; top:296px; z-index:9; margin:0 1000px 0 0;}
+#scene04 ul.txt01{margin-top: 160px; text-align: reight; font-family: "Nanum Gothic", sans-serif; color: #ffffff; font-size: 1.05em; line-height: 25px; letter-spacing:-0.5px; text-shadow: 2px 2px 1px #333333;}
+#scene04 ul.txt01 li.first{margin-bottom: 25px;}
+#scene04 .img03{position: absolute; left: 50%; top: 939px; z-index: 9; margin: 0 0 0 -582px; opacity:0;}
+
+/* scene05 */
+#scene05{height:2634px;}
+#scene05>div{position:absolute; left:50%; top:0; margin-left:-1195px; overflow:hidden;}
+#scene05>div.img02{height:0; overflow:hidden;}
+#scene05 .txt01{position:absolute; right:50%; top:296px; z-index:9; margin:0 1000px 0 0;}
+#scene05 ul.txt01{margin-top: 160px; text-align: reight; font-family: "Nanum Gothic", sans-serif; color: #ffffff; font-size: 1.05em; line-height: 25px; letter-spacing:-0.5px; text-shadow: 2px 2px 1px #333333;}
+#scene05 ul.txt01 li.first{margin-bottom: 25px;}
+#scene05 .img03{position: absolute; left: 50%; top: 959px; z-index: 9; margin: 0 0 0 -582px; opacity:0;}
+
+/* scene06 */
+#scene06{height:2634px;}
+#scene06>div{position:absolute; left:50%; top:0; margin-left:-1195px; overflow:hidden;}
+#scene06>div.img02{height:0; overflow:hidden;}
+#scene06 .txt01{position:absolute; right:50%; top:296px; z-index:9; margin:0 1000px 0 0;}
+#scene06 ul.txt01{margin-top: 160px; text-align: reight; font-family: "Nanum Gothic", sans-serif; color: #ffffff; font-size: 1.05em; line-height: 25px; letter-spacing:-0.5px; text-shadow: 2px 2px 1px #333333;}
+#scene06 ul.txt01 li.first{margin-bottom: 25px;}
+#scene06 .img03{position: absolute; left: 50%; top: 1079px; z-index: 9; margin: 0 0 0 -582px; opacity:0;}
+
+/* scene07 */
+#scene07{background: #003a9f;}
+#scene07>div{position:absolute; left:50%; opacity:0;}
+#scene07>div.img01{top:184px; margin: 0 0 0 -70px;}
+#scene07>div.img02{top:604px; left: 25%;}
+#scene07>div.img02 li{font-family: "Nanum Gothic", sans-serif; color: #ffffff; font-size: 3em; line-height: 95px; text-align:center;}
+#scene07>div.img02 li.bold{font-family: "Jeju Gothic", sans-serif; font-weight: bold; font-size: 5.5em; text-shadow:0 2px 4px #ffffff;}
+#scene07>div.img02 li.bold span{color:#a6deff;}
+
+/* scene08 */
+#scene08{background: url(../img/scene08_pt.gif) repeat-y center top; border: 1px solid #99b0d9; padding-bottom:100px;}
+#scene08 div{position: absolute; left:50%;}
+#scene08 div.img01{top:240px; margin:0 0 0 -398px;}
+#scene08 div.img01 ul{margin: -440px 0 0 0; padding-right: 100px; text-align: right;}
+#scene08 div.img01 ul li.top{font-family: "Nanum Gothic", sans-serif; color:#ffffff; font-size: 3.1em; line-height: 100%;}
+#scene08 div.img01 ul li.top p.bold{font-family: "Jeju Gothic", sans-serif; color:#ffffff; font-weight: bold; font-size:1.1em; margin-top:12px;}
+#scene08 div.img01 ul li.txt01{font-family: "Nanum Gothic", sans-serif; color:#fffeff; text-align:right; font-size:12px; line-height: 190%; margin-top: 20px;}
+#scene08 div.img01 ul li.txt01 p{color:#a6deff;}
+#scene08 div.img02{top:240px; margin:0 0 0 2px;}
+#scene08 div.img02 ul{margin: -360px 0 0 0; padding-left: 170px; text-align: left;}
+#scene08 div.img02 li.top{font-family: "Nanum Gothic", sans-serif; color:#797979; font-size: 1em;}
+#scene08 div.img02 li.top2{font-family: "Nanum Gothic", sans-serif; color:#0244b5; font-size: 2.7em;}
+#scene08 div.img02 li.top2 p.bold{font-family: "Jeju Gothic", sans-serif; color:#0244b5; font-weight: bold; font-size:49px; margin:15px 0 0 0; line-height: 93%;}
+#scene08 div.img02 ul li.txt01{font-family: "Nanum Gothic", sans-serif; color:#6b6b6b; text-align:left; font-size:15px; line-height: 290%; margin-top: 30px;}
+#scene08 div.img02 ul li.txt01 b{color:#6b6b6b; font-weight: bold;}
+
+#scene08 div.select01{left: 50%; bottom: 126px; margin: 0 0 0 -130px; opacity:0;}
+#scene08 div.select02{left: 50%; bottom: 126px; margin: 0 0 0 40px; opacity:0;}
+#scene08 div.top_btn{left: 50%; bottom: 140px; margin: 0 0 -100px -25px;}
+
+
+
+
+

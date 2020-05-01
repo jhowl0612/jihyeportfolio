@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>뷰</title>
+	<style type="text/css">
+		h1{font-size:22px; font-weight:500; letter-spacing:-0.5px;}
+		[v-cloak]{display:none;}
+	</style>
+</head>
+<body>
+	<div id="app" v-cloak>
+		<h1>카운터 : {{ number }}</h1>
+		<button @click="increment">증가</button>
+		<button @click="decrement">감소</button>
+		<hr/>
+		<h1>Hello, {{ name }} / 중괄호로 지정</h1>
+		<h1>Hello,
+			<span v-text="name1"></span> / v-text로 지정
+		</h1>
+		<h1>Hello,
+			<span v-html="name2" v-show="visible"></span>
+		</h1>
+		<hr/>
+		<h1 v-if="value > 5">data의 value가 5보다 클 때 보이는 문장 / v-if</h1>
+		<h1 v-else-if="value === 5">data의 value가 5일 때 보이는 문장 /  v-else-if</h1>
+		<h1 v-else>data의 value가 5보다 크지 않을 때 보이는 문장 / v-else</h1>
+		<h1 v-once>페이지 로드 시점 값에서 고정되는 v-once : {{ value }}</h1>
+		<h1>데이터 변경 시 바로 반영. 기본 설정 : {{ value }}</h1>
+		<hr/>
+		<h1 v-pre>{{지시문을 무시하고 그대로 출력해 주는 v-pre}}</h1>
+		<h1 v-pre>{{v-pre라고 써주지 않으면 중괄호 못 써요}}</h1>
+	</div>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script>
+		var app=new Vue({
+			el:'#app', //어떤 엘리먼트에 작동하는지
+			data:{ //사용할 정보
+				number:0,
+				name: 'Vue',
+				name1: 'World',
+				name2: '<em>v-html이랑 v-show</em>',
+				visible: true,
+				value:5
+			},
+			methods:{
+				increment: function(){
+					this.number++;
+				},
+				decrement: function(){
+					this.number--;
+				}
+			}
+		});
+	</script>
+</body>
+</html>

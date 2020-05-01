@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery Mobile</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<style type="text/css">
+		.ui-icon-my-icon:after{
+			background-image:url(img/logo19.png);
+			background-size:16px 16px;
+		}
+	</style>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1>Header</h1>
+        </div>
+        <div data-role="content">
+            <button data-icon="my-icon">사용자정의 아이콘</button>
+			<input type="button" value="사용자정의 아이콘2" data-icon="my-icon"/>
+			<a href="#" data-role="button" data-icon="my-icon"></a>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h4>Footer</h4>
+        </div>
+    </div>
+</body>
+</html>

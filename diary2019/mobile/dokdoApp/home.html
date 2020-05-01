@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+	<meta name="description" content="독도앱 독도 문방구" />
+	<meta name="keyword" content="독도앱, 독도, 문방구, 독도소개, 경상북도 독도, 경상북도" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>독도</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div data-role="page" id="home" class="eventPage" data-next="intro" data-prev="gallery" data-dom-cache="true" >
+        <div data-role="header" data-theme="b">
+            <h1>독도 소개 앱</h1>
+        </div>
+        <div data-role="content" style="text-align:center;">
+            <img src="images/bgdokdo1.png" style="margin:20px auto;" alt="독도 앱 로고"/>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="intro.html" data-ajax="false">독도 소개</a></li>
+				<li><a href="movie.html" data-rel="dialog" data-ajax="false">독도 영상</a></li>
+				<li><a href="wizard.html" data-rel="dialog" data-ajax="false">독도 음악</a></li>
+				<li><a href="gallery.html" data-ajax="false">독도 사진</a></li>
+			</ul>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h4>Copyright 2019 Jihye. All rights reserved</h4>
+        </div>
+    </div>
+</body>
+</html>

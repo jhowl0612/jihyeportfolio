@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+	<meta name="description" content="독도앱 독도 문방구" />
+	<meta name="keyword" content="독도앱, 독도, 문방구, 독도소개, 경상북도 독도, 경상북도" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>독도</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div data-role="page" id="wizard" class="eventPage" data-next="gallery" data-prev="movie" data-dom-cache="true" >
+        <div data-role="header" data-theme="b">
+            <h1>독도 노래</h1>
+        </div>
+        <div data-role="content">
+            <div class="ui-bar ui-bar-b">홀로 아리랑</div> <br/>
+			<audio controls width="100%">
+				<source src="arirangalone.mp3" type="audio/mp3" />
+			</audio>
+			<img src="images/3-1.jpg" width="100%" alt="홀로 아리랑"/>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <a href="home.html" data-ajax="false" data-direction="reverse">이전</a>
+            <a href="wizard1.html" data-ajax="false" data-rel="dialog" data-transition="slide">다음</a>
+        </div>
+    </div>
+</body>
+</html>

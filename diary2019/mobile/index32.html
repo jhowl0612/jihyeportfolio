@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery Mobile</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page" id="page1">
+        <div data-role="header" data-theme="b">
+            <a href="#page1" style="background:#00bfff;">홈</a>
+            <a href="#page2">다음</a>
+			<h1>Header</h1>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true">
+            	<li><a href="">가족시간</a></li>
+            	<li><a href="">여행시간</a></li>
+            	<li><a href="">취미활동</a></li>
+            	<li><a href="">학습활동</a></li>
+            </ul>
+        </div>
+        <div data-role="footer" class="ui-bar"  data-position="fixed" data-theme="b">
+            <div data-role="controlgroup" data-type="horizontal"  data-theme="a">
+				<a href="#page1">2011년</a>
+				<a href="#page2">2012년</a>
+				<a href="#page3">2013년</a>
+				<a href="#page3">2014년</a>
+				<a href="#page3">2015년</a>
+			</div>
+        </div>
+    </div>
+</body>
+</html>
