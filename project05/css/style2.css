@@ -8,7 +8,9 @@
 #gnb>ul{width:100%; min-width:700px; max-width:900px; margin:0 auto;}
 #gnb>ul>li>a{color:#333333; width:55%;}
 #gnb>ul>li.alright>a{width:65%; float:right;}
+#gnb>ul>li:hover>a{background-color:#4162a3; color:#ffffff;}
 .gnb_box{box-sizing:border-box; height:0;}
+.gnb_box:after{content:none;}
 #gnb>ul>li:hover .gnb_box{height:320px;}
 .depth2,.membership{width:100%;}
 .depth2>li>a{background-color:#4162a3; font-size:1.05em; padding:12px 0 11px; color:#ffffff; border:0;}

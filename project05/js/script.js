@@ -1,5 +1,17 @@
 $(function() {
-	bb=true;	
+	bb=true;
+	$('#gnb .cf>li').hover(function(){
+		if($(window).width()>700){
+			$('.nav_overlay_over700').show();
+		}
+		return false;
+	},function(){
+		if($(window).width()>700){
+			$('.nav_overlay_over700').hide();
+		}
+		return false;
+	});
+	
 	$('.mobile_nav .menuIconL').click(function(){
 		if($(window).width()<780){
 			$('.mobile_nav .gnb_box.under780.left').stop().animate({'left':'-100%'},300,function(){
@@ -50,6 +62,15 @@ $(function() {
 			};
 		}
 		return false;
+	});
+	
+	$('.search input').on('focus',function(){
+		$(this).css('background-position','10px -50px');
+	});
+	$('.search input').on('blur',function(){
+		if($(this).val()==''){
+			$(this).css('background-position','10px center');
+		}
 	});
 	
 	$('.banner_info').each(function(){

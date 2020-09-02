@@ -1,0 +1,160 @@
+/* 갤린더 */  
+	.calender-pause{ padding-bottom:40px;} 
+	/* 
+	수정할 것! 
+	.calender-pause{float:right; padding-top: 15px;}
+	*/
+	.cal1{
+	border-radius:4px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	-o-border-radius:4px;
+	-ms-border-radius:4px;
+
+}
+.clndr{
+width:100%;
+}
+.noselect {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+}
+.cal1 .clndr .clndr-controls {
+    position: relative;
+	font-size: 16px;
+	font-weight:400;
+	text-transform: uppercase;
+	padding:6px 8px 6px;
+	text-align: center;
+	/* border-bottom: 1px solid #bababa; */
+	border-top-left-radius: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-moz-border-top-left-radius: 4px;
+	-o-border-top-left-radius: 4px;
+	-ms-border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-top-right-radius: 4px;
+	-o-border-top-right-radius: 4px;
+	-ms-border-top-right-radius: 4px;
+	background:#2f5ca2;
+
+}
+.cal1 .clndr .clndr-controls .month {
+   text-align:center;
+}
+.cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button { 
+  position:absolute;
+  right:0px;
+  top:-6px;
+  width:30px;
+  height:30px;
+  text-indent: -4000px;
+  background: url(images/arrow-right.png) no-repeat 0px 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+}
+.cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button.inactive:hover {
+  cursor: default;
+}
+.cal1 .clndr .clndr-controls .clndr-control-button .clndr-previous-button { 
+   position:absolute;
+   left:8px;
+   top:-6px;
+   width:30px;
+   height:30px;
+  text-indent: -4000px;
+  background: url(images/arrow-left.png) no-repeat 0px 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+}
+.cal1 .clndr .clndr-controls .clndr-control-button .clndr-previous-button.inactive:hover {
+   cursor: default;
+}
+.cal1 .clndr .clndr-table {
+  table-layout: fixed;
+  width:100%;
+  margin:2px auto;
+  padding:4px 0 0 0;
+  height:152px;
+  border-radius: 4px;
+}
+.cal1 .clndr .clndr-table .header-days {
+   font-size:11px;
+   font-weight:500;
+}
+.cal1 .clndr .clndr-table .header-days .header-day {
+  vertical-align: middle;
+  text-align: center;
+  color:#ffffff;
+  color:rgba(255,255,255,0.75);
+}
+.cal1 .clndr .clndr-table tr {
+    height:20px;
+}
+.cal1 .clndr .clndr-table tr td {S
+  vertical-align: top;
+}
+.cal1 .clndr .clndr-table tr .day {
+  width: 100%;
+  height: 32px; /*현재날자높이값수정*/
+  color: #ffffff;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-top:1px solid rgba(255,255,255,0.1);
+}
+.cal1 .clndr .clndr-table tr .day.today {
+  	 border:none;
+	 background:#b22747;
+	 color: #ffffff;
+	 position:relative;
+}
+
+.cal1 .clndr .clndr-table tr .day.today:hover {
+  	color: #FFF;
+  	background:#8c0000;
+}
+.cal1 .clndr .clndr-table tr .day:hover{
+	color: #FFF;
+  	background:#802644;
+}
+.cal1 .clndr .clndr-table tr .day.today.event {
+     background:#b22747;
+	 color: #ffffff;
+}
+.cal1 .clndr .clndr-table tr .day.today.event:hover{
+	background:#8c0000;
+	color:#FFF;
+}
+.cal1 .clndr .clndr-table tr .day .day-contents {
+  box-sizing: border-box;
+  font-size:0.7em;
+  text-align:center;
+  cursor:pointer;
+}
+.cal1 .clndr .clndr-table tr .empty,
+.cal1 .clndr .clndr-table tr .adjacent-month {
+  width: 100%;
+  height: inherit;
+  color: transparent;
+  font-size:0;
+  font-weight: 300;
+ } 

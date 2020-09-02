@@ -21,7 +21,7 @@ div{border:none;}
 #wrap.fixed{padding-top:223px;}
 #header{width:100%; min-width:1280px;}
 .header_top{background:#214f8a; height:36px;}
-.top_center_mom{max-width: 1280px; min-width:588px; margin:0 auto;}
+.top_center_mom{max-width: 1280px; min-width:588px; position:relative; margin:0 auto;}
 .header_top_right{position:absolute; right:0; font-size:0; z-index:9999;}
 .header_top_right>li{float:left; border-left:1px solid #3f6698;}
 .header_top_right>li.top_home a{text-indent:-99999px; width:36px; box-sizing:border-box; background:url(../images/home.gif) no-repeat center;}

@@ -21,14 +21,20 @@
 		a{text-decoration:none; background:#e9f3ff; color:black; font-weight:bold; padding: 0 2px;}
 		a:hover{color:#0036d9; background:#eef6ff; }
 		a:active{color:#ff794c; background:#eef6ff; text-decoration: underline;}
-		#page_btn{position:fixed; bottom:10px; right:5px;}
-		#page_btn ul{list-style:none; margin:0; padding:0;}
-		#page_btn a{display:block; width:36px; font-size:0.75em; text-align:center; background:#00a3d9; padding:2px 0; color:#ffffff;}
-		#page_btn .arr a{display:block; width:36px; font-size:0.5em; text-align:center; background:#00a3d9; padding:0; height:22px; line-height:22px;}
+
+		.fixed_btn{position: fixed; bottom:10px;}
+		.fixed_btn ul{list-style:none; margin:0; padding:0}
+		.fixed_btn ul a{display:block; text-align:center; font-size:0.75em; word-break:keep-all;}
+		#page_btn{right:5px;}
+		#page_btn a{width:36px; background:#00a3d9; padding:2px 0; color:#ffffff;}
+		#page_btn .arr a{width:36px; font-size:0.5em; background:#00a3d9; padding:0; height:22px; line-height:22px;}
+		#go_btn{right:48px;}
+		#go_btn a{width:48px; margin-top:6px; padding:13px 8px; border-radius:50%; line-height:1.5; border: 1px solid #00a3d9; background:white;}
+		#go_btn a:hover{color:#3298dc;}
 	</style>
 </head>
 <body>
-	<div id="page_btn">
+	<div id="page_btn" class="fixed_btn">
 		<ul>
 			<li class="arr"><a href="#">↑</a><li>
 			<li><a href="#Feb">Feb</a><li>
@@ -40,6 +46,12 @@
 			<li><a href="#Oct">Oct</a><li>
 			<li><a href="#Nov">Nov</a><li>
 			<li class="arr"><a href="#bot">↓</a><li>
+		</ul>
+	</div>
+	<div id="go_btn" class="fixed_btn">
+		<ul>
+			<li><a href="../index.html">메인 페이지</a></li>
+			<li><a href="../diary2020/index.html" target="_blank">일기장 2020</a></li>
 		</ul>
 	</div>
 	<div id="wrap">

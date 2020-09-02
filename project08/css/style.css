@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Noto+Sans+KR');
+*{margin:0; padding:0; border:0;}
+html{overflow-x:hidden;}
+body{overflow-x:hidden; font-family:"Noto Sans KR", "맑은 고딕", sans-serif; font-weight:normal;}
+ol,ul{list-style:none;}
+a{line-height: inherit; text-decoration:none; vertical-align:middle}
+img{border:0; vertical-align:top;}
+select,input{vertical-align:middle;}
+h1,h2{font-weight:normal;}
+.cf:after {content:""; display:block; clear:both;}
+
+.ui-page.ui-page-theme-a{background:url(images/bg_main2.jpg) no-repeat center bottom; background-size:cover;}
+.ui-header .ui-title{font-size:1em; font-weight:normal; text-align:left; margin-left:3em; margin-right:3em;}
+.ui-header .ui-btn-left{top:5px;}
+.ui-header  .ui-btn:active{background:rgba(0,0,0,0.25)}
+
+#home.ui-page{background:url(images/bg_main1.jpg) no-repeat center bottom; background-size:cover;}
+#home .ui-title{font-size:1em; font-weight:normal; text-align:left; margin-left:1em; margin-right:3em;}
+#home .ui-content{position:absolute; bottom:24px; width:88%; padding:0 6%;}
+#home .ui-btn{min-height:initial;}
+#home .ui-btn:active, #home .ui-btn:visited, #home .ui-btn:focus{box-shadow:0 0 0 transparent;}
+
+.quickmenu{width:100%;}
+.quickmenu li{float:left; width:32.5%; height:100px; margin-bottom:4%; background:url(images/qmenu_bg3.png) no-repeat center 0;}
+.quickmenu li.center{margin:0 1% 4%;}
+.quickmenu li a{display:block; font-size:14px; text-align:center; border-radius:8px;}
+.quickmenu li a:active{background:rgba(0,0,0,0.1)}
+.quickmenu li img{display:block; margin:10px auto; padding-top:14px;}
+#panel1 .panelmenu li a{background:#2c2d2f;}
+#panel1 .panelmenu li a:active{background:#1a1a1a;}
+#panel1 .panelmenu li img{padding:6px 16px;}
+
+#chat ul li a{border-bottom:1px solid rgba(230,240,255,0.5); padding-left:0; margin-left:100px;}
+#chat ul li img{width:74px; padding:4px 0 0 4px;}
+#chat ul li a h3{margin-top:0;}
+#chat .ui-li-aside{line-height:20px;}
+
+#schedule .ui-content{padding:0;}
+#schedule h2{font-size:14px; padding:10px 16px; background:rgba(0,0,0,0.25);}
+#schedule p{text-align:center; font-size:15px; padding:16px;}
+
+#friends ul li a{min-height:1em; padding-left:60px; padding-right:30px; border-bottom:1px solid #cccccf;}
+#friends ul li a img{width:42px; padding:2px 8px 0;}
+#friends ul li a h3{margin-top:0; font-size:14px;}
+#friends .ui-li-aside{display:inline-block; width:136px; line-height:20px; text-align:left; letter-spacing:-0.5px;}
+#friends .ui-li-aside span{float:right; width:64px;}
+
+#inventory.ui-page{background:#666666;}
+#inventory .ui-content{padding:0;}
+#inventory h2{font-size:15px; padding:8px 24px; background:#2f5ca2;}
+#inventory h2 img{width:18px; padding:3px 8px 0;}
+#inventory h2 span{float:right; font-size:13px; line-height:20px;}
+.inventory_inner{width:100%;}
+.inventory_inner tr{width:100%;}
+.inventory_inner td img{width:100%;}
+
+#sell.ui-page{background:#66666a;}
+#sell .ui-content{padding:0;}
+#sell h2{font-size:15px; padding:8px 24px; background:#2f5ca2;}
+#sell h2 img{width:18px; padding:3px 8px 0;}
+#sell h2 span{float:right; font-size:13px; line-height:20px;}
+#sell .ui-listview{margin:0;}
+#sell ul li{background:transparent; border-color:transparent;}
+#sell ul li img{width:80px; padding-top:2px;}
+#sell ul li .ui-icon-carat-r:after{content:initial;}
+#sell ul li a{padding-left:0; margin-left:100px; border-bottom:1px solid rgba(255,240,230,0.25);}
+#sell h3{font-weight:normal;}
+#sell .ui-li-aside{top:48px;}
+#sell .ui-li-aside span{padding:0 24px 0 12px;}
+
+#buy.ui-page{background:#66666a;}
+#buy .ui-content{padding:0;}
+#buy h2{font-size:14px; padding:10px 16px; background:#3a3a43;}
+#buy h2 ul{Width:100%;}
+#buy table{width:100%; font-size:14px; letter-spacing:-0.68px;}
+#buy table tr{width:100%;}
+#buy table td{width:20%; padding:6px 0; background:url(images/buy_bg2.jpg) repeat-x 0 0; border-radius:6%; text-align:center; color:#101010;}
+#buy table.color1 td{background:url(images/buy_bg1.jpg) repeat-x 0 0;}
+
+
+
+
+

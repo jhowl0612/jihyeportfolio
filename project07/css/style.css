@@ -18,7 +18,7 @@ legend{text-indent:-99999px; position:absolute; visibility:hidden; margin-left:-
 	font-style:normal;
 	font-weight:normal;
 	src:url(../font/nanumgothic.eot);
-	src:url(../font/NanumGothic.eot?#iefix) format('embedded-opentype'), url(../font/nanumgothic.woff) format('woff');
+	src:url(../font/NanumGothic.eot?#iefix) format('embedded-opentype'), url(../font/NanumGothic.woff) format('woff');
 }
 @font-face{
 	font-family:'nanumgothicbold';

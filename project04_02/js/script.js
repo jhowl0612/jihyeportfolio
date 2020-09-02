@@ -75,7 +75,7 @@ $(function(){
 				$('html').stop().animate({"scrollTop":sct5},600)
 				return false;
 			});
-		}else if(sct>4000){
+		}else if(sct>3800){
 			$('.main_nav li').removeClass('active');
 			$('.main_nav li').eq(5).addClass('active');
 			$('.main_nav>.m_n_up').click(function(){

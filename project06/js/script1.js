@@ -173,13 +173,10 @@ $(function(){
 			var next=bannerP.eq(currentP);
 			move(next,'100%',0);
 		}
-		
 		function move(tg,start,end){
 			tg.css('left',start).stop().animate({left:end},750);
 		}		
-		
 		var timerP=setInterval(popupSlide,4000);
-		
 		$('.popup_visual').hover(function(){
 			clearInterval(timerP);
 		},function(){

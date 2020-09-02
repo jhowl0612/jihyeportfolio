@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
 	<title>한국문학번역원</title>
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -10,7 +11,10 @@
 	<link rel="stylesheet" href="css/calender.css" />
 	<link rel="stylesheet" href="css/style2.css" media="only screen and (min-width:768px) and (max-width:1279px)"/>
 	<link rel="stylesheet" href="css/style3.css" media="only screen and (max-width:767px)"/>
-	<!--[if IE 7, 8]>
+	<!--[if IE 8]>
+		<link rel="stylesheet" type="text/css" href="css/style4.css">
+	<![endif]-->
+	<!--[if IE 7]>
 		<link rel="stylesheet" type="text/css" href="css/style4.css">
 	<![endif]-->
 	<script src="js/jquery-1.7.1.min.js"></script>
@@ -532,7 +536,7 @@
 		</div>
 		<div class="section2 cf">
 			<div class="nav_bot">
-				<ul>
+				<ul class="cf">
 					<li><a href="#" class="a1">온라인 사업지원</a></li>
 					<li><a href="#" class="a2">한국문학 디지털도서관</a></li>
 					<li><a href="#" class="a3">계간지 KLN</a></li>
@@ -601,9 +605,8 @@
 				<div class="calendar_event">
 					<h3>행사안내</h3>
 					<ul class="event_info">
-						<li><a href="#">&nbsp; <br/>&nbsp;</a></li>
-						<li><a href="#">&nbsp; <br/>&nbsp;</a></li>
-						<li><a href="#">&nbsp; <br/>&nbsp;</a></li>
+						<li><a href="#">소통과 평화의 플랫폼 <br/>&nbsp;</a></li>
+						<li><a href="#">[문화가 있는 날] ‘역:시(譯:詩)-황인찬의 시를 일본어로 만나다’개최 <br/>&nbsp;</a></li>
 					</ul>
 				</div>
 			</div>
@@ -611,11 +614,11 @@
 	</div>
 	<div id="footer">
 		<div class="footer_top">
-			<div class="footerTop_inner">
+			<div class="footerTop_inner cf">
 				<ul class="page_info">
 					<li class="fir"><a href="#">홈페이지 이용안내</a></li>
 					<li class="bold"><a href="#">개인정보처리방침</a></li>
-					<li><a href="#">오시는 길</a></li>
+					<li class="third"><a href="#">오시는 길</a></li>
 					<li><a href="#">사이트맵</a></li>
 				</ul>
 				<div class="sitelink">
@@ -674,9 +677,9 @@
 				</div>
 				<div class="foot_bt_r">
 					<ul>
-						<li><a href="#"><img src="img/goodcontentsicon.jpg" alt="굿콘텐츠서비스"/></a></li>
-						<li><a href="#"><img src="img/mark_e.jpg" alt="굿콘텐츠서비스"/></a></li>
-						<li><a href="#"><img src="img/Family_friendly.png" alt="굿콘텐츠서비스"/></a></li>
+						<li><a href="img/ltikorea.png" target="_blank"><img src="img/goodcontentsicon.jpg" alt="굿콘텐츠서비스"/></a></li>
+						<li><a href="eprivacy.html" onclick="window.open(this.href,'isms','width=500, height=750,top=0, left=100, scrollbars=no');return false;"><img src="img/mark_e.jpg" alt="개인정보보호"/></a></li>
+						<li><a href="img/Family_friendly2.png" target="_blank"><img src="img/Family_friendly.png" alt="가족친화기관"/></a></li>
 						<li><a href="#"><img src="img/foot_img7.gif" alt="굿콘텐츠서비스"/></a></li>
 					</ul>
 				</div>

@@ -1,6 +1,7 @@
 const VueLoaderPlugin = require( 'vue-loader/lib/plugin' ); // 뷰 로더 플러그인 불러옴
 const path = require( 'path' ); // 노드js 에 내장된 path 모듈 불러옴.
 // 노드 환경에서는 const ooo = require(); 구문으로 모듈을 부른다.
+// module.exports를 해 놓으면, require()로 부를 수 있음
 
 module.exports = {
     mode: 'development', // development : 개발 중 / production : 배포 중

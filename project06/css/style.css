@@ -143,7 +143,7 @@ table caption{font-size:0;}
 .calendar_event{width:40%; height:100%; float:left; box-sizing:border-box; background:#f3f1f2; padding:15px 30px 0; transition:all .4s;}
 .calendar_event h3{font-size:16px;}
 .event_info{margin-top:8px; padding:12px 8px}
-.event_info li{margin-bottom:16px; font-size:14px; padding-left:24px; background:url(../img/orange_icon.png) 8px 4px no-repeat;}
+.event_info li{margin-bottom:16px; font-size:14px; padding-left:24px; background:url(../img/orange_icon.png) 8px 4px no-repeat; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 
 .footer_top{border-top:1px solid #d8d8d8; border-bottom:1px solid #d8d8d8;}
 .footerTop_inner{max-width:1400px; margin:0 auto; height:56px; transition:all .4s;}

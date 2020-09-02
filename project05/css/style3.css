@@ -27,7 +27,7 @@
 .depth2>li{font-size:1.1em; padding:0; width:33.33%;}
 .depth2>li>a{background-color:#4162a3; color:#ffffff;  font-size:1.1em; padding:9px 0 11px; border:0;}
 .depth2 ul{padding-top:12px; height:200px; border-top:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5;}
-.depth2 ul li a{padding:4px 4px 6px 10px; letter-spacing:-0.8px; font-size:0.9em; line-height:1.6;}
+.depth2 ul li a{padding:4px 4px 6px 19px; letter-spacing:-0.8px; font-size:0.9em; line-height:1.6;}
 .depth2 ul li:hover a:before{margin:0 17px 0 -20px;}
 
 .membership li{width:33.33%; padding:0px;}

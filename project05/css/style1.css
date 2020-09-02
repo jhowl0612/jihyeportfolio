@@ -25,31 +25,33 @@ input, select{font-size:13px;}
 .search{width:529px; top:26px; right:50%; margin-right:-264.5px; transition:all 0.4s;}
 .search fieldset{position:relative; height:26px; padding:13px 0 13px 26px; border:4px solid #212121; border-radius:30px;}
 .search select{width:60px; height:28px; margin-right:10px; border:0; color:#212121; font-size:16px; transition:all 0.4s;}
-.search input{width:333px; height:26px; padding:1px 0 1px 10px; border:0; caret-color:#06b596; line-height:26px; vertical-align:top; font-size:16px; font-weight:500; letter-spacing:-1.5px; transition:all 0.4s; background:url(../images/placeholder.png) no-repeat 10px center;}
+.search input{width:333px; height:26px; padding:1px 0 1px 10px; border:0; caret-color:#06b596; line-height:26px; vertical-align:top; font-size:16px; font-weight:500; letter-spacing:-1.5px; transition:width,padding 0.4s; background:url(../images/placeholder.png) no-repeat 10px center;}
 .search button{font-size:0; position:absolute; top:0; right:5px; width:77px; height:52px; background:url(../images/btn_search.png) no-repeat center; cursor:pointer;}
 
-#gnb{height:44px; background:#ffffff; position:relative; z-index:100; transition:width,height,background 0.4s; border-top:1px solid #cccccc;}
+#gnb{height:44px; background:#ffffff; position:relative; z-index:100; transition:width,height,background 0.4s; border-top:1px solid #cccccc; background:#4162a3;}
 #gnb>ul{width:1000px; margin:0 auto;}
 #gnb>ul>li{width:50%; transition:background-position 0.3s;}
-#gnb>ul>li>a{color:#333333; font-weight:500; letter-spacing:-1px; display:block; height:44px; padding:9px 0 8px; box-sizing:border-box; width:35%;}
+#gnb>ul>li>a{color:#ffffff; font-weight:500; letter-spacing:-1px; display:block; height:44px; padding:9px 0 8px; box-sizing:border-box; width:35%;}
 #gnb>ul>li>a img{padding:4px 12px;}
 #gnb>ul>li>a .under780{display:none; padding:4px 18px;}
-#gnb>ul>li:hover>a{background-color:#4162a3; color:#ffffff;}
+#gnb>ul>li:hover>a{background-color:#ffffff; color:#333333;}
 #gnb>ul>li.alright{text-align:right;}
-#gnb>ul>li.alright>a{ float:right; width:45%;}
+#gnb>ul>li.alright>a{float:right; width:45%;}
 
-.gnb_box{position:absolute; top:44px; left:0; width:100%; overflow:hidden; height:0; background:#ffffff; word-break:keep-all;}
+.gnb_box{position:absolute; top:44px; left:0; width:100%; overflow:hidden; height:0; background:#ffffff; word-break:keep-all; z-index:100;}
+.gnb_box:after{content:""; position:absolute; top:56px; left:0; width:100%; height:1px; background:#efefef;}
 #gnb>ul>li:hover .gnb_box{height:338px;}
 .depth2{width:1000px; margin:0 auto;}
 .depth2>li{float:left; width:16.6666%;}
-.depth2>li>a{display:block; padding:15px 0 12px; font-size:1.1em; background-color:#4162a3; color:#ffffff; text-align:center; border-bottom:3px solid #ffffff; letter-spacing:-1.2px; font-weight:500;}
-.depth2 ul{height:190px; padding-top:20px; border-left:1px solid #e5e5e5;}
+.depth2>li>a{display:block; padding:15px 0 12px; font-size:1.1em; color:#333333; text-align:center; border-bottom:3px solid #ffffff; letter-spacing:-1.2px; font-weight:500;}
+.depth2>li>a:hover{border-bottom-color:#4162a3;}
+.depth2 ul{height:270px; padding-top:20px; border-left:1px solid #e5e5e5;}
 .depth2 .la ul{border-right:1px solid #e5e5e5;}
 .depth2 ul li a{display:block; padding:8px 19px; font-size:0.92em; color:#444444;}
 .depth2 ul .fir a{padding-top:0;}
 .depth2 ul li:hover a:before{width:3px; height:15px; background-color:#4162a3; content:""; display:inline-block; margin:0 16px 0 -19px;}
 
-.membership{width:1000px; margin:10px auto;}
+.membership{width:1000px; margin:10px auto; position:relative;}
 .membership li{float:left; width:16.6666%; padding:0 4px; box-sizing:border-box;}
 .membership li.fir{margin-left:50%; letter-spacing:-0.7px;}
 .membership a{display:block; height:50px; line-height:50px; border:1px solid #e5e5e5; font-size:0.9em; padding-left:45px; color:#4466a7; font-weight:bold;}
@@ -64,6 +66,7 @@ input, select{font-size:13px;}
 .mobile_nav{display:none;}
 .mobile_nav .gnb_box{z-index:99;}
 .nav_overlay{top:0; left:0; display:none;}
+.nav_overlay_over700{position:absolute; top:44px; left:0; width:100%; height:1800px; background-color:rgba(0, 0, 0, 0.55); z-index:97; display:none;}
 .mobile_nav .mobile_logo{position:absolute; width:100%; display:none;}
 .mobile_nav .mobile_logo a{display:block; margin-top:5px;}
 .mobile_nav .mobile_logo img{transition:all .4s;}
