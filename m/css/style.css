@@ -1,0 +1,94 @@
+*{margin:0; padding:0; border:0;}
+html{width: 100%;height: 100%;}
+body{font-family:'NotoSansL','돋움',normal dotum, sans-serif; height:100%; color:#222222; background:#ffffff; font-size:1rem; letter-spacing:-0.4px; word-break:keep-all;}
+ul,li{list-style:none;}
+img{border:0; vertical-align:middle;}
+a{color:inherit; text-decoration:none;}
+i,em,address{font-style:normal;}
+b{font-weight:normal;}
+.cf:after{content:""; display:block; clear:both;}
+.fl{float:left;}
+@font-face{font-family:'NotoSansR'; src:url('font/NotoSans-Regular.eot'); src:url('font/NotoSans-Regular.eot?#iefix') format('embedded-opentype'), url('font/NotoSans-Regular.woff2') format('woff2'), url('font/NotoSans-Regular.woff') format('woff'); font-style:normal; font-weight:normal;}
+@font-face{font-family:'NotoSansL'; src:url('font/NotoSans-Light.eot'); src:url('font/NotoSans-Light.eot?#iefix') format('embedded-opentype'), url('font/NotoSans-Light.woff2') format('woff2'), url('font/NotoSans-Light.woff') format('woff'); font-style:normal; font-weight:normal;}
+h2{font-size:1.2rem; height:2rem; text-align:center; height:2rem; line-height:2rem;}
+h3{font-size:1.4rem; height:4rem; color:#ef684a;}
+h4{line-height:2.4rem; margin-top:1rem;}
+#wrap{height:100%;}
+#header{position:fixed; width:100%; top:0; left:0; height:3rem; background:#ffffff; z-index:10; font-family:'NotoSansR'; text-align:center; box-shadow:0 0 1px #dfdfdf;}
+#header>a{display:block; float:left; width:3rem; height:3rem; font-size:0; text-align:center;}
+#header a.menubtn{background:#222222; position:relative;}
+#header a.logo{float:right; line-height:3rem;}
+#header .menubtn img{position:absolute; top:0; left:0;}
+#header a span{display:block; width:10px; height:1.2rem; background:#ef684a; transition:all 0.55s ease-in-out;}
+#header a span:nth-child(2){height:0.6rem; transition:all 0.4s ease-in-out;}
+#header a.active span{width:100%;}
+#header h1{display:inline; font-size:1rem; line-height:3rem; font-weight:400;}
+.overlay{position: fixed; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.55); z-index: 9; display: none;}
+.menu{position:fixed; width:65%; height:auto; top:3rem; left:-65%; bottom:0; z-index:11; background:#ffffff; border-top:1px solid #cccccc; font-family:'NotoSansL';}
+.menu_profile{height:8rem; text-align:left; background:#f8f7f7;  font-family:'NotoSansR';}
+.menu_profile img{height:5rem; padding:1.5rem 0.5rem;}
+.menu_profile p{float:right; width:calc(100% - 7rem); line-height:1.5rem; padding:1.75rem 0.5rem;}
+.menu>p{margin-top:0.5rem; padding-left:3rem; text-align:left; background:no-repeat 1.4rem 0.4rem; color:#ef684a; white-space:nowrap;}
+.menu>p:nth-child(2){background-image:url(../img/phone.png);}
+.menu>p:nth-child(3){background-image:url(../img/mail.png);}
+.menu_link{position:absolute; left:0; bottom:2.2rem; width:100%;}
+.menu_link a{width:50%; padding:0 .4rem; box-sizing:border-box; font-size:0.95rem; line-height:2rem;}
+.menu_link a:first-child:after{content:""; display:block; position:absolute; width:1px; height:.8rem; background:#999999; left:calc(50% - .3rem); bottom:.5rem;}
+
+#intro{width:100%; margin-top:3rem; padding:2rem 0; background:url(../img/introbg.jpg) no-repeat; background-size:cover; color:#ffffff; font-size:0.95rem; letter-spacing:-0.4px; text-align:center; box-sizing:border-box;}
+#intro a{display:inline-block; margin:0.8rem 0.25rem; width:5rem; height:1.6rem; line-height:1.5rem; border:1px solid #ffffff; border-radius:3px;}
+#intro a.contact{background:#ffffff; color:#ef684a; letter-spacing:0;}
+#intro p:nth-child(4){position:relative;}
+#intro img{position:absolute; left:50%; margin-left:-7px; top:1.6rem;}
+
+#portfolio{width:100%;}
+#portfolio h2{border-top:2px solid #ef684a; }
+.swiper-slide{text-align:center; background: #fff; box-sizing:border-box; padding:1.5rem 2.6rem;}
+.swiper-button-next, .swiper-button-prev{background-size:20px;}
+.swiper-pagination-progressbar{height:2px!important;}
+.pageview{height:14rem; width:80%; margin:0 auto; position:relative;}
+
+.imgcontainer{height:100%; overflow-y:scroll; border:2px solid #bbbbbb; border-radius:0.2rem;}
+.imgcontainer a, .imgcontainer img{width:100%; }
+.imgcontainer span{position:absolute; display:block; padding:0.075rem 0.4rem; width:14rem; left:50%; top:-1.8rem; margin-left:-7rem; background:#222222 url(../img/alert-white.png) no-repeat 0.3rem 0.3rem; color:#ffffff; font-size:0.8em; text-align:right; white-space:nowrap; box-sizing:border-box; z-index:1;}
+.pageviewbtn .imgcontainer span{margin-left:-3.2rem;}
+.port07 .imgcontainer span{text-align:center; padding:0.075rem 0 0.075rem 0.525rem;}
+
+.pageviewbtn{height:10rem; width:calc(100% - 7.8rem); margin-right:8.2rem;}
+.pageview>a{position:absolute; top:0; right:-7.8rem; width:7.5rem; height:2.8rem; line-height:2.7rem; background:#ef7a4a; border-radius:3px; color:#ffffff;}
+
+.port01 .pageview>a:nth-child(2){top:0.4rem;}
+.port01 .pageview>a:nth-child(3){top:3.6rem;}
+.port01 .pageview>a:nth-child(4){top:6.8rem;}
+
+.port02 .pageview>a:nth-child(2){top:2.2rem;}
+.port02 .pageview>a:nth-child(3){top:5.4rem;}
+
+.port06 .pageview{width:60%; height:auto;}
+.port06 .imgcontainer{overflow:initial;}
+
+.port08 .pageview{height:auto;}
+.port11 .pageview{height:auto;}
+
+.port_txt{margin-top:1.6rem; overflow:hidden; font-size:0.9rem;}
+.port_txt span{display:inline-block; margin-top:0.5rem; padding:0 0.35rem; color:#ef684a;}
+
+#about{padding-bottom:2rem; text-align:center;}
+#about h2{border-top:0.75rem solid #dfdfdf; border-bottom:1.6px solid #dfdfdf;}
+#about hr{display:block; width:30%; height:1px; margin:0 auto; background:#222222;}
+#about ul{padding:1.2rem 0; font-size:0.94rem;}
+#about ul li>span{display:inline-block; width:50%; text-align:left;}
+#about ul em{display:inline-block; width:25%; text-align:right;}
+#about ul p{width:75%; height:0.2rem; margin:.2rem auto .6rem; background:#cccccc;}
+#about ul p span{display:block; height:0.2rem;}
+#about ul li:nth-child(1) p span{width:90%; background:#ed7b51;}
+#about ul li:nth-child(2) p span{width:90%; background:#ed7b51;}
+#about ul li:nth-child(3) p span{width:85%; background:#44a4dc;}
+#about ul li:nth-child(4) p span{width:80%; background:#a271e6;}
+#about ul li:nth-child(5) p span{width:40%; background:#44a4dc;}
+#about ul li:nth-child(6) p span{width:45%; background:#81c823;}
+#about ul li:nth-child(7) p span{width:75%; background:#81c823;}
+#about ul li:nth-child(8) p span{width:40%; background:#44a4dc;}
+
+
+#footer{height:2.2rem; line-height:2.2rem; background:#303030; font-family:'NotoSansL'; color:#efefef; text-align:center; font-size:0.85rem;}
