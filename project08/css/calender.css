@@ -1,7 +1,7 @@
-/* °¶¸°´õ */  
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */  
 	.calender-pause{ padding-bottom:40px;} 
 	/* 
-	¼öÁ¤ÇÒ °Í! 
+	ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½! 
 	.calender-pause{float:right; padding-top: 15px;}
 	*/
 	.cal1{
@@ -54,7 +54,7 @@ width:100%;
   width:30px;
   height:30px;
   text-indent: -4000px;
-  background: url(images/arrow-right.png) no-repeat 0px 10px;
+  background: url(images/arrow-right.png) no-repeat 30px 10px;
   cursor: pointer;
   -webkit-user-select: none;
   /* Chrome/Safari */
@@ -111,7 +111,7 @@ width:100%;
 }
 .cal1 .clndr .clndr-table tr .day {
   width: 100%;
-  height: 32px; /*ÇöÀç³¯ÀÚ³ôÀÌ°ª¼öÁ¤*/
+  height: 32px; /*ï¿½ï¿½ï¿½ç³¯ï¿½Ú³ï¿½ï¿½Ì°ï¿½ï¿½ï¿½ï¿½ï¿½*/
   color: #ffffff;
   vertical-align: middle;
   cursor: pointer;
