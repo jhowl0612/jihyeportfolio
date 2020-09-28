@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Noto+Sans+KR');
 *{margin:0; padding:0; border:0;}
 html{overflow-x:hidden;}
-body{overflow-x:hidden; font-family:"Noto Sans KR", "맑은 고딕", sans-serif; font-weight:normal; -ms-overflow-style: none; /* IE and Edge */ scrollbar-width: none; /* Firefox */}
-body::-webkit-scrollbar{display: none;  /* Chrome, Safari, Opera*/}
+body{overflow-x:hidden; font-family:"Noto Sans KR", "맑은 고딕", sans-serif; font-weight:normal;}
+body.ui-mobile-viewport{-ms-overflow-style: none; /* IE and Edge */ scrollbar-width: none; /* Firefox */}
+body.ui-mobile-viewport::-webkit-scrollbar{display: none!important;  /* Chrome, Safari, Opera*/}
 ol,ul{list-style:none;}
 a{line-height: inherit; text-decoration:none; vertical-align:middle}
 img{border:0; vertical-align:top;}
