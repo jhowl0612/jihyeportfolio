@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>global_warming</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script src="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@4.4.0/dist/echarts-en.min.js"></script>
+    <link rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-tooltip@3.0.2/dist/css/bulma-tooltip.min.css" />
+</head>
+<style>
+    /* 슬라이더 */
+    input[type=range] {
+        height: 38px;
+        -webkit-appearance: none;
+        margin: 10px 0;
+        width: 100%;
+    }
+    input[type=range]:focus { outline: none; }
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 10px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px #000000;
+        background: #3071A9;
+        border-radius: 5px;
+        border: 1px solid #000000;
+    }
+    input[type=range]::-webkit-slider-thumb {
+        box-shadow: 1px 1px 1px #000000;
+        border: 1px solid #000000;
+        height: 30px;
+        width: 15px;
+        border-radius: 5px;
+        background: #FFFFFF;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -11px;
+    }
+    input[type=range]:focus::-webkit-slider-runnable-track {
+        background: #3071A9;
+    }
+    input[type=range]::-moz-range-track {
+        width: 100%;
+        height: 10px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px #000000;
+        background: #3071A9;
+        border-radius: 5px;
+        border: 1px solid #000000;
+    }
+    input[type=range]::-moz-range-thumb {
+        box-shadow: 1px 1px 1px #000000;
+        border: 1px solid #000000;
+        height: 30px;
+        width: 15px;
+        border-radius: 5px;
+        background: #FFFFFF;
+        cursor: pointer;
+    }
+    input[type=range]::-ms-track {
+        width: 100%;
+        height: 10px;
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+    }
+    input[type=range]::-ms-fill-lower {
+        background: #3071A9;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        box-shadow: 1px 1px 1px #000000;
+    }
+    input[type=range]::-ms-fill-upper {
+        background: #3071A9;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        box-shadow: 1px 1px 1px #000000;
+    }
+    input[type=range]::-ms-thumb {
+        margin-top: 1px;
+        box-shadow: 1px 1px 1px #000000;
+        border: 1px solid #000000;
+        height: 30px;
+        width: 15px;
+        border-radius: 5px;
+        background: #FFFFFF;
+        cursor: pointer;
+    }
+    input[type=range]:focus::-ms-fill-lower { background: #3071A9; }
+    input[type=range]:focus::-ms-fill-upper { background: #3071A9; }
+
+
+    /* 탭과 배경 스타일 */
+    .clearfix::after{ content:""; display: block; clear: both; }
+    *{transition: all 0.25s ease-in-out;}
+    #container {padding: 24px 0; background-color: lightgray;}
+    .tabs li a{width: 100%; max-width: 250px; transition: all .2s ease-out;}
+
+    /* 지도 */
+    .leaflet-popup-content-wrapper{
+        width: 600px!important;
+        padding-left: 0px!important;
+    }
+    .year_text{
+        position: absolute;
+        z-index: 10000;
+        color: white;
+    }
+
+    /* 스케일바 */
+    .gradient_sample{
+        position: absolute; padding: 8px; background-color: white;
+    }
+    .gradient_sample.small{
+        transform: scale(.9);
+    }
+    .gradient_sample.normal.fold{
+        right:0!important;
+        transform: translateX(100%);
+    }
+    .gradient_sample.small.fold{
+        right:0!important;
+        transform: translateX(100%) scale(.9);
+    }
+
+    .gradient_sample > div{
+        width:100%;
+        text-align: center;
+        color:#fff;
+        padding: 4px 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #ohc_tab_content .gradient_sample > div {
+        height:7.142857142857143%; 
+    }
+    #sst_tab_content .gradient_sample > div {
+        height:5%; 
+    }
+
+    .gradient_btn{
+        position: absolute;
+        padding: 4px;
+        display: block;
+        background-color: white;
+        top:0; left:0;
+        transform: translate(calc(-100% + 2px),0);
+    }
+
+</style>
+<body>
+    <div id="container">
+        <div class="container box" style="margin-bottom: -20px;">
+            <div class="tabs has-text-weight-bold">
+                <ul>
+                    <li class="is-active" style="width:50%" data-target="ohc_tab_content"><a class="is-pulled-right">열함량</a></li>
+                    <li style="width:50%" data-target="sst_tab_content"><a>해수면온도</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container box">
+            <div id="ohc_tab_content" class="tab_content">
+                <div id="ohc_global_wrap" class="content clearfix" style="position: relative;">
+                    <h4 class="title is-5" style="margin-bottom: .5rem;">전지구 열함량</h4>
+                    <div class="year_text" style="font-size: 80px; left:8px; padding-top:calc(36% - 120px); letter-spacing: -6px; text-shadow: 0 0 8px #333333;">1955</div>
+                    <div id="o_g_leaflet" class="map00 open-modal" style="width:100%; padding-bottom: calc(36%);"></div>
+                    <div class="gradient_sample normal is-size-7-touch" style="top: 42px; bottom:92px; right: 10px;">
+                        <a class="gradient_btn">▶</a>
+                        <div style="background: #fcdb74;">45 ~ &nbsp;</div>
+                        <div style="background: #f7c777;">40 ~ 45</div>
+                        <div style="background: #f4b26f;">35 ~ 40</div>
+                        <div style="background: #f39e6a;">30 ~ 35</div>
+                        <div style="background: #f18b6f;">25 ~ 30</div>
+                        <div style="background: #e77c7a;">20 ~ 25</div>
+                        <div style="background: #d16e8a;">15 ~ 20</div>
+                        <div style="background: #c06b94;">10 ~ 15</div>
+                        <div style="background: #b06a9b;">5 ~ 10</div>
+                        <div style="background: #9f6ba6;">0 ~ 5</div>
+                        <div style="background: #8a68ae;">-5 ~ -0</div>
+                        <div style="background: #6d5daf;">-10 ~ -5</div>
+                        <div style="background: #5251a8; letter-spacing: -1px;">-15 ~ -10 </div>
+                        <div style="background: #3a4694;">&nbsp; ~ -15</div>
+                    </div>
+                    <div style="float: left; width: 80px; height:70px">
+                        <span class="play" style="display: block; padding-left: 32px; padding-top: 10px;" onclick="Play(0, 'ohc_global_wrap');"><img src="./play.png" style="width : 40px;">  </span>
+                        <span class="stop" style="display: none; padding-left: 32px; padding-top: 10px;" onclick="Stop(0, 'ohc_global_wrap');"><img src="./stop.png" style="width: 40px;"></span>
+                    </div>
+                    <div class="range-slider" style="height: 70px; position: relative; float: left; width: calc(100% - 120px);">
+                        <input class="range-slider__range" type="range" value="1955" min="1955" max="2019" onchange = "SetValue(0)"/>
+                        <span class="range-slider__value" style="position : absolute; bottom : 0; left: 0px; margin-left: -13px; white-space: nowrap;">1955년</span>
+                    </div>
+                </div>
+                <div class="columns clearfix" style="margin-bottom: .5rem;">
+                    <div id="ohc_korea_wrap" class="column is-5 clearfix" style="position: relative;">
+                        <h4 class="title is-5" style="margin-bottom: .5rem;">한반도 열함량</h4>
+                        <div class="year_text" style="font-size: 56px; left:8px; padding-top:calc(72% - 96px); letter-spacing: -4px; text-shadow: 0 0 6px #333333;">1955</div>
+                        <div id="o_k_leaflet" class="map01 open-modal" style="width:100%; padding-bottom: calc(72%);"></div>
+                        <div class="gradient_sample small is-size-7-touch" style="top: 42px; bottom:92px; right: 16px;">
+                            <a class="gradient_btn">▶</a>
+                            <div style="background: #fcdb74;">45 ~ &nbsp;</div>
+                            <div style="background: #f7c777;">40 ~ 45</div>
+                            <div style="background: #f4b26f;">35 ~ 40</div>
+                            <div style="background: #f39e6a;">30 ~ 35</div>
+                            <div style="background: #f18b6f;">25 ~ 30</div>
+                            <div style="background: #e77c7a;">20 ~ 25</div>
+                            <div style="background: #d16e8a;">15 ~ 20</div>
+                            <div style="background: #c06b94;">10 ~ 15</div>
+                            <div style="background: #b06a9b;">5 ~ 10</div>
+                            <div style="background: #9f6ba6;">0 ~ 5</div>
+                            <div style="background: #8a68ae;">-5 ~ -0</div>
+                            <div style="background: #6d5daf;">-10 ~ -5</div>
+                            <div style="background: #5251a8; letter-spacing: -1px;">-15 ~ -10 </div>
+                            <div style="background: #3a4694;">&nbsp; ~ -15</div>
+                        </div>
+                        <div style="float: left; width: 80px; height:70px">
+                            <span class="play" style="display: block; padding-left: 32px; padding-top: 10px;" onclick="Play(1, 'ohc_korea_wrap');"><img src="./play.png" style="width : 40px;">  </span>
+                            <span class="stop" style="display: none; padding-left: 32px; padding-top: 10px;" onclick="Stop(1, 'ohc_korea_wrap');"><img src="./stop.png" style="width: 40px;"></span>
+                        </div>
+                        <div class="range-slider" style="height: 70px; position: relative; float: left; width: calc(100% - 120px);">
+                            <input class="range-slider__range" type="range" value="1955" min="1955" max="2019" onchange = "SetValue(1)"/>
+                            <span class="range-slider__value" style="position : absolute; bottom : 0; left: 0px; margin-left: -13px; white-space: nowrap;">1955년</span>
+                        </div>
+                    </div>
+                    <div class="column is-7 clearfix">
+                        <h4 class="title is-5" style="margin-bottom: .5rem;">Global Warming </h4>
+                        <div class="box " style="height:calc(72% + 20px);">
+                            <div class="column">
+                                <h4 class="title is-5">Ocean Heat Content</h4>
+                                <p>글 들어갑니다~</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sst_tab_content" class="tab_content">
+                <div id="sst_08_wrap" class="content clearfix" style="position: relative;">
+                    <h4 class="title is-5" style="margin-bottom: .5rem;">매해 8월 해수면온도</h4>
+                    <div class="year_text" style="font-size: 80px; left:20px; padding-top:calc(36% - 124px); letter-spacing: -6px; text-shadow: 0 0 8px #333333;">1850</div>
+                    <div id="s_08_leaflet" class="map02 open-modal" style="width:100%; padding-bottom: calc(36%);"></div>
+                    <div class="gradient_sample normal is-size-7-touch" style="top: 42px; bottom:92px; right: 10px;">
+                        <a class="gradient_btn">▶</a>
+                        <div style="background: #ff8900;">25 ~ &nbsp;</div>
+                        <div style="background: #fcab04;">24 ~ 25</div>
+                        <div style="background: #ffbe00;">23 ~ 24</div>
+                        <div style="background: #fdd005;">22 ~ 23</div>
+                        <div style="background: #ffeb00;">21 ~ 22</div>
+                        <div style="background: #fafa04;">20 ~ 21</div>
+                        <div style="background: #d9fe00;">19 ~ 20</div>
+                        <div style="background: #b3fe01;">18 ~ 19</div>
+                        <div style="background: #91ff00;">17 ~ 18</div>
+                        <div style="background: #6dff00;">16 ~ 17</div>
+                        <div style="background: #00f625;">15 ~ 16</div>
+                        <div style="background: #03d8b8;">14 ~ 15</div>
+                        <div style="background: #00d3de;">13 ~ 14</div>
+                        <div style="background: #00cbfd;">12 ~ 13</div>
+                        <div style="background: #1ebdf7;">11 ~ 12</div>
+                        <div style="background: #36b1ed;">10 ~11</div>
+                        <div style="background: #56a0e7;">9 ~ 10</div>
+                        <div style="background: #7293e0;">8 ~ 9</div>
+                        <div style="background: #b378d6;">7 ~ 8 </div>
+                        <div style="background: #b378d6;">&nbsp; ~ 7</div>
+                    </div>
+                    <div style="float: left; width: 80px; height:70px">
+                        <span class="play" style="display: block; padding-left: 32px; padding-top: 10px;" onclick="Play(2, 'sst_08_wrap');"><img src="./play.png" style="width : 40px;">  </span>
+                        <span class="stop" style="display: none; padding-left: 32px; padding-top: 10px;" onclick="Stop(2, 'sst_08_wrap');"><img src="./stop.png" style="width: 40px;"></span>
+                    </div>
+                    <div class="range-slider" style="height: 70px; position: relative; float: left; width: calc(100% - 120px);">
+                        <input class="range-slider__range" type="range" value="1850" min="1850" max="2019" onchange = "SetValue(2)"/>
+                        <span class="range-slider__value" style="position : absolute; bottom : 0; left: 0px; margin-left: -13px; white-space: nowrap;">1850년</span>
+                    </div>
+                </div>
+                <div class="columns clearfix">
+                    <div id="sst_02_wrap" class="column is-4 clearfix" style="position: relative;">
+                        <h4 class="title is-5" style="margin-bottom: .5rem;">매해 2월 해수면온도</h4>
+                        <div class="year_text" style="font-size: 56px; left:20px; padding-top:calc(80% - 96px); letter-spacing: -4px; text-shadow: 0 0 6px #333333;">1850</div>
+                        <div id="s_02_leaflet" class="map03 open-modal" style="width:100%; padding-bottom: calc(80%);"></div>
+                        <div class="gradient_sample small is-size-7-touch" style="top: 42px; bottom:92px; right: 16px;">
+                            <a class="gradient_btn">▶</a>
+                            <div style="background: #ff8900;">25 ~ &nbsp;</div>
+                            <div style="background: #fcab04;">24 ~ 25</div>
+                            <div style="background: #ffbe00;">23 ~ 24</div>
+                            <div style="background: #fdd005;">22 ~ 23</div>
+                            <div style="background: #ffeb00;">21 ~ 22</div>
+                            <div style="background: #fafa04;">20 ~ 21</div>
+                            <div style="background: #d9fe00;">19 ~ 20</div>
+                            <div style="background: #b3fe01;">18 ~ 19</div>
+                            <div style="background: #91ff00;">17 ~ 18</div>
+                            <div style="background: #6dff00;">16 ~ 17</div>
+                            <div style="background: #00f625;">15 ~ 16</div>
+                            <div style="background: #03d8b8;">14 ~ 15</div>
+                            <div style="background: #00d3de;">13 ~ 14</div>
+                            <div style="background: #00cbfd;">12 ~ 13</div>
+                            <div style="background: #1ebdf7;">11 ~ 12</div>
+                            <div style="background: #36b1ed;">10 ~11</div>
+                            <div style="background: #56a0e7;">9 ~ 10</div>
+                            <div style="background: #7293e0;">8 ~ 9</div>
+                            <div style="background: #b378d6;">7 ~ 8 </div>
+                            <div style="background: #b378d6;">&nbsp; ~ 7</div>
+                        </div>
+                        <div style="float: left; width: 80px; height:70px">
+                            <span class="play" style="display: block; padding-left: 32px; padding-top: 10px;" onclick="Play(3, 'sst_02_wrap');"><img src="./play.png" style="width : 40px;">  </span>
+                            <span class="stop" style="display: none; padding-left: 32px; padding-top: 10px;" onclick="Stop(3, 'sst_02_wrap');"><img src="./stop.png" style="width: 40px;"></span>
+                        </div>
+                        <div class="range-slider" style="height: 70px; position: relative; float: left; width: calc(100% - 120px);">
+                            <input class="range-slider__range" type="range" value="1850" min="1850" max="2019" onchange = "SetValue(3)"/>
+                            <span class="range-slider__value" style="position : absolute; bottom : 0; left: 0px; margin-left: -13px; white-space: nowrap;">1850년</span>
+                        </div>
+                    </div>
+                    <div id="sst_annual_wrap" class="column is-4 clearfix" style="position: relative;">
+                        <h4 class="title is-5" style="margin-bottom: .5rem;">매해 평균 해수면온도</h4>
+                        <div class="year_text" style="font-size: 56px; left:20px; padding-top:calc(80% - 96px); letter-spacing: -4px; text-shadow: 0 0 6px #333333;">1850</div>
+                        <div id="s_all_leaflet" class="map04 open-modal" style="width:100%; padding-bottom: calc(80%);"></div>
+                        <div class="gradient_sample small is-size-7-touch" style="top: 42px; bottom:92px; right: 16px;">
+                            <a class="gradient_btn">▶</a>
+                            <div style="background: #ff8900;">25 ~ &nbsp;</div>
+                            <div style="background: #fcab04;">24 ~ 25</div>
+                            <div style="background: #ffbe00;">23 ~ 24</div>
+                            <div style="background: #fdd005;">22 ~ 23</div>
+                            <div style="background: #ffeb00;">21 ~ 22</div>
+                            <div style="background: #fafa04;">20 ~ 21</div>
+                            <div style="background: #d9fe00;">19 ~ 20</div>
+                            <div style="background: #b3fe01;">18 ~ 19</div>
+                            <div style="background: #91ff00;">17 ~ 18</div>
+                            <div style="background: #6dff00;">16 ~ 17</div>
+                            <div style="background: #00f625;">15 ~ 16</div>
+                            <div style="background: #03d8b8;">14 ~ 15</div>
+                            <div style="background: #00d3de;">13 ~ 14</div>
+                            <div style="background: #00cbfd;">12 ~ 13</div>
+                            <div style="background: #1ebdf7;">11 ~ 12</div>
+                            <div style="background: #36b1ed;">10 ~11</div>
+                            <div style="background: #56a0e7;">9 ~ 10</div>
+                            <div style="background: #7293e0;">8 ~ 9</div>
+                            <div style="background: #b378d6;">7 ~ 8 </div>
+                            <div style="background: #b378d6;">&nbsp; ~ 7</div>
+                        </div>
+                        <div style="float: left; width: 80px; height:70px">
+                            <span class="play" style="display: block; padding-left: 32px; padding-top: 10px;" onclick="Play(4, 'sst_annual_wrap');"><img src="./play.png" style="width : 40px;">  </span>
+                            <span class="stop" style="display: none; padding-left: 32px; padding-top: 10px;" onclick="Stop(4, 'sst_annual_wrap');"><img src="./stop.png" style="width: 40px;"></span>
+                        </div>
+                        <div class="range-slider" style="height: 70px; position: relative; float: left; width: calc(100% - 120px);">
+                            <input class="range-slider__range" type="range" value="1850" min="1850" max="2019" onchange = "SetValue(4)"/>
+                            <span class="range-slider__value" style="position : absolute; bottom : 0; left: 0px; margin-left: -13px; white-space: nowrap;">1850년</span>
+                        </div>
+                    </div>
+                    <div class="column is-4 clearfix">
+                        <h4 class="title is-5" style="margin-bottom: .5rem;">Global Warming </h4>
+                        <div class="box " style="height:calc(80% + 8px);">
+                            <div class="column">
+                                <h4 class="title is-5">Sea Surface Temperature</h4>
+                                <p>글 들어갑니다~</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javaScript" language="javascript" defer="defer">
+
+    var geoServerURL = "https://geoserver.kesti.info/";
+
+    // 베이스맵
+    var o_g_map = L.map('o_g_leaflet').setView([15.56816, 126.98966], 3);
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { minZoom : 2, attribution: '&copy; KESTI.CO.KR', }).addTo(o_g_map);
+    // L.tileLayer('http://api.vworld.kr/req/wmts/1.0.0/B0B11BDF-9AD8-361A-8098-48FF3460D9BB/gray/{z}/{y}/{x}.png', { minZoom : 2, attribution: '&copy; KESTI.CO.KR', }).addTo(o_g_map);
+
+    var o_k_map = L.map('o_k_leaflet').setView([37.06816, 127.98966], 5);
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { minZoom : 5, attribution: '&copy; KESTI.CO.KR', }).addTo(o_k_map);
+
+    var s_08_map = L.map('s_08_leaflet').setView([37.56816, 126.98966], 5);
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { minZoom : 5, attribution: '&copy; KESTI.CO.KR', }).addTo(s_08_map);
+
+    var s_02_map = L.map('s_02_leaflet').setView([37.56816, 126.98966], 4);
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { minZoom : 4, attribution: '&copy; KESTI.CO.KR', }).addTo(s_02_map);
+
+    var s_all_map = L.map('s_all_leaflet').setView([37.56816, 126.98966], 4);
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { minZoom : 4, attribution: '&copy; KESTI.CO.KR', }).addTo(s_all_map);
+
+    var map_arr = [o_g_map, o_k_map, s_08_map, s_02_map, s_all_map];
+
+    // 팝업
+    var o_g_popup = L.popup();
+    var o_k_popup = L.popup();
+    var s_08_popup = L.popup();
+    var s_02_popup = L.popup();
+    var s_all_popup = L.popup();
+
+    var popup_arr = [o_g_popup, o_k_popup, s_08_popup, s_02_popup, s_all_popup];
+
+    // 슬라이더
+    var o_g_slider = $("#ohc_global_wrap .range-slider__range");
+    var o_k_slider = $("#ohc_korea_wrap .range-slider__range");
+    var s_08_slider = $("#sst_08_wrap .range-slider__range");
+    var s_02_slider = $("#sst_02_wrap .range-slider__range");
+    var s_all_slider = $("#sst_annual_wrap .range-slider__range");
+    var o_g_now_num = Number(o_g_slider.val());
+    var o_k_now_num = Number(o_k_slider.val());
+    var s_08_now_num = Number(s_08_slider.val());
+    var s_02_now_num = Number(s_02_slider.val());
+    var s_all_now_num = Number(s_all_slider.val());
+    var o_g_textbox = $("#ohc_global_wrap .range-slider__value");
+    var o_k_textbox = $("#ohc_korea_wrap .range-slider__value");
+    var s_08_textbox = $("#sst_08_wrap .range-slider__value");
+    var s_02_textbox = $("#sst_02_wrap .range-slider__value");
+    var s_all_textbox = $("#sst_annual_wrap .range-slider__value");
+
+
+    var slider_arr = [o_g_slider, o_k_slider, s_08_slider, s_02_slider, s_all_slider];
+    var num_arr = [o_g_now_num, o_k_now_num, s_08_now_num, s_02_now_num, s_all_now_num];
+    var textbox_arr = [o_g_textbox, o_k_textbox, s_08_textbox, s_02_textbox, s_all_textbox];
+
+        // 레이어 배열
+    var o_g_res_arr = [];
+    var o_k_res_arr = [];
+    var s_02_res_arr = [];
+    var s_08_res_arr = [];
+    var s_all_res_arr = [];
+
+    var res_arr_wrap = [o_g_res_arr, o_k_res_arr, s_08_res_arr, s_02_res_arr, s_all_res_arr];
+
+    // 열함량 전지구
+    var o_g_res = L.tileLayer.wms( geoServerURL + 'geoserver/ola/wms', {
+			layers: 'ola:ohc_global',
+			transparent: true, 
+			opacity: 1, 
+			format: 'image/png',
+			crs: L.CRS.EPSG3857,
+            env: 'hh:ohc1955;'
+		}).addTo(o_g_map);
+    o_g_map.options.minZoom = 1;
+    o_g_res_arr.push(o_g_res);
+
+    // 열함량 한반도
+    var o_k_res = L.tileLayer.wms( geoServerURL + 'geoserver/ola/wms', {
+			layers: 'ola:ohc_korea',
+			transparent: true, 
+			opacity: 1, 
+			format: 'image/png',
+			crs: L.CRS.EPSG3857,
+            env: 'hh:ohc1955;'
+        }).addTo(o_k_map);
+    o_k_res_arr.push(o_k_res);
+        
+    // 해수면 08월
+    var s_08_res = L.tileLayer.wms( geoServerURL + 'geoserver/ola/wms', {
+			layers: 'ola:sst_08',
+			transparent: true, 
+			opacity: 1, 
+			format: 'image/png',
+			crs: L.CRS.EPSG3857,
+            env: 'hh:sst1850;'
+        }).addTo(s_08_map);
+    s_08_res_arr.push(s_08_res);
+
+    // 해수면 02월
+    var s_02_res = L.tileLayer.wms( geoServerURL + 'geoserver/ola/wms', {
+			layers: 'ola:sst_02',
+			transparent: true, 
+			opacity: 1, 
+			format: 'image/png',
+			crs: L.CRS.EPSG3857,
+            env: 'hh:sst1850;'
+        }).addTo(s_02_map);
+    s_02_res_arr.push(s_02_res);
+    
+    // 해수면 연평균
+    var s_all_res = L.tileLayer.wms( geoServerURL + 'geoserver/ola/wms', {
+			layers: 'ola:sst',
+			transparent: true, 
+			opacity: 1, 
+			format: 'image/png',
+			crs: L.CRS.EPSG3857,
+            env: 'hh:sst1850;'
+        }).addTo(s_all_map);
+    s_all_res_arr.push(s_all_res);
+
+    // 팝업 이벤트
+    function popup_information(e) {
+
+        var map_class = e.target._container.classList[0]
+        var map_num = Number(map_class.replace('map',''))
+
+        var point = map_arr[map_num].latLngToContainerPoint(e.latlng, map_arr[map_num].getZoom());
+        var size = map_arr[map_num].getSize();
+        var bounds = map_arr[map_num].getBounds();
+        var sw = bounds.getSouthWest();
+        var ne = bounds.getNorthEast();
+        
+        var params = {
+            REQUEST: 'GetFeatureInfo',
+            SERVICE: 'WMS',
+            VERSION: '1.1.1',
+            SRS: 'EPSG:4326',
+            VERSION: '1.1', 
+            FORMAT: 'image/png',
+            BBOX: [[sw.lng, sw.lat].join(','), [ne.lng, ne.lat].join(',')].join(','),
+            HEIGHT: size.y,
+            WIDTH: size.x,
+            X: point.x,
+            Y: point.y,
+            LAYERS: 'ola:ohc_global',
+            QUERY_LAYERS: 'ola:ohc_global',
+            INFO_FORMAT: 'application/json',
+        };   
+
+        $.ajax({
+            type:"GET",
+            url: geoServerURL + 'geoserver/ola/wms',
+            data : params,
+            dataType : 'json',
+            success : function(data){
+                if(data.features[0])
+                {
+                    var data_properties = data.features[0].properties
+                    
+                    //x축
+                    var key = Object.getOwnPropertyNames(data_properties)
+                    x_value= key.slice(9,)
+
+                    //y축
+                    var y_value = []
+                    for(var i = 0; i < x_value.length; i++) {
+                        y = Object.getOwnPropertyDescriptor(data_properties, x_value[i]).value;
+                        y_value.push(y)
+                    }
+
+                    //팝업
+                    popup_arr[map_num].setLatLng([e.latlng.lat, e.latlng.lng])
+                    .setContent(`<div id="` + map_class + `_chart" style="width: 600px;height:400px;"></div>`)
+                    .openOn(map_arr[map_num]);
+
+                    //그래프 그리기
+                    var myChart = echarts.init(document.getElementById(map_class + "_chart"))
+                    var option = {
+                        xAxis: {
+                            data: x_value
+                        },
+                        yAxis: {},
+                        series: [{
+                            type: 'bar',
+                            data: y_value
+                        }]
+                    };
+                    myChart.setOption(option);
+                } 
+            }
+        });
+    }  
+
+    for (var i = 0; i < map_arr.length; i++) { map_arr[i].addEventListener('click', popup_information); }
+
+    // 자동재생, 년도 변경
+    var interval_arr = [null, null, null, null, null]
+
+    var Play =function(slider_num, wrap_name) {
+
+        $("#" + wrap_name + " .play").css('display','none');
+        $("#" + wrap_name + " .stop").css('display','block');
+
+        if (slider_num <= 1) { 
+            var oldest_year = 1955; var period = 65;
+        } else { 
+            var oldest_year = 1850 ; var period = 170;
+        }
+
+        interval_arr[slider_num] = setInterval(function() {
+            loop(slider_num, wrap_name);
+            num_arr[slider_num]  = num_arr[slider_num] + 1
+            if(num_arr[slider_num] > 2019) {
+                num_arr[slider_num] = oldest_year;
+            }
+        },1000); 
+    };
+
+    var Stop = function(slider_num, wrap_name) {
+        $("#" + wrap_name + " .play").css('display','block');
+        $("#" + wrap_name + " .stop").css('display','none');
+        clearInterval(interval_arr[slider_num]);
+    };
+
+    var loop = function(slider_num, wrap_name) {
+        makeMap(slider_num);
+
+        if (slider_num <= 1) { 
+            var oldest_year = 1955; var period = 65;
+        } else { 
+            var oldest_year = 1850 ; var period = 170;
+        }
+
+        $("#" + wrap_name + " .range-slider__range").val(num_arr[slider_num]);
+        $("#" + wrap_name + " .range-slider__value").html(num_arr[slider_num]);
+        $("#" + wrap_name + " .range-slider__value").css('left','calc(100% / ' + period + ' *'+  (num_arr[slider_num] - oldest_year) +')');
+        $("#" + wrap_name + " .range-slider__value").html(num_arr[slider_num] +"년");   
+        $("#" + wrap_name + " .year_text").html(num_arr[slider_num]);
+    };
+
+
+
+    var SetValue = function(slider_num) {
+
+        var this_slider = slider_arr[slider_num]
+        num_arr[slider_num] = Number(this_slider.val());
+
+        if (slider_num <= 1) { 
+            var oldest_year = 1955; var period = 65;
+        } else { 
+            var oldest_year = 1850 ; var period = 170;
+        }
+
+        textbox_arr[slider_num].css('left','calc(100% / ' + period + ' *'+  (num_arr[slider_num] - oldest_year) +')');
+        makeMap(slider_num);  
+    }
+
+    var makeMap = function(map_num) {
+
+        var geo_layer_name = ['ohc_global', 'ohc_korea', 'sst_08', 'sst_02', 'sst'];
+        if ( map_num <= 1) {var env_prefix = 'ohc'} else { var env_prefix = 'sst' };
+
+        //새 레이어 생성
+        res = L.tileLayer.wms( geoServerURL + 'geoserver/ola/wms', {
+			layers: 'ola:' + geo_layer_name[map_num],
+			transparent: true, 
+            env: "hh:" + env_prefix + num_arr[map_num] ,
+			opacity: 1, 
+			format: 'image/png',
+			crs: L.CRS.EPSG4326
+            
+		}).addTo(map_arr[map_num]);
+        map_arr[map_num].options.minZoom = 2;
+        res_arr_wrap[map_num].push(res);
+
+        //이전 레이어 삭제 
+        for(var i = 0; i < res_arr_wrap[map_num].length -2; i++)
+        {
+            map_arr[map_num].removeLayer(res_arr_wrap[map_num][i]); //레이어 지움
+            res_arr_wrap[map_num].shift(); // 빈 배열 앞 1칸 삭제
+        }
+    }
+    
+
+    $('.range-slider__range').each(function () {
+        $(this).on('input', function() {
+            $(this).next().html(this.value +"년");
+            $(this).parent().siblings('.year_text').html(this.value);
+        });
+    })
+
+    $('.gradient_btn').click(function () {
+       $(this).parent().toggleClass('fold') 
+    });
+
+
+
+
+    // 탭
+    $('.tabs li').click(function () {
+        $('.tabs li').removeClass('is-active');
+        $(this).addClass('is-active');
+
+        var content_class = '#' + $(this).attr("data-target");
+        console.log(content_class)
+        $('.tab_content').addClass('is-hidden');
+        $(content_class).removeClass('is-hidden');
+    });
+
+    // 양쪽 탭 모두 보이는 상태로 로딩했다가 한쪽 숨기기 위해 트리거클릭
+    $('.tabs li').eq(0).trigger("click");
+</script>
+</html>
